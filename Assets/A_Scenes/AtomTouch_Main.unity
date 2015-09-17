@@ -1832,7 +1832,7 @@ MonoBehaviour:
   cameraScript: {fileID: 1960553279}
   mainMenu: {fileID: 172858662}
   levels: {fileID: 2003053574}
-  levelGuide: {fileID: 0}
+  levelGuide: {fileID: 479600156}
   mainMenuGameObject: {fileID: 172858660}
   levelsGameObject: {fileID: 2003053570}
   levelGuideGameObject: {fileID: 479600155}
