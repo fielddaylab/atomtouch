@@ -22,8 +22,6 @@
  * 
  * 
  **/ 
-
-
 using UnityEngine;
 using System.Collections;
 using System;
@@ -31,9 +29,20 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class AtomTouchGUI : MonoBehaviour {
-	
-	
+public class AtomTouchGUI : MonoBehaviour
+{
+	public GameObject mainCameraGameObject;
+	public CameraScript cameraScript;
+
+	//UI Panels Scripts
+	public MainMenuPanel mainMenu;
+	public LevelsPanel levels;
+	public LevelGuide levelGuide;
+
+	//UI Panels GameObject
+	public GameObject mainMenuGameObject;
+	public GameObject levelsGameObject;
+	public GameObject levelGuideGameObject;
 	private float oldTemperaure = -1;
 	//plane materials
 	public Material matPlane1;
@@ -49,7 +58,7 @@ public class AtomTouchGUI : MonoBehaviour {
 	public GameObject timer;
 	public GameObject tempSlider;//temperature
 	public GameObject volSlider;//volume
-	public GameObject bondLineBtn; 
+	public GameObject bondLineBtn;
 	public GameObject selectAtomPanel;
 	public GameObject selectAtomGroup;
 	public GameObject settingsCanvas;
@@ -60,7 +69,6 @@ public class AtomTouchGUI : MonoBehaviour {
 	public GameObject platinumCount;
 	public GameObject numAtomInput;
 	public GameObject buttonPanel;
-
 	public GameObject cuBatchToggle;
 	public GameObject auBatchToggle;
 	public GameObject ptBatchToggle;
@@ -76,7 +84,6 @@ public class AtomTouchGUI : MonoBehaviour {
 	public GameObject platText;
 	public GameObject sodiumText;
 	public GameObject chlorineText;
-
 	public Text selectAllText;
 
 	//prefabs to spawn
@@ -92,24 +99,30 @@ public class AtomTouchGUI : MonoBehaviour {
 	public Texture normalTimeButton;
 	public Texture slowTimeButton;
 	public Texture stoppedTimeButton;
-	
-	
-	
-	[HideInInspector]public bool changingTemp = false;
-	[HideInInspector]public bool changingVol = false;
+	[HideInInspector]
+	public bool
+		changingTemp = false;
+	[HideInInspector]
+	public bool
+		changingVol = false;
 	public EventSystem eventSystem;
-	
 	public static StaticVariables.TimeSpeed currentTimeSpeed = StaticVariables.TimeSpeed.Stopped;
-	
-	[HideInInspector]public Slider tempSliderComponent;
-	[HideInInspector]public Slider volSliderComponent;
+	[HideInInspector]
+	public Slider
+		tempSliderComponent;
+	[HideInInspector]
+	public Slider
+		volSliderComponent;
+	[HideInInspector]
+	public static AtomTouchGUI
+		myAtomTouchGUI;
 
-	[HideInInspector]public static AtomTouchGUI myAtomTouchGUI; 
-	void Awake(){
+	void Awake ()
+	{
 		myAtomTouchGUI = this;
 
 		tempSliderComponent = tempSlider.GetComponent<Slider> ();
-		volSliderComponent = volSlider.GetComponent<Slider>();
+		volSliderComponent = volSlider.GetComponent<Slider> ();
 		//set slider range
 		tempSliderComponent.minValue = StaticVariables.minTemp;
 		tempSliderComponent.maxValue = StaticVariables.maxTemp;
@@ -117,94 +130,100 @@ public class AtomTouchGUI : MonoBehaviour {
 		volSliderComponent.minValue = StaticVariables.minVol * 0.1f; //to nm
 		volSliderComponent.maxValue = StaticVariables.maxVol * 0.1f; //to nm
 		
-		Atom.EnableSelectAtomGroup(false);
-		settingsCanvas.SetActive(false);
-		eventSystem = GameObject.Find("EventSystem").gameObject.GetComponent<EventSystem>();
+		Atom.EnableSelectAtomGroup (false);
+		settingsCanvas.SetActive (false);
+		eventSystem = GameObject.Find ("EventSystem").gameObject.GetComponent<EventSystem> ();
 
 	}
-	void Start () {
 
+	void Start ()
+	{
+		MainMenuInit ();
+		LevelsInit ();
 	}
 	
 
 	
 	//this function selects all of the atoms in the scene
-	void SelectAllAtoms(){
+	void SelectAllAtoms ()
+	{
 		for (int i = 0; i < Atom.AllAtoms.Count; i++) {
-			Atom currAtom = Atom.AllAtoms[i];
+			Atom currAtom = Atom.AllAtoms [i];
 			currAtom.selected = true;
-			currAtom.SetSelected(true);
+			currAtom.SetSelected (true);
 		}
 	}
 	
 	//this function deselects all of the atoms in the scene
-	void DeselectAllAtoms(){
+	void DeselectAllAtoms ()
+	{
 		for (int i = 0; i < Atom.AllAtoms.Count; i++) {
-			Atom currAtom = Atom.AllAtoms[i];
+			Atom currAtom = Atom.AllAtoms [i];
 			currAtom.selected = false;
-			currAtom.SetSelected(false);
+			currAtom.SetSelected (false);
 		}
-		Atom.EnableSelectAtomGroup(false);
+		Atom.EnableSelectAtomGroup (false);
 	}
 
-
-
-	public void DeleteSelectedAtoms(){
-		Debug.Log("DeleteSelectedAtoms called");
-		for(int i=Atom.AllAtoms.Count-1; i >= 0;i--){
-			Atom currAtom = Atom.AllAtoms[i];
-			if(currAtom.selected){
+	public void DeleteSelectedAtoms ()
+	{
+		Debug.Log ("DeleteSelectedAtoms called");
+		for (int i=Atom.AllAtoms.Count-1; i >= 0; i--) {
+			Atom currAtom = Atom.AllAtoms [i];
+			if (currAtom.selected) {
 				//delete this atom from the list
-				Debug.Log("deleting atom: " + i);
+				Debug.Log ("deleting atom: " + i);
 				currAtom.selected = false;
-				currAtom.SetSelected(false);
+				currAtom.SetSelected (false);
 				
-				if(currAtom is Copper){
+				if (currAtom is Copper) {
 					Copper.count--;
-					copperCount.GetComponent<Text>().text = "Cu: " + Copper.count;
-				}else if (currAtom is Gold){
+					copperCount.GetComponent<Text> ().text = "Cu: " + Copper.count;
+				} else if (currAtom is Gold) {
 					Gold.count--;
-					goldCount.GetComponent<Text>().text = "Au: " + Gold.count;
-				}else if (currAtom is Platinum){
+					goldCount.GetComponent<Text> ().text = "Au: " + Gold.count;
+				} else if (currAtom is Platinum) {
 					Platinum.count --;
-					platinumCount.GetComponent<Text>().text = "Pt: " + Platinum.count;
+					platinumCount.GetComponent<Text> ().text = "Pt: " + Platinum.count;
 				}
 				
-				Atom.UnregisterAtom(currAtom);
-				Destroy(currAtom.gameObject);
+				Atom.UnregisterAtom (currAtom);
+				Destroy (currAtom.gameObject);
 			}
 		}
-		AtomTouchGUI.myAtomTouchGUI.TryEnableAddAtomBtns();
-		Atom.EnableSelectAtomGroup(false);
+		AtomTouchGUI.myAtomTouchGUI.TryEnableAddAtomBtns ();
+		Atom.EnableSelectAtomGroup (false);
 	}
 	//this function returns the number of atoms that are selected
-	public int CountSelectedAtoms(){
+	public int CountSelectedAtoms ()
+	{
 		return NumberofAtom.selectedAtoms;
 	}
 	//this function checks the position of all of the atoms to make sure they are inside of the box
-	void CheckAtomVolumePositions(){
+	void CheckAtomVolumePositions ()
+	{
 		
-		CreateEnvironment createEnvironment = Camera.main.GetComponent<CreateEnvironment>();
+		CreateEnvironment createEnvironment = Camera.main.GetComponent<CreateEnvironment> ();
 		for (int i = 0; i < Atom.AllAtoms.Count; i++) {
-			Atom currAtom = Atom.AllAtoms[i];
+			Atom currAtom = Atom.AllAtoms [i];
 			Vector3 newPosition = currAtom.transform.position;
-			if(currAtom.transform.position.x > CreateEnvironment.bottomPlane.transform.position.x + (createEnvironment.width/2.0f) - createEnvironment.errorBuffer){
-				newPosition.x = CreateEnvironment.bottomPlane.transform.position.x + (createEnvironment.width/2.0f) - createEnvironment.errorBuffer;
+			if (currAtom.transform.position.x > CreateEnvironment.bottomPlane.transform.position.x + (createEnvironment.width / 2.0f) - createEnvironment.errorBuffer) {
+				newPosition.x = CreateEnvironment.bottomPlane.transform.position.x + (createEnvironment.width / 2.0f) - createEnvironment.errorBuffer;
 			}
-			if(currAtom.transform.position.x < CreateEnvironment.bottomPlane.transform.position.x - (createEnvironment.width/2.0f) + createEnvironment.errorBuffer){
-				newPosition.x = CreateEnvironment.bottomPlane.transform.position.x - (createEnvironment.width/2.0f) + createEnvironment.errorBuffer;
+			if (currAtom.transform.position.x < CreateEnvironment.bottomPlane.transform.position.x - (createEnvironment.width / 2.0f) + createEnvironment.errorBuffer) {
+				newPosition.x = CreateEnvironment.bottomPlane.transform.position.x - (createEnvironment.width / 2.0f) + createEnvironment.errorBuffer;
 			}
-			if(currAtom.transform.position.y > CreateEnvironment.bottomPlane.transform.position.y + (createEnvironment.height) - createEnvironment.errorBuffer){
+			if (currAtom.transform.position.y > CreateEnvironment.bottomPlane.transform.position.y + (createEnvironment.height) - createEnvironment.errorBuffer) {
 				newPosition.y = CreateEnvironment.bottomPlane.transform.position.y + (createEnvironment.height) - createEnvironment.errorBuffer;
 			}
-			if(currAtom.transform.position.y < CreateEnvironment.bottomPlane.transform.position.y + createEnvironment.errorBuffer){
+			if (currAtom.transform.position.y < CreateEnvironment.bottomPlane.transform.position.y + createEnvironment.errorBuffer) {
 				newPosition.y = CreateEnvironment.bottomPlane.transform.position.y + createEnvironment.errorBuffer;
 			}
-			if(currAtom.transform.position.z > CreateEnvironment.bottomPlane.transform.position.z + (createEnvironment.depth/2.0f) - createEnvironment.errorBuffer){
-				newPosition.z = CreateEnvironment.bottomPlane.transform.position.z + (createEnvironment.depth/2.0f) - createEnvironment.errorBuffer;
+			if (currAtom.transform.position.z > CreateEnvironment.bottomPlane.transform.position.z + (createEnvironment.depth / 2.0f) - createEnvironment.errorBuffer) {
+				newPosition.z = CreateEnvironment.bottomPlane.transform.position.z + (createEnvironment.depth / 2.0f) - createEnvironment.errorBuffer;
 			}
-			if(currAtom.transform.position.z < CreateEnvironment.bottomPlane.transform.position.z - (createEnvironment.depth/2.0f) + createEnvironment.errorBuffer){
-				newPosition.z = CreateEnvironment.bottomPlane.transform.position.z - (createEnvironment.depth/2.0f) + createEnvironment.errorBuffer;
+			if (currAtom.transform.position.z < CreateEnvironment.bottomPlane.transform.position.z - (createEnvironment.depth / 2.0f) + createEnvironment.errorBuffer) {
+				newPosition.z = CreateEnvironment.bottomPlane.transform.position.z - (createEnvironment.depth / 2.0f) + createEnvironment.errorBuffer;
 			}
 			currAtom.transform.position = newPosition;
 		}
@@ -212,108 +231,112 @@ public class AtomTouchGUI : MonoBehaviour {
 		
 	}
 	
-	
-	public void AllAtomsKick(){
-		for(int i = 0; i < Atom.AllAtoms.Count; i++){
+	public void AllAtomsKick ()
+	{
+		for (int i = 0; i < Atom.AllAtoms.Count; i++) {
 			//Atom currAtom = Atom.AllAtoms[i];
-			AtomKick(i);
+			AtomKick (i);
 		}
 	}
 
 	//kick only one atom
-	public void AtomKick(int i){
-		Atom currAtom = Atom.AllAtoms[i];
+	public void AtomKick (int i)
+	{
+		Atom currAtom = Atom.AllAtoms [i];
 		float xVelocity = 0.0f;
 		float yVelocity = 0.0f;
 		float zVelocity = 0.0f;
 		//this is maximum random velocity.
-		float maxVelocity = 2.0f*Mathf.Sqrt(3.0f*StaticVariables.kB*StaticVariables.desiredTemperature/currAtom.massamu/StaticVariables.amuToKg)/StaticVariables.angstromsToMeters;
+		float maxVelocity = 2.0f * Mathf.Sqrt (3.0f * StaticVariables.kB * StaticVariables.desiredTemperature / currAtom.massamu / StaticVariables.amuToKg) / StaticVariables.angstromsToMeters;
 
-		if(UnityEngine.Random.Range(0.0f, 1.0f) > .5f){
-			xVelocity = UnityEngine.Random.Range(1.0f * maxVelocity, 5.0f * maxVelocity);
+		if (UnityEngine.Random.Range (0.0f, 1.0f) > .5f) {
+			xVelocity = UnityEngine.Random.Range (1.0f * maxVelocity, 5.0f * maxVelocity);
+		} else {
+			xVelocity = UnityEngine.Random.Range (-5.0f * maxVelocity, -1.0f * maxVelocity);
 		}
-		else{
-			xVelocity = UnityEngine.Random.Range(-5.0f * maxVelocity, -1.0f * maxVelocity);
+		if (UnityEngine.Random.Range (0.0f, 1.0f) > .5f) {
+			yVelocity = UnityEngine.Random.Range (1.0f * maxVelocity, 5.0f * maxVelocity);
+		} else {
+			yVelocity = UnityEngine.Random.Range (-5.0f * maxVelocity, -1.0f * maxVelocity);
 		}
-		if(UnityEngine.Random.Range(0.0f, 1.0f) > .5f){
-			yVelocity = UnityEngine.Random.Range(1.0f * maxVelocity, 5.0f * maxVelocity);
+		if (UnityEngine.Random.Range (0.0f, 1.0f) > .5f) {
+			zVelocity = UnityEngine.Random.Range (1.0f * maxVelocity, 5.0f * maxVelocity);
+		} else {
+			zVelocity = UnityEngine.Random.Range (-5.0f * maxVelocity, -1.0f * maxVelocity);
 		}
-		else{
-			yVelocity = UnityEngine.Random.Range(-5.0f * maxVelocity, -1.0f * maxVelocity);
-		}
-		if(UnityEngine.Random.Range(0.0f, 1.0f) > .5f){
-			zVelocity = UnityEngine.Random.Range(1.0f * maxVelocity, 5.0f * maxVelocity);
-		}
-		else{
-			zVelocity = UnityEngine.Random.Range(-5.0f * maxVelocity, -1.0f * maxVelocity);
-		}
-		currAtom.velocity = new Vector3(xVelocity, yVelocity, zVelocity);
+		currAtom.velocity = new Vector3 (xVelocity, yVelocity, zVelocity);
 	}
 	
-	public static int IntParseFast(string value)
-    {
+	public static int IntParseFast (string value)
+	{
 		// An optimized int parse method.
 		int result = 0;
-		for (int i = 0; i < value.Length; i++)
-		{
-		    result = 10 * result + (value[i] - 48);
+		for (int i = 0; i < value.Length; i++) {
+			result = 10 * result + (value [i] - 48);
 		}
 		return result;
-    }
+	}
 
-	public void BatchCreateAtoms(){
+	public void BatchCreateAtoms ()
+	{
 		//sanity check 
 		//0-20
 		//TODO: detect selected toggle
-		int numToCreate = IntParseFast(numAtomInput.GetComponent<Text>().text);
-		if(numToCreate < 0 || numToCreate > 20)return; //too much
+		int numToCreate = IntParseFast (numAtomInput.GetComponent<Text> ().text);
+		if (numToCreate < 0 || numToCreate > 20)
+			return; //too much
 
-		if(cuBatchToggle.GetComponent<Toggle>().isOn){
-			for(int i=0; i < numToCreate; i++) 
-				CreateEnvironment.myEnvironment.createAtom(copperPrefab);
-		}else if (auBatchToggle.GetComponent<Toggle>().isOn){
-			for(int i=0;i<numToCreate;i++)
-				CreateEnvironment.myEnvironment.createAtom(goldPrefab);
-		}else if (ptBatchToggle.GetComponent<Toggle>().isOn){
-			for(int i=0;i<numToCreate;i++)
-				CreateEnvironment.myEnvironment.createAtom(platinumPrefab);
+		if (cuBatchToggle.GetComponent<Toggle> ().isOn) {
+			for (int i=0; i < numToCreate; i++) 
+				CreateEnvironment.myEnvironment.createAtom (copperPrefab);
+		} else if (auBatchToggle.GetComponent<Toggle> ().isOn) {
+			for (int i=0; i<numToCreate; i++)
+				CreateEnvironment.myEnvironment.createAtom (goldPrefab);
+		} else if (ptBatchToggle.GetComponent<Toggle> ().isOn) {
+			for (int i=0; i<numToCreate; i++)
+				CreateEnvironment.myEnvironment.createAtom (platinumPrefab);
 		}
 	}
 
-	public void BatchRemoveAtoms(){
-		int numToRemove = IntParseFast(numAtomInput.GetComponent<Text>().text);
-		if(numToRemove <= 0)return;
-		if(cuBatchToggle.GetComponent<Toggle>().isOn){
+	public void BatchRemoveAtoms ()
+	{
+		int numToRemove = IntParseFast (numAtomInput.GetComponent<Text> ().text);
+		if (numToRemove <= 0)
+			return;
+		if (cuBatchToggle.GetComponent<Toggle> ().isOn) {
 			//TODO: error notice
-			if(numToRemove > Copper.count)return;
-			for(int i=0; i<Atom.AllAtoms.Count && numToRemove > 0;i++){
-				Atom currAtom = Atom.AllAtoms[i];
-				if(currAtom is Copper){
-					Atom.UnregisterAtom(currAtom);
-					Destroy(currAtom.gameObject);
+			if (numToRemove > Copper.count)
+				return;
+			for (int i=0; i<Atom.AllAtoms.Count && numToRemove > 0; i++) {
+				Atom currAtom = Atom.AllAtoms [i];
+				if (currAtom is Copper) {
+					Atom.UnregisterAtom (currAtom);
+					Destroy (currAtom.gameObject);
 					numToRemove--;
 					Copper.count--;
 				}
 			}
-		}else if (auBatchToggle.GetComponent<Toggle>().isOn){
-			if(numToRemove > Gold.count)return;
-			for(int i=0; i<Atom.AllAtoms.Count && numToRemove > 0;i++){
-				Atom currAtom = Atom.AllAtoms[i];
-				if(currAtom is Gold){
-					Atom.UnregisterAtom(currAtom);
-					Destroy(currAtom.gameObject);
+		} else if (auBatchToggle.GetComponent<Toggle> ().isOn) {
+			if (numToRemove > Gold.count)
+				return;
+			for (int i=0; i<Atom.AllAtoms.Count && numToRemove > 0; i++) {
+				Atom currAtom = Atom.AllAtoms [i];
+				if (currAtom is Gold) {
+					Atom.UnregisterAtom (currAtom);
+					Destroy (currAtom.gameObject);
 					numToRemove--;
 					Gold.count--;
 				}
 			}
 			
-		}else if (ptBatchToggle.GetComponent<Toggle>().isOn){
-			if(numToRemove > Platinum.count)return;
-			for(int i=0; i<Atom.AllAtoms.Count && numToRemove > 0;i++){
-				Atom currAtom = Atom.AllAtoms[i];
-				if(currAtom is Platinum){
-					Atom.UnregisterAtom(currAtom);
-					Destroy(currAtom.gameObject);
+		} else if (ptBatchToggle.GetComponent<Toggle> ().isOn) {
+			if (numToRemove > Platinum.count)
+				return;
+			for (int i=0; i<Atom.AllAtoms.Count && numToRemove > 0; i++) {
+				Atom currAtom = Atom.AllAtoms [i];
+				if (currAtom is Platinum) {
+					Atom.UnregisterAtom (currAtom);
+					Destroy (currAtom.gameObject);
 					numToRemove--;
 					Platinum.count--;
 				}
@@ -322,44 +345,47 @@ public class AtomTouchGUI : MonoBehaviour {
 
 	}
 
-	public void SetAtomBtnsVisibility(){
-		if(Potential.currentPotential == Potential.potentialType.Buckingham){
-			AddCopperBtn.SetActive(false);
-			AddGoldBtn.SetActive(false);
-			AddPlatBtn.SetActive(false);
-			AddSodiumBtn.SetActive(true);
-			AddChlorineBtn.SetActive(true);
-		}else if(Potential.currentPotential == Potential.potentialType.LennardJones){
-			AddCopperBtn.SetActive(true);
-			AddGoldBtn.SetActive(true);
-			AddPlatBtn.SetActive(true);
-			AddSodiumBtn.SetActive(false);
-			AddChlorineBtn.SetActive(false);
+	public void SetAtomBtnsVisibility ()
+	{
+		if (Potential.currentPotential == Potential.potentialType.Buckingham) {
+			AddCopperBtn.SetActive (false);
+			AddGoldBtn.SetActive (false);
+			AddPlatBtn.SetActive (false);
+			AddSodiumBtn.SetActive (true);
+			AddChlorineBtn.SetActive (true);
+		} else if (Potential.currentPotential == Potential.potentialType.LennardJones) {
+			AddCopperBtn.SetActive (true);
+			AddGoldBtn.SetActive (true);
+			AddPlatBtn.SetActive (true);
+			AddSodiumBtn.SetActive (false);
+			AddChlorineBtn.SetActive (false);
 		}
 	}
-	public void TryEnableAddAtomBtns(){
+
+	public void TryEnableAddAtomBtns ()
+	{
 		bool tooMuch = Atom.AllAtoms.Count >= StaticVariables.maxAtoms;
 		
-		AddCopperBtn.GetComponent<Button>().interactable = !tooMuch;
-		AddGoldBtn.GetComponent<Button>().interactable = !tooMuch;
-		AddPlatBtn.GetComponent<Button>().interactable = !tooMuch;
-		AddSodiumBtn.GetComponent<Button>().interactable = !tooMuch;
-		AddChlorineBtn.GetComponent<Button>().interactable = !tooMuch;
+		AddCopperBtn.GetComponent<Button> ().interactable = !tooMuch;
+		AddGoldBtn.GetComponent<Button> ().interactable = !tooMuch;
+		AddPlatBtn.GetComponent<Button> ().interactable = !tooMuch;
+		AddSodiumBtn.GetComponent<Button> ().interactable = !tooMuch;
+		AddChlorineBtn.GetComponent<Button> ().interactable = !tooMuch;
 
-		Text cuText = copperText.GetComponent<Text>();
-		Text auText = goldText.GetComponent<Text>();
-		Text ptText = platText.GetComponent<Text>();
-		Text naText = sodiumText.GetComponent<Text>();
-		Text clText = chlorineText.GetComponent<Text>();
+		Text cuText = copperText.GetComponent<Text> ();
+		Text auText = goldText.GetComponent<Text> ();
+		Text ptText = platText.GetComponent<Text> ();
+		Text naText = sodiumText.GetComponent<Text> ();
+		Text clText = chlorineText.GetComponent<Text> ();
 
-		if(tooMuch){
+		if (tooMuch) {
 			cuText.color = StaticVariables.atomDisabledColor;
 			auText.color = StaticVariables.atomDisabledColor;
 			ptText.color = StaticVariables.atomDisabledColor;
 			naText.color = StaticVariables.atomDisabledColor;
 			clText.color = StaticVariables.atomDisabledColor;
 
-		}else{
+		} else {
 			cuText.color = StaticVariables.atomEnabledColor;
 			auText.color = StaticVariables.atomEnabledColor;
 			ptText.color = StaticVariables.atomEnabledColor;
@@ -368,78 +394,88 @@ public class AtomTouchGUI : MonoBehaviour {
 		}
 			
 	}
-	public void AddPlatinumAtom(){
+
+	public void AddPlatinumAtom ()
+	{
 		
-		if(Input.mousePosition.x < Screen.width && Input.mousePosition.x > 0 && Input.mousePosition.y > 0 && Input.mousePosition.y < Screen.height){
+		if (Input.mousePosition.x < Screen.width && Input.mousePosition.x > 0 && Input.mousePosition.y > 0 && Input.mousePosition.y < Screen.height) {
 			//Vector3 curPosition = new Vector3 (createEnvironment.centerPos.x + (UnityEngine.Random.Range (-(createEnvironment.width / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.width / 2.0f) - createEnvironment.errorBuffer)), createEnvironment.centerPos.y + (UnityEngine.Random.Range (-(createEnvironment.height / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.height / 2.0f) - createEnvironment.errorBuffer)), createEnvironment.centerPos.z + (UnityEngine.Random.Range (-(createEnvironment.depth / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.depth / 2.0f) - createEnvironment.errorBuffer)));
 			CreateEnvironment myEnvironment = CreateEnvironment.myEnvironment;
-			myEnvironment.createAtom(platinumPrefab);
+			myEnvironment.createAtom (platinumPrefab);
 			
 		}
-		TryEnableAddAtomBtns();
+		TryEnableAddAtomBtns ();
 	}
 
-	public void AddGoldAtom(){
+	public void AddGoldAtom ()
+	{
 		
-		if(Input.mousePosition.x < Screen.width && Input.mousePosition.x > 0 && Input.mousePosition.y > 0 && Input.mousePosition.y < Screen.height){
+		if (Input.mousePosition.x < Screen.width && Input.mousePosition.x > 0 && Input.mousePosition.y > 0 && Input.mousePosition.y < Screen.height) {
 			//Vector3 curPosition = new Vector3 (createEnvironment.centerPos.x + (UnityEngine.Random.Range (-(createEnvironment.width / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.width / 2.0f) - createEnvironment.errorBuffer)), createEnvironment.centerPos.y + (UnityEngine.Random.Range (-(createEnvironment.height / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.height / 2.0f) - createEnvironment.errorBuffer)), createEnvironment.centerPos.z + (UnityEngine.Random.Range (-(createEnvironment.depth / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.depth / 2.0f) - createEnvironment.errorBuffer)));
 			CreateEnvironment myEnvironment = CreateEnvironment.myEnvironment;
-			myEnvironment.createAtom(goldPrefab);
+			myEnvironment.createAtom (goldPrefab);
 			
 		}
-		TryEnableAddAtomBtns();
+		TryEnableAddAtomBtns ();
 	}
 
-	public void AddCopperAtom(){
+	public void AddCopperAtom ()
+	{
 		
-		if(Input.mousePosition.x < Screen.width 
+		if (Input.mousePosition.x < Screen.width 
 			&& Input.mousePosition.x > 0 && Input.mousePosition.y > 0 
-			&& Input.mousePosition.y < Screen.height){
+			&& Input.mousePosition.y < Screen.height) {
 			//Vector3 curPosition = new Vector3 (createEnvironment.centerPos.x + (UnityEngine.Random.Range (-(createEnvironment.width / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.width / 2.0f) - createEnvironment.errorBuffer)), createEnvironment.centerPos.y + (UnityEngine.Random.Range (-(createEnvironment.height / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.height / 2.0f) - createEnvironment.errorBuffer)), createEnvironment.centerPos.z + (UnityEngine.Random.Range (-(createEnvironment.depth / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.depth / 2.0f) - createEnvironment.errorBuffer)));
 			CreateEnvironment myEnvironment = CreateEnvironment.myEnvironment;
-			myEnvironment.createAtom(copperPrefab);
+			myEnvironment.createAtom (copperPrefab);
 			
 		}
-		TryEnableAddAtomBtns();
+		TryEnableAddAtomBtns ();
 
 	}
-	public void AddSodiumAtom(){
+
+	public void AddSodiumAtom ()
+	{
 		
-		if(Input.mousePosition.x < Screen.width 
+		if (Input.mousePosition.x < Screen.width 
 			&& Input.mousePosition.x > 0 && Input.mousePosition.y > 0 
-			&& Input.mousePosition.y < Screen.height){
+			&& Input.mousePosition.y < Screen.height) {
 			//Vector3 curPosition = new Vector3 (createEnvironment.centerPos.x + (UnityEngine.Random.Range (-(createEnvironment.width / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.width / 2.0f) - createEnvironment.errorBuffer)), createEnvironment.centerPos.y + (UnityEngine.Random.Range (-(createEnvironment.height / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.height / 2.0f) - createEnvironment.errorBuffer)), createEnvironment.centerPos.z + (UnityEngine.Random.Range (-(createEnvironment.depth / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.depth / 2.0f) - createEnvironment.errorBuffer)));
 			CreateEnvironment myEnvironment = CreateEnvironment.myEnvironment;
-			myEnvironment.createAtom(sodiumPrefab);
+			myEnvironment.createAtom (sodiumPrefab);
 			
 		}
-		TryEnableAddAtomBtns();
+		TryEnableAddAtomBtns ();
 
 	}
-	public void AddChlorineAtom(){
+
+	public void AddChlorineAtom ()
+	{
 		
-		if(Input.mousePosition.x < Screen.width 
+		if (Input.mousePosition.x < Screen.width 
 			&& Input.mousePosition.x > 0 && Input.mousePosition.y > 0 
-			&& Input.mousePosition.y < Screen.height){
+			&& Input.mousePosition.y < Screen.height) {
 			//Vector3 curPosition = new Vector3 (createEnvironment.centerPos.x + (UnityEngine.Random.Range (-(createEnvironment.width / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.width / 2.0f) - createEnvironment.errorBuffer)), createEnvironment.centerPos.y + (UnityEngine.Random.Range (-(createEnvironment.height / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.height / 2.0f) - createEnvironment.errorBuffer)), createEnvironment.centerPos.z + (UnityEngine.Random.Range (-(createEnvironment.depth / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.depth / 2.0f) - createEnvironment.errorBuffer)));
 			CreateEnvironment myEnvironment = CreateEnvironment.myEnvironment;
-			myEnvironment.createAtom(chlorinePrefab);
+			myEnvironment.createAtom (chlorinePrefab);
 			
 		}
-		TryEnableAddAtomBtns();
+		TryEnableAddAtomBtns ();
 
 	}
-	public void ResetAll(){
+
+	public void ResetAll ()
+	{
 		
 		CreateEnvironment myEnvironment = CreateEnvironment.myEnvironment;
 		myEnvironment.InitAtoms ();
-		Atom.EnableSelectAtomGroup(false);
+		Atom.EnableSelectAtomGroup (false);
 		//reset temp and vol
 		tempSliderComponent.value = StaticVariables.tempRangeHigh - StaticVariables.tempDefault;
 		volSliderComponent.value = StaticVariables.volRangeHigh - StaticVariables.volDefault;
 
-		SnapTempToInterval(10.0f);
-		SnapVolumeToInterval(0.5f);
+		SnapTempToInterval (10.0f);
+		SnapVolumeToInterval (0.5f);
 
 		//ChangeTimeScaleWithTemperature(oldTemperaure);
 		
@@ -447,23 +483,24 @@ public class AtomTouchGUI : MonoBehaviour {
 		changingTemp = false;
 		//SettingsControl.renderAtoms = true;
 	}
-	
 
-	public void SnapTempToInterval(float stepSize){
+	public void SnapTempToInterval (float stepSize)
+	{
 		changingTemp = true;
 		float rawVal = tempSliderComponent.value;
-		float floor = Mathf.Floor(rawVal / stepSize);
-		if(!Mathf.Approximately(rawVal / stepSize, floor))
+		float floor = Mathf.Floor (rawVal / stepSize);
+		if (!Mathf.Approximately (rawVal / stepSize, floor))
 			tempSliderComponent.value = floor * stepSize + stepSize;
 
 	}
 	//for volume slider
 	//range: 1.5 - 4.5 nm 
 	//step size: 0.5
-	public void SnapVolumeToInterval(float stepSize){
+	public void SnapVolumeToInterval (float stepSize)
+	{
 		float rawVal = volSliderComponent.value;
-		float floor = Mathf.Floor(rawVal / stepSize);
-		if(!Mathf.Approximately(rawVal / stepSize, floor))
+		float floor = Mathf.Floor (rawVal / stepSize);
+		if (!Mathf.Approximately (rawVal / stepSize, floor))
 			volSliderComponent.value = floor * stepSize + stepSize;
 
 	}
@@ -480,9 +517,10 @@ public class AtomTouchGUI : MonoBehaviour {
 	}
 	*/
 	//when clicking on timer
-	public void changeTimer(){
-		RawImage ri = timer.GetComponent<RawImage>();
-		if(currentTimeSpeed == StaticVariables.TimeSpeed.Normal){
+	public void changeTimer ()
+	{
+		RawImage ri = timer.GetComponent<RawImage> ();
+		if (currentTimeSpeed == StaticVariables.TimeSpeed.Normal) {
 			currentTimeSpeed = StaticVariables.TimeSpeed.Stopped;
 			StaticVariables.pauseTime = true;
 			StaticVariables.MDTimestep = StaticVariables.MDTimestepStop;
@@ -491,8 +529,7 @@ public class AtomTouchGUI : MonoBehaviour {
 
 			ri.texture = stoppedTimeButton;
 
-		}
-		else if(currentTimeSpeed == StaticVariables.TimeSpeed.Stopped){
+		} else if (currentTimeSpeed == StaticVariables.TimeSpeed.Stopped) {
 			currentTimeSpeed = StaticVariables.TimeSpeed.SlowMotion;
 
 			StaticVariables.MDTimestep = StaticVariables.MDTimestepSlow;
@@ -501,8 +538,7 @@ public class AtomTouchGUI : MonoBehaviour {
 			StaticVariables.pauseTime = false;
 
 			ri.texture = slowTimeButton;
-		}
-		else if(currentTimeSpeed == StaticVariables.TimeSpeed.SlowMotion){
+		} else if (currentTimeSpeed == StaticVariables.TimeSpeed.SlowMotion) {
 			currentTimeSpeed = StaticVariables.TimeSpeed.Normal;
 
 			StaticVariables.MDTimestep = StaticVariables.MDTimestepNormal;
@@ -512,105 +548,102 @@ public class AtomTouchGUI : MonoBehaviour {
 			ri.texture = normalTimeButton;
 		}	
 	}
-
-
 	
-	
-	public void resetCamera(){
-		Camera.main.transform.position = new Vector3(0.0f, 0.0f, -40.0f);
-		Camera.main.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+	public void resetCamera ()
+	{
+		Camera.main.transform.position = new Vector3 (0.0f, 0.0f, -40.0f);
+		Camera.main.transform.rotation = Quaternion.Euler (0.0f, 0.0f, 0.0f);
 	}
 
-	public void ToggleSelectAll() {
-		if(NumberofAtom.selectedAtoms == Atom.AllAtoms.Count){
-			DeselectAllAtoms();
-		}else{
-			SelectAllAtoms();
+	public void ToggleSelectAll ()
+	{
+		if (NumberofAtom.selectedAtoms == Atom.AllAtoms.Count) {
+			DeselectAllAtoms ();
+		} else {
+			SelectAllAtoms ();
 		}
 		
 
 	}
 
-	public void deselectAll(){
+	public void deselectAll ()
+	{
 		DeselectAllAtoms ();
 	}
-	public void ChangeAtomVolume(){
+
+	public void ChangeAtomVolume ()
+	{
 		
 		CreateEnvironment createEnvironment = CreateEnvironment.myEnvironment;
 		//these are in angstroms
 		float offset = StaticVariables.maxVol + StaticVariables.minVol;
-		createEnvironment.width = Math.Abs(offset -volSliderComponent.value*10.0f);
-		createEnvironment.height = Math.Abs(offset -volSliderComponent.value*10.0f);
-		createEnvironment.depth = Math.Abs(offset - volSliderComponent.value*10.0f);
+		createEnvironment.width = Math.Abs (offset - volSliderComponent.value * 10.0f);
+		createEnvironment.height = Math.Abs (offset - volSliderComponent.value * 10.0f);
+		createEnvironment.depth = Math.Abs (offset - volSliderComponent.value * 10.0f);
 		createEnvironment.volume = 
-			createEnvironment.width*
-			createEnvironment.height*
+			createEnvironment.width *
+			createEnvironment.height *
 			createEnvironment.depth; //to nm^3
 		//since slider is upside down...
 		float realVol = createEnvironment.width * 0.1f;
 
-		ChangePlaneMaterial(realVol);
+		ChangePlaneMaterial (realVol);
 		changingVol = true;
 	}
 
-	public void ChangePlaneMaterial(float realVol){
+	public void ChangePlaneMaterial (float realVol)
+	{
 
-		MeshRenderer topMesh = CreateEnvironment.topPlane.GetComponent<MeshRenderer>();
-		MeshRenderer backMesh = CreateEnvironment.backPlane.GetComponent<MeshRenderer>();
-		MeshRenderer frontMesh = CreateEnvironment.frontPlane.GetComponent<MeshRenderer>();
-		MeshRenderer leftMesh = CreateEnvironment.leftPlane.GetComponent<MeshRenderer>();
-		MeshRenderer rightMesh = CreateEnvironment.rightPlane.GetComponent<MeshRenderer>();
-		MeshRenderer bottomMesh = CreateEnvironment.bottomPlane.GetComponent<MeshRenderer>();
+		MeshRenderer topMesh = CreateEnvironment.topPlane.GetComponent<MeshRenderer> ();
+		MeshRenderer backMesh = CreateEnvironment.backPlane.GetComponent<MeshRenderer> ();
+		MeshRenderer frontMesh = CreateEnvironment.frontPlane.GetComponent<MeshRenderer> ();
+		MeshRenderer leftMesh = CreateEnvironment.leftPlane.GetComponent<MeshRenderer> ();
+		MeshRenderer rightMesh = CreateEnvironment.rightPlane.GetComponent<MeshRenderer> ();
+		MeshRenderer bottomMesh = CreateEnvironment.bottomPlane.GetComponent<MeshRenderer> ();
 
-		if(Mathf.Approximately(realVol, 1.0f)){
+		if (Mathf.Approximately (realVol, 1.0f)) {
 			topMesh.material = matPlane1;
 			backMesh.material = matPlane1;
 			frontMesh.material = matPlane1;
 			leftMesh.material = matPlane1;
 			rightMesh.material = matPlane1;
 			bottomMesh.material = matPlane1;
-		}
-		else if(Mathf.Approximately(realVol, 1.5f)){
+		} else if (Mathf.Approximately (realVol, 1.5f)) {
 			topMesh.material = matPlane1_5;
 			backMesh.material = matPlane1_5;
 			frontMesh.material = matPlane1_5;
 			leftMesh.material = matPlane1_5;
 			rightMesh.material = matPlane1_5;
 			bottomMesh.material = matPlane1_5;
-		}
-		else if(Mathf.Approximately(realVol,2.0f)){
+		} else if (Mathf.Approximately (realVol, 2.0f)) {
 			topMesh.material = matPlane2;
 			backMesh.material = matPlane2;
 			frontMesh.material = matPlane2;
 			leftMesh.material = matPlane2;
 			rightMesh.material = matPlane2;
 			bottomMesh.material = matPlane2;
-		}
-		else if(Mathf.Approximately(realVol,2.5f)){
+		} else if (Mathf.Approximately (realVol, 2.5f)) {
 			topMesh.material = matPlane2_5;
 			backMesh.material = matPlane2_5;
 			frontMesh.material = matPlane2_5;
 			leftMesh.material = matPlane2_5;
 			rightMesh.material = matPlane2_5;
 			bottomMesh.material = matPlane2_5;
-		}
-		else if(Mathf.Approximately(realVol,3.0f)){
+		} else if (Mathf.Approximately (realVol, 3.0f)) {
 			topMesh.material = matPlane3;
 			backMesh.material = matPlane3;
 			frontMesh.material = matPlane3;
 			leftMesh.material = matPlane3;
 			rightMesh.material = matPlane3;
 			bottomMesh.material = matPlane3;
-		}
-		else if(Mathf.Approximately(realVol,3.5f)){
+		} else if (Mathf.Approximately (realVol, 3.5f)) {
 			topMesh.material = matPlane3_5;
 			backMesh.material = matPlane3_5;
 			frontMesh.material = matPlane3_5;
 			leftMesh.material = matPlane3_5;
 			rightMesh.material = matPlane3_5;
 			bottomMesh.material = matPlane3_5;
-		}
-		else if(Mathf.Approximately(realVol,4.0f)){
+		} else if (Mathf.Approximately (realVol, 4.0f)) {
 			topMesh.material = matPlane4;
 			backMesh.material = matPlane4;
 			frontMesh.material = matPlane4;
@@ -621,32 +654,36 @@ public class AtomTouchGUI : MonoBehaviour {
 	}
 	//check if all of the atoms are static
 	
-	public bool CheckAllAtomsStatic(){
-		for(int i=0;i<Atom.AllAtoms.Count;i++){
-			Atom currentAtom = Atom.AllAtoms[i];
-			Vector3 atomVel = currentAtom.GetComponent<Rigidbody>().velocity;
-			float diff = Vector3.Distance(atomVel, Vector3.zero);
-			if(!Mathf.Approximately(diff, 0.0f)){
+	public bool CheckAllAtomsStatic ()
+	{
+		for (int i=0; i<Atom.AllAtoms.Count; i++) {
+			Atom currentAtom = Atom.AllAtoms [i];
+			Vector3 atomVel = currentAtom.GetComponent<Rigidbody> ().velocity;
+			float diff = Vector3.Distance (atomVel, Vector3.zero);
+			if (!Mathf.Approximately (diff, 0.0f)) {
 				return false;
 			}
 		}
 		return true;
 	}
 	
-	public void ChangeTimeScaleWithTemperature(float oldTemp){
-		if(Potential.currentPotential == Potential.potentialType.LennardJones){
+	public void ChangeTimeScaleWithTemperature (float oldTemp)
+	{
+		if (Potential.currentPotential == Potential.potentialType.LennardJones) {
 
-			float ratio = (StaticVariables.maxTimeScale-StaticVariables.baseTimeScale)
-						/(StaticVariables.maxTemp - StaticVariables.defaultTemp);
+			float ratio = (StaticVariables.maxTimeScale - StaticVariables.baseTimeScale)
+				/ (StaticVariables.maxTemp - StaticVariables.defaultTemp);
 			float tempChange = StaticVariables.desiredTemperature - StaticVariables.defaultTemp;
-			if(tempChange < 0)return;
+			if (tempChange < 0)
+				return;
 			Time.timeScale = StaticVariables.baseTimeScale + ratio * tempChange;
 
-		}else if(Potential.currentPotential == Potential.potentialType.Buckingham){
-			float ratio = (StaticVariables.maxTimeScaleBuck-StaticVariables.baseTimeScaleBuck)
-						/(StaticVariables.maxTemp - StaticVariables.defaultTemp);
+		} else if (Potential.currentPotential == Potential.potentialType.Buckingham) {
+			float ratio = (StaticVariables.maxTimeScaleBuck - StaticVariables.baseTimeScaleBuck)
+				/ (StaticVariables.maxTemp - StaticVariables.defaultTemp);
 			float tempChange = StaticVariables.desiredTemperature - StaticVariables.defaultTemp;
-			if(tempChange < 0)return;
+			if (tempChange < 0)
+				return;
 			Time.timeScale = StaticVariables.baseTimeScaleBuck + ratio * tempChange;
 		}
 		
@@ -663,29 +700,96 @@ public class AtomTouchGUI : MonoBehaviour {
 	//base Normal timeScale = 1.0f
 	//timeScale = baseTimeScale + (maxTimeScale-baseTimeScale)/(maxTemp-minTemp) * (desiredTemp-currTemp)
 	
-	public void ChangeAtomTemperature(){
+	public void ChangeAtomTemperature ()
+	{
+
+
 		oldTemperaure = StaticVariables.desiredTemperature;
 		StaticVariables.desiredTemperature 
-		= Math.Abs(StaticVariables.maxTemp - tempSliderComponent.value)*StaticVariables.tempScaler;
-		ChangeTimeScaleWithTemperature(oldTemperaure);
+			= Math.Abs (tempSliderComponent.value) * StaticVariables.tempScaler;
+		ChangeTimeScaleWithTemperature (oldTemperaure);
 		//Debug.Log("temp changing");
-		if(oldTemperaure < 0){
+		if (oldTemperaure < 0) {
 			return;
-		}else if(Mathf.Approximately(oldTemperaure, 0.0f)){
+		} else if (Mathf.Approximately (oldTemperaure, 0.0f)) {
 			//if all atoms are static, kick all
-			if(CheckAllAtomsStatic()){
-				AllAtomsKick();
+			if (CheckAllAtomsStatic ()) {
+				AllAtomsKick ();
 			}
 		}
 		changingTemp = true;
-		
+
 	}
-	public void OnPointerUp_TempSlider(){
+
+	public void OnPointerUp_TempSlider ()
+	{
 		changingTemp = false;
 	}
-	public void OnPointerUp_VolSlider(){
-		changingVol= false;
+
+	public void OnPointerUp_VolSlider ()
+	{
+		changingVol = false;
 	}
 
+	public void Credits ()
+	{
+		Debug.Log ("Credits Button Pressed");
+	}
 
+	public void FreePlay ()
+	{
+		MainMenuClose ();
+	}
+
+	public void ReplayVideo ()
+	{
+		Debug.Log ("ReplayVideo Button Pressed");
+	}
+
+	private void MainMenuInit ()
+	{
+		mainMenu.Init (this);
+	}
+
+	private void LevelsInit ()
+	{
+		levels.Init (this);
+	}
+
+	public void MainMenuOpen ()
+	{
+		mainMenuGameObject.SetActive (true);
+	}
+
+	public void MainMenuClose ()
+	{
+		mainMenuGameObject.SetActive (false);
+	}
+
+	public void LevelsOpen ()
+	{
+		MainMenuClose (); // move to more realistic spot
+		levelsGameObject.SetActive (true);
+	}
+
+	public void LevelsClose ()
+	{
+		levelsGameObject.SetActive (false);
+	}
+
+	public void LevelGuideOpen ()
+	{
+		levelGuideGameObject.SetActive (true);
+	}
+
+	public void LevelGuideClose ()
+	{
+		levelGuideGameObject.SetActive (false);
+	}
+
+	public void CameraScriptOn (bool toggle)
+	{
+		cameraScript.enabled = toggle;
+	}
+	
 }
