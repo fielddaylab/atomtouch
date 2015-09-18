@@ -224,7 +224,7 @@ MonoBehaviour:
   Panel: {fileID: 171000}
   levelsButton: {fileID: 11476774}
   creditsButton: {fileID: 11415738}
-  freePlayButton: {fileID: 0}
+  freePlayButton: {fileID: 11451292}
   ReplayVideoButton: {fileID: 11490078}
 --- !u!114 &11410754
 MonoBehaviour:

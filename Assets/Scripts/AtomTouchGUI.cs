@@ -100,19 +100,15 @@ public class AtomTouchGUI : MonoBehaviour
 	public Texture slowTimeButton;
 	public Texture stoppedTimeButton;
 	[HideInInspector]
-	public bool
-		changingTemp = false;
+	public bool changingTemp = false;
 	[HideInInspector]
-	public bool
-		changingVol = false;
+	public bool changingVol = false;
 	public EventSystem eventSystem;
 	public static StaticVariables.TimeSpeed currentTimeSpeed = StaticVariables.TimeSpeed.Stopped;
 	[HideInInspector]
-	public Slider
-		tempSliderComponent;
+	public Slider tempSliderComponent;
 	[HideInInspector]
-	public Slider
-		volSliderComponent;
+	public Slider volSliderComponent;
 	[HideInInspector]
 	public static AtomTouchGUI
 		myAtomTouchGUI;
