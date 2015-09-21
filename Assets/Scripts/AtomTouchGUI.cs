@@ -35,11 +35,13 @@ public class AtomTouchGUI : MonoBehaviour
 	public CameraScript cameraScript;
 
 	//UI Panels Scripts
+	public IntroVideoController introVideoController;
 	public MainMenuPanel mainMenu;
 	public LevelsPanel levels;
 	public LevelGuide levelGuide;
 
 	//UI Panels GameObject
+	public GameObject introVideoGameObject;
 	public GameObject mainMenuGameObject;
 	public GameObject levelsGameObject;
 	public GameObject levelGuideGameObject;
@@ -781,6 +783,17 @@ public class AtomTouchGUI : MonoBehaviour
 	public void LevelGuideClose ()
 	{
 		levelGuideGameObject.SetActive (false);
+	}
+
+	public void IntroVideoOpen ()
+	{
+		introVideoGameObject.SetActive (true);
+		introVideoController.introVideo.Play ();
+	}
+
+	public void IntroVideoClose ()
+	{
+		introVideoGameObject.SetActive (false);
 	}
 
 	public void CameraScriptOn (bool toggle)
