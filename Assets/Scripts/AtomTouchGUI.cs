@@ -45,6 +45,8 @@ public class AtomTouchGUI : MonoBehaviour
 	public GameObject mainMenuGameObject;
 	public GameObject levelsGameObject;
 	public GameObject levelGuideGameObject;
+	public GameObject creditsGameObject;
+
 	private float oldTemperaure = -1;
 	//plane materials
 	public Material matPlane1;
@@ -139,11 +141,23 @@ public class AtomTouchGUI : MonoBehaviour
 		MainMenuInit ();
 		LevelsInit ();
 	}
+
+	void Update ()
+
+	{
+		if (CountSelectedAtoms () > 0) {
+			//change delete to delete selected
+			//change selected number
+		} else {
+			//change delete selected to delete
+			// change selected to none selected
+		}
+	}
 	
 
 	
 	//this function selects all of the atoms in the scene
-	void SelectAllAtoms ()
+	public void SelectAllAtoms ()
 	{
 		for (int i = 0; i < Atom.AllAtoms.Count; i++) {
 			Atom currAtom = Atom.AllAtoms [i];
@@ -151,9 +165,9 @@ public class AtomTouchGUI : MonoBehaviour
 			currAtom.SetSelected (true);
 		}
 	}
-	
+
 	//this function deselects all of the atoms in the scene
-	void DeselectAllAtoms ()
+    public void DeselectAllAtoms ()
 	{
 		for (int i = 0; i < Atom.AllAtoms.Count; i++) {
 			Atom currAtom = Atom.AllAtoms [i];
@@ -552,7 +566,7 @@ public class AtomTouchGUI : MonoBehaviour
 		Camera.main.transform.position = new Vector3 (0.0f, 0.0f, -40.0f);
 		Camera.main.transform.rotation = Quaternion.Euler (0.0f, 0.0f, 0.0f);
 	}
-
+	/*
 	public void ToggleSelectAll ()
 	{
 		if (NumberofAtom.selectedAtoms == Atom.AllAtoms.Count) {
@@ -568,7 +582,7 @@ public class AtomTouchGUI : MonoBehaviour
 	{
 		DeselectAllAtoms ();
 	}
-
+	*/
 	public void ChangeAtomVolume ()
 	{
 		
@@ -729,39 +743,43 @@ public class AtomTouchGUI : MonoBehaviour
 		changingVol = false;
 	}
 
-	public void Credits ()
-	{
-		Debug.Log ("Credits Button Pressed");
-	}
 
-	public void FreePlay ()
-	{
-		MainMenuClose ();
-	}
-
-	public void ReplayVideo ()
-	{
-		Debug.Log ("ReplayVideo Button Pressed");
-	}
-
+	//initialize UI Objects
 	private void MainMenuInit ()
 	{
 		mainMenu.Init (this);
 	}
-
+	
 	private void LevelsInit ()
 	{
 		levels.Init (this);
 	}
-
+	
 	public void MainMenuOpen ()
 	{
 		mainMenuGameObject.SetActive (true);
 	}
 
+
+	//UI GameObject Controllers
 	public void MainMenuClose ()
 	{
 		mainMenuGameObject.SetActive (false);
+	}
+
+	public void CreditsOpen ()
+	{
+		creditsGameObject.SetActive (true);
+	}
+
+	public void CreditsClose () 
+	{
+		creditsGameObject.SetActive (false);
+	}
+
+	public void FreePlayOpen ()
+	{
+		MainMenuClose ();
 	}
 
 	public void LevelsOpen ()
@@ -769,7 +787,7 @@ public class AtomTouchGUI : MonoBehaviour
 		MainMenuClose (); // move to more realistic spot
 		levelsGameObject.SetActive (true);
 	}
-
+	
 	public void LevelsClose ()
 	{
 		levelsGameObject.SetActive (false);
@@ -779,26 +797,29 @@ public class AtomTouchGUI : MonoBehaviour
 	{
 		levelGuideGameObject.SetActive (true);
 	}
-
+	
 	public void LevelGuideClose ()
 	{
 		levelGuideGameObject.SetActive (false);
 	}
-
+	
 	public void IntroVideoOpen ()
 	{
 		introVideoGameObject.SetActive (true);
 		introVideoController.introVideo.Play ();
 	}
-
+	
 	public void IntroVideoClose ()
 	{
 		introVideoGameObject.SetActive (false);
 	}
 
+
+	// bug fix for camera working past UI elements
 	public void CameraScriptOn (bool toggle)
 	{
 		cameraScript.enabled = toggle;
 	}
+
 	
 }

@@ -14,8 +14,8 @@ public class MainMenuPanel : MonoBehaviour
 	public void Init (AtomTouchGUI controler)
 	{
 		levelsButton.onClick.AddListener (controler.LevelsOpen);
-		creditsButton.onClick.AddListener (controler.Credits);
-		freePlayButton.onClick.AddListener (controler.FreePlay);
-		ReplayVideoButton.onClick.AddListener (controler.ReplayVideo);
+		creditsButton.onClick.AddListener (controler.CreditsOpen);
+		freePlayButton.onClick.AddListener (controler.FreePlayOpen);
+		ReplayVideoButton.onClick.AddListener (controler.IntroVideoOpen);
 	}
 }

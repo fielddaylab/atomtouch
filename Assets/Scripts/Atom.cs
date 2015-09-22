@@ -247,7 +247,8 @@ public abstract class Atom : MonoBehaviour
 	}
 
 	public void ShowHelpTip(){
-		StartCoroutine(Tooltip.self.Fade());
+//commented out for new UI
+		//StartCoroutine(Tooltip.self.Fade());
 	}
 	//this function gives the user the ability to control the z-axis of the atom on iOS
 	void HandleZAxisTouch(){

@@ -199,14 +199,14 @@ public class SettingsControl : MonoBehaviour {
 				simTypeChanged = true;
 			}
 			currentPotentialType = Potential.potentialType.LennardJones;
-			Debug.Log("changeing to LennardJones");
+			Debug.Log("changing to LennardJones");
 		}else if(buckinghamOn.GetComponent<Toggle>().isOn){
 			Potential.currentPotential = Potential.potentialType.Buckingham;
 			if(currentPotentialType != Potential.potentialType.Buckingham){
 				simTypeChanged = true;
 			}
 			currentPotentialType = Potential.potentialType.Buckingham;
-			Debug.Log("changeing to buckingham");
+			Debug.Log("changing to buckingham");
 		}
 		atomTouchGUI.SetAtomBtnsVisibility();
 	}
