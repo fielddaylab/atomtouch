@@ -814,6 +814,13 @@ public class AtomTouchGUI : MonoBehaviour
 		introVideoGameObject.SetActive (false);
 	}
 
+	public void CloseAllExMain() 
+	{
+		LevelsClose ();
+		LevelGuideClose ();
+		CreditsClose ();
+	}
+
 
 	// bug fix for camera working past UI elements
 	public void CameraScriptOn (bool toggle)

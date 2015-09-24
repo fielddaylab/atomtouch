@@ -37,6 +37,7 @@ public class CameraScript : MonoBehaviour {
 	}
 	void Start(){
 	}
+	
 	void OnPreRender(){
 		RenderSettings.fog = false;
 	}
@@ -68,6 +69,7 @@ public class CameraScript : MonoBehaviour {
 	//this function handles the rotation of the camera
 	void Update () {
 		if(SettingsControl.GamePaused){
+			Debug.Log ("game paused");
 			return;
 		}
 		//Debug.Log("resumed");

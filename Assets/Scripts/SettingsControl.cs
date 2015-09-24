@@ -9,6 +9,7 @@ public class SettingsControl : MonoBehaviour {
 	public GameObject settingsCanvas;
 	public GameObject settingsPanel;
 	public GameObject hudCanvas;
+	public HUD hud;
 	public GameObject settingsButton;
 	public GameObject bondLineOn;
 	public GameObject lenJonesOn;
@@ -199,6 +200,7 @@ public class SettingsControl : MonoBehaviour {
 				simTypeChanged = true;
 			}
 			currentPotentialType = Potential.potentialType.LennardJones;
+			hud.ChangeHUDtoLenardJones();
 			Debug.Log("changing to LennardJones");
 		}else if(buckinghamOn.GetComponent<Toggle>().isOn){
 			Potential.currentPotential = Potential.potentialType.Buckingham;
@@ -206,9 +208,10 @@ public class SettingsControl : MonoBehaviour {
 				simTypeChanged = true;
 			}
 			currentPotentialType = Potential.potentialType.Buckingham;
+			hud.ChangeHUDtoBuckingham();
 			Debug.Log("changing to buckingham");
 		}
-		atomTouchGUI.SetAtomBtnsVisibility();
+		//atomTouchGUI.SetAtomBtnsVisibility();
 	}
 	/*
 	public void OpenScreenLoader(){

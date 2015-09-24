@@ -18,6 +18,9 @@ public class IntroVideoController : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Space) && introVideo.isPlaying) {
 			introVideo.Stop();
+
+		}
+		if (!introVideo.isPlaying) {
 			controller.IntroVideoClose();
 		}
 	}
