@@ -8,20 +8,27 @@ public class IntroVideoController : MonoBehaviour {
 	public MovieTexture introVideo;
 	
 
-	// Use this for initialization
+
 	void Start () {
 		GetComponent<RawImage> ().texture = introVideo as MovieTexture;
 		introVideo.Play ();
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Space) && introVideo.isPlaying) {
 			introVideo.Stop();
 
 		}
+
 		if (!introVideo.isPlaying) {
 			controller.IntroVideoClose();
 		}
+	}
+
+	public void ScreenTouched() 
+	{
+		introVideo.Stop();
+		controller.IntroVideoClose();
 	}
 }

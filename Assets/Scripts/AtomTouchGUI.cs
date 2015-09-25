@@ -785,6 +785,7 @@ public class AtomTouchGUI : MonoBehaviour
 	public void LevelsOpen ()
 	{
 		MainMenuClose (); // move to more realistic spot
+		CameraScriptOn (false);
 		levelsGameObject.SetActive (true);
 	}
 	

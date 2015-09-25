@@ -30,6 +30,8 @@ public class LevelStates : MonoBehaviour
 	{
 		controller.LevelsClose ();
 		controller.CameraScriptOn (true);
+		levelGuide.SetLevelGuide (2, 0);
+		controller.LevelGuideOpen ();
 		Debug.Log ("Level three started");
 	}
 
@@ -37,6 +39,8 @@ public class LevelStates : MonoBehaviour
 	{
 		controller.LevelsClose ();
 		controller.CameraScriptOn (true);
+		levelGuide.SetLevelGuide (3, 0);
+		controller.LevelGuideOpen ();
 		Debug.Log ("Level four started");
 	}
 
@@ -44,6 +48,35 @@ public class LevelStates : MonoBehaviour
 	{
 		controller.LevelsClose ();
 		controller.CameraScriptOn (true);
+		levelGuide.SetLevelGuide (4, 0);
+		controller.LevelGuideOpen ();
 		Debug.Log ("Level five started");
+	}
+
+	public void Level06 ()
+	{
+		controller.LevelsClose ();
+		controller.CameraScriptOn (true);
+		levelGuide.SetLevelGuide (5, 0);
+		controller.LevelGuideOpen ();
+		Debug.Log ("Level six started");
+	}
+
+	public void Level07 ()
+	{
+		controller.LevelsClose ();
+		controller.CameraScriptOn (true);
+		levelGuide.SetLevelGuide (6, 0);
+		controller.LevelGuideOpen ();
+		Debug.Log ("Level seven started");
+	}
+
+	public void Level08 ()
+	{
+		controller.LevelsClose ();
+		controller.CameraScriptOn (true);
+		levelGuide.SetLevelGuide (7, 0);
+		controller.LevelGuideOpen ();
+		Debug.Log ("Level eight started");
 	}
 }
