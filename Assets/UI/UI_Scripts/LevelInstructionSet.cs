@@ -17,6 +17,7 @@ public class LevelInstructionSet : MonoBehaviour {
 		public string heading;
 		[Multiline]
 		public string instruction;
+		public GameObject gameObject;
 	}
 	
 	

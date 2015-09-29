@@ -46,6 +46,7 @@ public class AtomTouchGUI : MonoBehaviour
 	public GameObject levelsGameObject;
 	public GameObject levelGuideGameObject;
 	public GameObject creditsGameObject;
+	public GameObject mainMenuAnimation;
 
 	private float oldTemperaure = -1;
 	//plane materials
@@ -137,7 +138,8 @@ public class AtomTouchGUI : MonoBehaviour
 	}
 
 	void Start ()
-	{
+	{	
+		Handheld.PlayFullScreenMovie ("AtomTouchIntro.mp4", Color.black, FullScreenMovieControlMode.CancelOnInput);
 		MainMenuInit ();
 		LevelsInit ();
 	}
@@ -758,6 +760,7 @@ public class AtomTouchGUI : MonoBehaviour
 	public void MainMenuOpen ()
 	{
 		mainMenuGameObject.SetActive (true);
+		mainMenuAnimation.SetActive (true);
 	}
 
 
@@ -770,16 +773,19 @@ public class AtomTouchGUI : MonoBehaviour
 	public void CreditsOpen ()
 	{
 		creditsGameObject.SetActive (true);
+		MainMenuClose ();
 	}
 
 	public void CreditsClose () 
 	{
 		creditsGameObject.SetActive (false);
+		MainMenuOpen ();
 	}
 
 	public void FreePlayOpen ()
 	{
 		MainMenuClose ();
+		mainMenuAnimation.SetActive (false);
 	}
 
 	public void LevelsOpen ()
@@ -787,16 +793,19 @@ public class AtomTouchGUI : MonoBehaviour
 		MainMenuClose (); // move to more realistic spot
 		CameraScriptOn (false);
 		levelsGameObject.SetActive (true);
+		mainMenuAnimation.SetActive (true);
 	}
 	
 	public void LevelsClose ()
 	{
 		levelsGameObject.SetActive (false);
+		mainMenuAnimation.SetActive (false);
 	}
 
 	public void LevelGuideOpen ()
 	{
 		levelGuideGameObject.SetActive (true);
+
 	}
 	
 	public void LevelGuideClose ()
@@ -807,17 +816,19 @@ public class AtomTouchGUI : MonoBehaviour
 	public void IntroVideoOpen ()
 	{
 		introVideoGameObject.SetActive (true);
+		MainMenuClose ();
 		introVideoController.introVideo.Play ();
 	}
 	
 	public void IntroVideoClose ()
 	{
 		introVideoGameObject.SetActive (false);
+		MainMenuOpen ();
 	}
 
 	public void CloseAllExMain() 
 	{
-		LevelsClose ();
+		//LevelsClose ();
 		LevelGuideClose ();
 		CreditsClose ();
 	}
