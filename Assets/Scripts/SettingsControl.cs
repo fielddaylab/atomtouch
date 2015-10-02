@@ -62,8 +62,8 @@ public class SettingsControl : MonoBehaviour {
 	
 	public void ResumeGame(){
 		//Debug.Log("mio");
-		settingsCanvas.SetActive(false);
-		hudCanvas.SetActive(true);
+		//settingsCanvas.SetActive(false);
+		//hudCanvas.SetActive(true);
 		//resume
 		//Time.timeScale = 1.0f;
 		atomTouchGUI.ChangeAtomTemperature();
@@ -71,7 +71,7 @@ public class SettingsControl : MonoBehaviour {
 		atomTouchGUI.changingVol = false;
 		//if sim type is changed, reset
 		if(simTypeChanged){
-			CreateEnvironment.myEnvironment.preCompute();
+			//CreateEnvironment.myEnvironment.preCompute();
 			//CreateEnvironment.myEnvironment.InitAtoms();
 			atomTouchGUI.ResetAll();
 			simTypeChanged = false;
@@ -82,8 +82,8 @@ public class SettingsControl : MonoBehaviour {
 
 	public void PauseGame(){
 		gamePaused = true;
-		settingsCanvas.SetActive(true);
-		hudCanvas.SetActive(false);
+		//settingsCanvas.SetActive(true);
+		//hudCanvas.SetActive(false);
 		//pause
 		Time.timeScale = 0.0f;
 	}
@@ -92,7 +92,7 @@ public class SettingsControl : MonoBehaviour {
 
 	public void OnClick_SettingsButton(){
 		PauseGame();
-		sceneLoader.SetActive(false);
+	    sceneLoader.SetActive(false);
 		credits.SetActive(true);
 		preferences.SetActive(true);
 	}
@@ -212,6 +212,8 @@ public class SettingsControl : MonoBehaviour {
 			Debug.Log("changing to buckingham");
 		}
 		//atomTouchGUI.SetAtomBtnsVisibility();
+		//atomTouchGUI.SelectAllAtoms ();
+		//atomTouchGUI.DeleteSelectedAtoms ();
 	}
 	/*
 	public void OpenScreenLoader(){

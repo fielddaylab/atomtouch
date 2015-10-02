@@ -31,10 +31,12 @@ using UnityEngine.EventSystems;
 
 public class AtomTouchGUI : MonoBehaviour
 {
+	public string currentAtomPreset;
 	public GameObject mainCameraGameObject;
 	public CameraScript cameraScript;
 
 	//UI Panels Scripts
+	public HUD hudController;
 	public IntroVideoController introVideoController;
 	public MainMenuPanel mainMenu;
 	public LevelsPanel levels;
@@ -101,9 +103,9 @@ public class AtomTouchGUI : MonoBehaviour
 	
 	
 	//time button
-	public Texture normalTimeButton;
-	public Texture slowTimeButton;
-	public Texture stoppedTimeButton;
+	public Sprite normalTimeButton;
+	public Sprite slowTimeButton;
+	public Sprite stoppedTimeButton;
 	[HideInInspector]
 	public bool changingTemp = false;
 	[HideInInspector]
@@ -482,7 +484,7 @@ public class AtomTouchGUI : MonoBehaviour
 	{
 		
 		CreateEnvironment myEnvironment = CreateEnvironment.myEnvironment;
-		myEnvironment.InitAtoms ();
+		myEnvironment.InitAtoms (currentAtomPreset);
 		Atom.EnableSelectAtomGroup (false);
 		//reset temp and vol
 		tempSliderComponent.value = StaticVariables.tempRangeHigh - StaticVariables.tempDefault;
@@ -533,7 +535,7 @@ public class AtomTouchGUI : MonoBehaviour
 	//when clicking on timer
 	public void changeTimer ()
 	{
-		RawImage ri = timer.GetComponent<RawImage> ();
+		Image ri = timer.GetComponent<Image> ();
 		if (currentTimeSpeed == StaticVariables.TimeSpeed.Normal) {
 			currentTimeSpeed = StaticVariables.TimeSpeed.Stopped;
 			StaticVariables.pauseTime = true;
@@ -541,7 +543,7 @@ public class AtomTouchGUI : MonoBehaviour
 			StaticVariables.MDTimestepSqr = StaticVariables.MDTimestep * StaticVariables.MDTimestep;
 
 
-			ri.texture = stoppedTimeButton;
+			ri.sprite = stoppedTimeButton;
 
 		} else if (currentTimeSpeed == StaticVariables.TimeSpeed.Stopped) {
 			currentTimeSpeed = StaticVariables.TimeSpeed.SlowMotion;
@@ -551,7 +553,7 @@ public class AtomTouchGUI : MonoBehaviour
 
 			StaticVariables.pauseTime = false;
 
-			ri.texture = slowTimeButton;
+			ri.sprite = slowTimeButton;
 		} else if (currentTimeSpeed == StaticVariables.TimeSpeed.SlowMotion) {
 			currentTimeSpeed = StaticVariables.TimeSpeed.Normal;
 
@@ -559,7 +561,7 @@ public class AtomTouchGUI : MonoBehaviour
 			StaticVariables.MDTimestepSqr = StaticVariables.MDTimestep * StaticVariables.MDTimestep;
 
 			StaticVariables.pauseTime = false;
-			ri.texture = normalTimeButton;
+			ri.sprite = normalTimeButton;
 		}	
 	}
 	
@@ -805,12 +807,13 @@ public class AtomTouchGUI : MonoBehaviour
 	public void LevelGuideOpen ()
 	{
 		levelGuideGameObject.SetActive (true);
-
+		hudController.settingsButton.interactable = false;
 	}
 	
 	public void LevelGuideClose ()
 	{
 		levelGuideGameObject.SetActive (false);
+		hudController.settingsButton.interactable = true;
 	}
 	
 	public void IntroVideoOpen ()

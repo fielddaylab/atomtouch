@@ -223,7 +223,7 @@ public class CreateEnvironment : MonoBehaviour {
 		preCompute ();
 		
 		//create the atoms
-		InitAtoms ();
+		InitAtoms (atomTouchGUI.currentAtomPreset);
 		
 		
 		//give all of the atoms a random velocity on startup
@@ -282,7 +282,7 @@ public class CreateEnvironment : MonoBehaviour {
 	}
 	
 	//initialize the atoms to a random position and to the original number of atoms
-	public void InitAtoms()
+	public void InitAtoms(string preset)
 	{
 		//destroy and unregister all the current atoms
 		for (int i = Atom.AllAtoms.Count-1; i >= 0; i--)
@@ -292,7 +292,7 @@ public class CreateEnvironment : MonoBehaviour {
 			Destroy (currAtom.gameObject);
 		}
 		if(Potential.currentPotential == Potential.potentialType.Buckingham)
-			CreatePresetConfiguration ("box");
+			CreatePresetConfiguration (preset);
 		else
 			CreateRandomConfiguration();
 
@@ -402,6 +402,7 @@ public class CreateEnvironment : MonoBehaviour {
 		
 		for (int iLine=2; iLine < 2+numAtoms; iLine++)
 		{
+			Debug.Log(iLine);
 			textArray1 = lineArray[iLine].Split('\t');
 			Vector3 pos = new Vector3(float.Parse(textArray1[1]), float.Parse(textArray1[2]), float.Parse(textArray1[3]));
 			Vector3 vel = new Vector3(float.Parse(textArray1[4]), float.Parse(textArray1[5]), float.Parse(textArray1[6]));

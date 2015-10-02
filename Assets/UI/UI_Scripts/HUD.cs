@@ -7,6 +7,7 @@ public class HUD : MonoBehaviour {
 	public GameObject settingsPanel;
 	public GameObject buckinghamPanel;
 	public GameObject lenardJonesPanel;
+	public Button settingsButton;
 
 
 	public void SettingsOpen() {

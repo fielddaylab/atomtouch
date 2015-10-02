@@ -1,0 +1,2 @@
+0
+dimer molecule, potential=buckingham, temperature=300, volume=8000, timespeed=slowmotion

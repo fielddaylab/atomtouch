@@ -6,6 +6,7 @@ public class LevelStates : MonoBehaviour
 
 	public AtomTouchGUI controller;
 	public LevelGuide levelGuide;
+	public CreateEnvironment createEnviroment;
 
 	public void Level01 ()
 	{
@@ -13,7 +14,7 @@ public class LevelStates : MonoBehaviour
 		controller.CameraScriptOn (true);
 		levelGuide.SetLevelGuide (0, 0);
 		controller.LevelGuideOpen ();
-
+		controller.ResetAll ();
 		Debug.Log ("Level one started");
 	}
 
@@ -23,60 +24,81 @@ public class LevelStates : MonoBehaviour
 		controller.CameraScriptOn (true);
 		levelGuide.SetLevelGuide (1, 0);
 		controller.LevelGuideOpen ();
-		Debug.Log ("Level two started");
+		controller.ResetAll ();
+		Debug.Log ("Level eight started");
 	}
 
 	public void Level03 ()
-	{
+	{	
+		controller.currentAtomPreset = "states_matter";
+		createEnviroment.CreatePresetConfiguration (controller.currentAtomPreset);
+		controller.ResetAll ();
 		controller.LevelsClose ();
 		controller.CameraScriptOn (true);
 		levelGuide.SetLevelGuide (2, 0);
 		controller.LevelGuideOpen ();
-		Debug.Log ("Level three started");
+		Debug.Log ("Level two started");
 	}
 
 	public void Level04 ()
 	{
+		controller.currentAtomPreset = "Changing_State_with_Tempature";
+		createEnviroment.CreatePresetConfiguration (controller.currentAtomPreset);
+		controller.ResetAll ();
 		controller.LevelsClose ();
 		controller.CameraScriptOn (true);
 		levelGuide.SetLevelGuide (3, 0);
 		controller.LevelGuideOpen ();
-		Debug.Log ("Level four started");
+		Debug.Log ("Level three started");
 	}
 
 	public void Level05 ()
 	{
+		controller.currentAtomPreset = "Changing_State_with_Volume";
+		createEnviroment.CreatePresetConfiguration (controller.currentAtomPreset);
+		controller.ResetAll ();
 		controller.LevelsClose ();
 		controller.CameraScriptOn (true);
 		levelGuide.SetLevelGuide (4, 0);
 		controller.LevelGuideOpen ();
-		Debug.Log ("Level five started");
+		Debug.Log ("Level four started");
 	}
 
 	public void Level06 ()
 	{
+		controller.currentAtomPreset = "Everything_is_Made_of_Atoms";
+		createEnviroment.CreatePresetConfiguration (controller.currentAtomPreset);
+		controller.ResetAll ();
 		controller.LevelsClose ();
 		controller.CameraScriptOn (true);
 		levelGuide.SetLevelGuide (5, 0);
 		controller.LevelGuideOpen ();
-		Debug.Log ("Level six started");
+		Debug.Log ("Level five started");
 	}
 
 	public void Level07 ()
 	{
+		controller.currentAtomPreset = "Forces";
+		createEnviroment.CreatePresetConfiguration (controller.currentAtomPreset);
+		controller.ResetAll ();
 		controller.LevelsClose ();
 		controller.CameraScriptOn (true);
 		levelGuide.SetLevelGuide (6, 0);
 		controller.LevelGuideOpen ();
-		Debug.Log ("Level seven started");
+		Debug.Log ("Level six started");
 	}
 
 	public void Level08 ()
 	{
+		controller.currentAtomPreset = "Sandbox";
+		createEnviroment.CreatePresetConfiguration (controller.currentAtomPreset);
+		controller.ResetAll ();
 		controller.LevelsClose ();
 		controller.CameraScriptOn (true);
 		levelGuide.SetLevelGuide (7, 0);
 		controller.LevelGuideOpen ();
-		Debug.Log ("Level eight started");
+		Debug.Log ("Level seven started");
 	}
+
+
 }

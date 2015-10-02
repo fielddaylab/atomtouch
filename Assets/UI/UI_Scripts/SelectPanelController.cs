@@ -6,6 +6,8 @@ public class SelectPanelController : MonoBehaviour {
 
 	public AtomTouchGUI controller;
 
+	public GameObject selectPanel;
+
 	public Button selectedAtoms;
 	public Button delete;
 	public Button selectAll;
@@ -29,10 +31,13 @@ public class SelectPanelController : MonoBehaviour {
 	void Update () {
 		numberSelectedAtoms = controller.CountSelectedAtoms ();
 		selectedAtomsText.text = numberSelectedAtoms + " Atom(s) Selected";
+
 		if (numberSelectedAtoms > 0) {
 			delete.interactable = true;
+			selectPanel.SetActive (true);
 		} else {
-			delete.interactable = false;;
+			delete.interactable = false;
+			selectPanel.SetActive (false);
 		}
 	}
 }

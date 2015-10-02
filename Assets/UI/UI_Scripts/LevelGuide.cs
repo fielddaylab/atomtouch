@@ -24,18 +24,19 @@ public class LevelGuide : MonoBehaviour
 		this.instructionNumber = instructionNumber;
 		heading.text = LIS.levelInstructions [levelNumber].instructions [instructionNumber].heading;
 		instruction.text = LIS.levelInstructions [levelNumber].instructions [instructionNumber].instruction;
-		Debug.Log (LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject != null);
 		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject != null)
-			LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject.SetActive (true);
-		if (instructionNumber == 0)
-			backButton.enabled = false;
-		else
-			backButton.enabled = true;
+			LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject.SetActive (true);		
+		if (instructionNumber == 0) {
+			backButton.interactable = false;
+		} else {
+			backButton.interactable = true;
+		}
 		if (instructionNumber == LIS.levelInstructions [levelNumber].instructions.Length - 1) 
 			nextButtonText.text = "Finish";
 		if (instructionNumber < LIS.levelInstructions [levelNumber].instructions.Length - 1) 
 			nextButtonText.text = "Next";
 //		Debug.Log (" level number = " + levelNumber + " /n instruction number = " + instructionNumber);
+
 	}
 
 	public void NextButton ()
