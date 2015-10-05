@@ -2,14 +2,16 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 4
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Mat_Chlorine
   m_Shader: {fileID: 23, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
+  m_LightmapFlags: 5
   m_CustomRenderQueue: -1
+  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -45,7 +47,11 @@ Material:
       data:
         first:
           name: _Shininess
-        second: .0792755112
+        second: .185000002
+      data:
+        first:
+          name: _Smoothness
+        second: .642857134
       data:
         first:
           name: _Parallax
@@ -56,17 +62,13 @@ Material:
         second: 3
       data:
         first:
-          name: _Smoothness
-        second: .642857134
-      data:
-        first:
           name: _BumpAmt
         second: 10
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: .452380419, g: .522058845, b: .341641456, a: 1}
+        second: {r: .478886753, g: .595588207, b: .293414772, a: 1}
       data:
         first:
           name: _SpecColor

@@ -2,14 +2,16 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 4
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Mat_Sodium
   m_Shader: {fileID: 23, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
+  m_LightmapFlags: 5
   m_CustomRenderQueue: -1
+  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -38,12 +40,12 @@ Material:
       data:
         first:
           name: _Shininess
-        second: .121540688
+        second: .412
     m_Colors:
       data:
         first:
           name: _Color
-        second: {r: .235294104, g: .235294104, b: .235294104, a: 1}
+        second: {r: .308823526, g: .26794982, b: .26794982, a: 1}
       data:
         first:
           name: _SpecColor

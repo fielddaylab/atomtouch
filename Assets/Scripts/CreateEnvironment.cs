@@ -363,7 +363,7 @@ public class CreateEnvironment : MonoBehaviour {
 				StaticVariables.desiredTemperature = float.Parse(textArray2[1]);
 				//change temp slider value
 				atomTouchGUI.tempSliderComponent.value 
-					= StaticVariables.tempRangeHigh - StaticVariables.desiredTemperature;
+					= /*StaticVariables.tempRangeHigh -*/ StaticVariables.desiredTemperature;
 				
 
 				atomTouchGUI.SnapTempToInterval(10.0f);
@@ -402,7 +402,6 @@ public class CreateEnvironment : MonoBehaviour {
 		
 		for (int iLine=2; iLine < 2+numAtoms; iLine++)
 		{
-			Debug.Log(iLine);
 			textArray1 = lineArray[iLine].Split('\t');
 			Vector3 pos = new Vector3(float.Parse(textArray1[1]), float.Parse(textArray1[2]), float.Parse(textArray1[3]));
 			Vector3 vel = new Vector3(float.Parse(textArray1[4]), float.Parse(textArray1[5]), float.Parse(textArray1[6]));

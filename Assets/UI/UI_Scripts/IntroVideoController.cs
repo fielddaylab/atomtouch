@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class IntroVideoController : MonoBehaviour {
-
+	/*
 	public AtomTouchGUI controller;
 	public MovieTexture introVideo;
 	
@@ -31,4 +31,5 @@ public class IntroVideoController : MonoBehaviour {
 		introVideo.Stop();
 		controller.IntroVideoClose();
 	}
+	*/
 }

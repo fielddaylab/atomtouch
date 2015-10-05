@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -11,6 +11,8 @@ Material:
   m_ShaderKeywords: _ALPHABLEND_ON _LIGHTMAPPING_REALTIME
   m_LightmapFlags: 5
   m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -122,6 +124,14 @@ Material:
     m_Floats:
       data:
         first:
+          name: _SrcBlend
+        second: 5
+      data:
+        first:
+          name: _DstBlend
+        second: 10
+      data:
+        first:
           name: _Cutoff
         second: .5
       data:
@@ -132,14 +142,6 @@ Material:
         first:
           name: _AlphaTestRef
         second: .5
-      data:
-        first:
-          name: _SrcBlend
-        second: 5
-      data:
-        first:
-          name: _DstBlend
-        second: 10
       data:
         first:
           name: _Lightmapping
@@ -155,7 +157,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: .300000012
+        second: .284000009
       data:
         first:
           name: _BumpScale
@@ -192,7 +194,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .661764741, g: .889382184, b: 1, a: .615686297}
+        second: {r: .522058845, g: .843692183, b: 1, a: .615686297}
       data:
         first:
           name: _SpecColor

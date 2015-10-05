@@ -141,7 +141,7 @@ public class AtomTouchGUI : MonoBehaviour
 
 	void Start ()
 	{	
-		Handheld.PlayFullScreenMovie ("AtomTouchIntro.mp4", Color.black, FullScreenMovieControlMode.CancelOnInput);
+		//Handheld.PlayFullScreenMovie ("AtomTouchIntro.mp4", Color.black, FullScreenMovieControlMode.CancelOnInput);
 		MainMenuInit ();
 		LevelsInit ();
 	}
@@ -487,7 +487,7 @@ public class AtomTouchGUI : MonoBehaviour
 		myEnvironment.InitAtoms (currentAtomPreset);
 		Atom.EnableSelectAtomGroup (false);
 		//reset temp and vol
-		tempSliderComponent.value = StaticVariables.tempRangeHigh - StaticVariables.tempDefault;
+		tempSliderComponent.value = /*StaticVariables.tempRangeHigh*/ StaticVariables.desiredTemperature;
 		volSliderComponent.value = StaticVariables.volRangeHigh - StaticVariables.volDefault;
 
 		SnapTempToInterval (10.0f);
@@ -818,14 +818,14 @@ public class AtomTouchGUI : MonoBehaviour
 	
 	public void IntroVideoOpen ()
 	{
-		introVideoGameObject.SetActive (true);
+//		introVideoGameObject.SetActive (true);
 		MainMenuClose ();
-		introVideoController.introVideo.Play ();
+//		introVideoController.introVideo.Play ();
 	}
 	
 	public void IntroVideoClose ()
 	{
-		introVideoGameObject.SetActive (false);
+//		introVideoGameObject.SetActive (false);
 		MainMenuOpen ();
 	}
 

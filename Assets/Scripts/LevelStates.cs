@@ -9,7 +9,9 @@ public class LevelStates : MonoBehaviour
 	public CreateEnvironment createEnviroment;
 
 	public void Level01 ()
-	{
+	{ 
+		controller.currentAtomPreset = "box";
+		createEnviroment.CreatePresetConfiguration (controller.currentAtomPreset);
 		controller.LevelsClose ();
 		controller.CameraScriptOn (true);
 		levelGuide.SetLevelGuide (0, 0);
@@ -20,6 +22,8 @@ public class LevelStates : MonoBehaviour
 
 	public void Level02 ()
 	{
+		controller.currentAtomPreset = "box";
+		createEnviroment.CreatePresetConfiguration (controller.currentAtomPreset);
 		controller.LevelsClose ();
 		controller.CameraScriptOn (true);
 		levelGuide.SetLevelGuide (1, 0);

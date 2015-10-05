@@ -2,14 +2,16 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 4
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: mat_plane1
   m_Shader: {fileID: 4800000, guid: e1f50dc041f1545edbb228f8daea22a1, type: 3}
   m_ShaderKeywords: 
+  m_LightmapFlags: 5
   m_CustomRenderQueue: -1
+  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -73,7 +75,7 @@ Material:
       data:
         first:
           name: _Shininess
-        second: .346292913
+        second: .277999997
     m_Colors:
       data:
         first:
