@@ -171,6 +171,64 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22484954, guid: 16074564d895b4a17a60338653483852,
     type: 2}
   m_PrefabInternal: {fileID: 1786011927}
+--- !u!114 &22318681 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11487244, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 1786011927}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!114 &22318683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 22318678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
+    m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
+    m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
+    m_ColorMultiplier: 1
+    m_FadeDuration: .0500000007
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 22318681}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 22318685}
+        m_MethodName: OnClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &22318685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4285,7 +4343,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 2e265854193f54454b9887c197102762, type: 3}
   - {fileID: 2800000, guid: 5866868f9ad08487ba544501dccccdb0, type: 3}
   - {fileID: 2800000, guid: c51b83b361d494433b5707fbe18a249f, type: 3}
-  framesPerSecond: 30
+  framesPerSecond: 60
   image: {fileID: 490858559}
 --- !u!114 &490858559
 MonoBehaviour:
@@ -10392,7 +10450,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 0, y: .5}
-  m_AnchoredPosition: {x: 0, y: 77}
+  m_AnchoredPosition: {x: .999999046, y: 77}
   m_SizeDelta: {x: 130, y: 218}
   m_Pivot: {x: 0, y: .5}
 --- !u!114 &1448304149
@@ -13853,7 +13911,8 @@ Prefab:
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[0].instruction
       value: "Welcome to AtomTouch. \nIn this app, each of the spheres onscreen represents
-        one atom. \n\n(this is a menu bar that you can always drag up and down)"
+        one atom. \n\n(this is a menu bar that you can always tap to drop dwon and
+        up)"
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11404810, guid: 16074564d895b4a17a60338653483852, type: 2}
@@ -14938,7 +14997,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11490078, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11451292, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

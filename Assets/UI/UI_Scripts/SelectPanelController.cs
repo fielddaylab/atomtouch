@@ -14,17 +14,17 @@ public class SelectPanelController : MonoBehaviour {
 	public Button deselect;
 
 	private Text selectedAtomsText;
-	private Text deleteText;
-	private Text selectAllText;
-	private Text deselectText;
+//	private Text deleteText;
+//	private Text selectAllText;
+//	private Text deselectText;
 
 	private int numberSelectedAtoms;
 
 	void Start () {
 		selectedAtomsText = selectedAtoms.GetComponentInChildren<Text> ();
-		deleteText = delete.GetComponentInChildren<Text> ();
-		selectAllText = selectAll.GetComponentInChildren<Text> ();
-		deselectText = deselect.GetComponentInChildren<Text> ();
+//		deleteText = delete.GetComponentInChildren<Text> ();
+//		selectAllText = selectAll.GetComponentInChildren<Text> ();
+//		deselectText = deselect.GetComponentInChildren<Text> ();
 	}
 
 	// Update is called once per frame
