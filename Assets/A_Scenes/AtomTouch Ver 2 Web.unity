@@ -186,6 +186,7 @@ RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 22484954, guid: 16074564d895b4a17a60338653483852,
     type: 2}
+<<<<<<< HEAD
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 22318678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -228,10 +229,24 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11487244, guid: 16074564d895b4a17a60338653483852,
     type: 2}
+=======
+  m_PrefabInternal: {fileID: 1786011927}
+--- !u!114 &22318681 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11487244, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 1786011927}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!114 &22318683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+>>>>>>> a3bcc68a0d1b2cc199e945df369f5227943c4628
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 22318678}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -252,6 +267,52 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 22318678}
+=======
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
+    m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
+    m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
+    m_ColorMultiplier: 1
+    m_FadeDuration: .0500000007
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 22318681}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 22318685}
+        m_MethodName: OnClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+>>>>>>> a3bcc68a0d1b2cc199e945df369f5227943c4628
 --- !u!114 &22318685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4947,7 +5008,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 2e265854193f54454b9887c197102762, type: 3}
   - {fileID: 2800000, guid: 5866868f9ad08487ba544501dccccdb0, type: 3}
   - {fileID: 2800000, guid: c51b83b361d494433b5707fbe18a249f, type: 3}
-  framesPerSecond: 30
+  framesPerSecond: 60
   image: {fileID: 490858559}
 --- !u!114 &490858559
 MonoBehaviour:
@@ -11242,7 +11303,11 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 0, y: .5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: 0, y: 85.3000031}
+=======
+  m_AnchoredPosition: {x: .999999046, y: 77}
+>>>>>>> a3bcc68a0d1b2cc199e945df369f5227943c4628
   m_SizeDelta: {x: 130, y: 218}
   m_Pivot: {x: 0, y: .5}
 --- !u!114 &1448304149
@@ -13952,6 +14017,835 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 132186, guid: a68afe71e8aaa3d46a11bef9e639ca71, type: 2}
   m_PrefabInternal: {fileID: 157047559}
+<<<<<<< HEAD
+=======
+--- !u!1001 &1786011927
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 729164636}
+    m_Modifications:
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[7].instructions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -34
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -98
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -278
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 208
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_Pivot.x
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460424, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 1960553280}
+    - target: {fileID: 11460424, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelsPanel
+      value: 
+      objectReference: {fileID: 2003053574}
+    - target: {fileID: 11450004, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 1960553280}
+    - target: {fileID: 11450004, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelsPanel
+      value: 
+      objectReference: {fileID: 2003053574}
+    - target: {fileID: 100372, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484954, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484954, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484954, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 456
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484954, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.4999752
+      objectReference: {fileID: 0}
+    - target: {fileID: 11487244, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484954, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 248
+      objectReference: {fileID: 0}
+    - target: {fileID: 22403686, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472564, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -54
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472564, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 108
+      objectReference: {fileID: 0}
+    - target: {fileID: 22415444, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 22415444, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 46.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22415444, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 615
+      objectReference: {fileID: 0}
+    - target: {fileID: 22415444, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11463752, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11463752, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 22406134, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -280
+      objectReference: {fileID: 0}
+    - target: {fileID: 22406134, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 22406134, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: -105
+      objectReference: {fileID: 0}
+    - target: {fileID: 22406134, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 295
+      objectReference: {fileID: 0}
+    - target: {fileID: 22407198, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 22407198, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 22407198, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 258
+      objectReference: {fileID: 0}
+    - target: {fileID: 22407198, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 92
+      objectReference: {fileID: 0}
+    - target: {fileID: 11462026, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22403686, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -13
+      objectReference: {fileID: 0}
+    - target: {fileID: 22403686, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 258
+      objectReference: {fileID: 0}
+    - target: {fileID: 22403686, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 94.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11408890, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415688, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11495190, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 22464534, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 106
+      objectReference: {fileID: 0}
+    - target: {fileID: 22464534, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 22464534, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 270.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22464534, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 40.0000153
+      objectReference: {fileID: 0}
+    - target: {fileID: 22464534, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22464534, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413752, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484954, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.81469727e-06
+      objectReference: {fileID: 0}
+    - target: {fileID: 22484954, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478050, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_ScrollSensitivity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460694, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_ScrollSensitivity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[6].heading
+      value: Turn on time - normal speed
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[6].instruction
+      value: Tap the yellow clock one time, the green clock icon indicates normal
+        time speed
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[7].heading
+      value: Reset
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[7].instruction
+      value: Tap the reset button to return AtomTouch to the home screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[8].heading
+      value: Add more atoms
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[8].instruction
+      value: Click on the Na and Cl icons to add more sodium (Na) and Chlorine (Cl)
+        atoms
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[9].heading
+      value: Select all atoms
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[9].instruction
+      value: Touch one atoms then touch the "select all" box that appears at the top
+        of the screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[10].heading
+      value: 'Delete atoms '
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[10].instruction
+      value: 'Delete selected atoms by touching the  "Delete" box '
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[4].heading
+      value: Reorient to Home position
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[5].heading
+      value: Turn on time - slow speed
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[5].instruction
+      value: Tap the red clock one time, the  yellow clock icon indicates slow time
+        speed
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[1].instructions.Array.data[0].heading
+      value: Put an atom in its place
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[1].instructions.Array.data[1].heading
+      value: Put an atom in its place part 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[1].instructions.Array.data[0].instruction
+      value: Select an atom and move it to the top right-hand corner of the back of
+        the box.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[1].instructions.Array.data[1].instruction
+      value: Select a second atom and move it to the left-hand corner in the front
+        of the  box
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[0].instruction
+      value: "Turn time to normal speed. \n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[1].instruction
+      value: 'How many bonding partners does the highlighted atom have?
+
+        Hint: Bonds are indicated by lines between atoms. Bonds may form and break
+        as the atoms move, but the selected atom will keep the same bonding partners.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[2].instruction
+      value: The atom is bonded to three other atoms
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[3].instruction
+      value: What state of matter is this?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[4].instruction
+      value: This is a solid because the atoms are maintaining bonding partners and
+        relative position to all the other atoms in the structure, even though the
+        atoms are moving.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[5].instruction
+      value: Stop time and add 4 Na and 4 Cl atoms so they bond to the other atoms
+        in the structure.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[6].instruction
+      value: Start time again, and observe the structure for about 30 seconds
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[7].instruction
+      value: What state of matter is this?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[0].heading
+      value: Action
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[8].instruction
+      value: This is a solid because the atoms are maintaining bonding partners and
+        relative position to all the other atoms in the structure, even though the
+        atoms are moving.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[1].heading
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[2].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[3].heading
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[4].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[5].heading
+      value: Action
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[6].heading
+      value: Action
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[7].heading
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[8].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[0].instruction
+      value: 'Set the temperature slider at 0.001 Kelvin. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[0].heading
+      value: Action
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[1].instruction
+      value: How many degrees Celcius (C) is this?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[1].heading
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[2].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[2].instruction
+      value: -273.15 degrees C
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[3].heading
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[3].instruction
+      value: What happens to your atoms at 0.001 K?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[4].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[4].instruction
+      value: The atoms stop moving.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[5].instruction
+      value: 0 K is known as absolute zero. Based upon what is happening with your
+        atoms, why do you think its called absolute zero?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[5].heading
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].instruction
+      value: Absolute zero is the temperature at which all atomic motion stops
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[7].heading
+      value: Action
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[7].instruction
+      value: Slowly heat the structure by increasing the temperature to around 1000
+        K. Observe the bonding partners of your highlighted atom, and its relative
+        position to the other atoms in the structure.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[8].instruction
+      value: What state of matter is this?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[8].heading
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[9].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[9].instruction
+      value: "This is a liquid because the highlighted atom is changing bonding partners
+        and doesn\u2019t keep the same relative position in the structure."
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[10].heading
+      value: Action
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[10].instruction
+      value: Increase the temperature to 5000 K.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[11].heading
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[11].instruction
+      value: What state of matter is this?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[12].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[12].instruction
+      value: This is a gas because the distance between the atoms is much larger than
+        in a solid or a liquid, and there is no sustained bonding between the atoms.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[0].instruction
+      value: Increase the temperature to 5000 K.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[0].heading
+      value: Action
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[1].instruction
+      value: What state of matter is this?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[1].heading
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[2].instruction
+      value: This is a gas because the distance between the atoms is much larger than
+        in a solid or a liquid, and there is no sustained bonding between the atoms.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[2].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[3].instruction
+      value: Decrease the volume to 1 cubic nanometer (nm^3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[3].heading
+      value: Action
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[4].instruction
+      value: What state of matter is this?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[4].heading
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[5].instruction
+      value: "This is a liquid because the highlighted atom is changing bonding partners
+        and doesn\u2019t keep the same relative position in the structure."
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[5].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[6].instruction
+      value: Can you make a solid at 5000 K?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[6].heading
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[7].instruction
+      value: Yes, if you add enough atoms to a 1 nm^3 box (around 100 atoms) it will
+        become a solid.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[7].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[0].heading
+      value: Action Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[0].instruction
+      value: Use the grid in the box and its volume to roughly estimate the width
+        of a chlorine atom.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[1].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[1].instruction
+      value: A chlorine atom is roughly 0.2nm in width
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[2].heading
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[2].instruction
+      value: "When you changed the temperature, the structure formed by the atoms
+        changed. Is there anything you can do that will change the structure of the
+        individual atom you selected? \n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[3].instruction
+      value: No, atoms are indivisible units that make up all matter. It is the bonding
+        between them that determines the structure.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[3].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[0].heading
+      value: Action
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[0].instruction
+      value: Stop time and place 8 sodium atoms in one corner of the box and 8 chlorine
+        atoms in the opposite corner. Set time to normal speed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[1].heading
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[1].instruction
+      value: 'What are the atoms doing? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[2].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[2].instruction
+      value: Sodium atoms repel other sodium atoms. Chlorine atoms repel other chlorine
+        atoms. Sodium and Chlorine atoms attract each other.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[3].instruction
+      value: 'In order to simulate salt (NaCl), sodium atoms have a charge of +1 and
+        chlorine atoms have a charge of -1. What does this tell you about how charged
+        atoms interact? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[3].heading
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[4].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[4].instruction
+      value: Positively charged atoms repel other positively charged atoms while negatively
+        charged atoms repel other positivity charged atoms. Positively charged atoms
+        attract negatively charged atoms. Since Sodium and Chlorine atoms have opposite
+        charges they attract each other to form an ionic bond. In an ionic bond, two
+        atoms with opposite charges bond to one another to form a structure with a
+        net charge of 0.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[0].heading
+      value: Action
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[0].instruction
+      value: Build and observe different structures! What formation of atoms stays
+        solid at the highest temperature?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[1].heading
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[1].instruction
+      value: 'What are the atoms doing? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[2].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[2].instruction
+      value: Sodium atoms repel other sodium atoms. Chlorine atoms repel other chlorine
+        atoms. Sodium and Chlorine atoms attract each other.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[3].heading
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[3].instruction
+      value: 'In order to simulate salt (NaCl), sodium atoms have a charge of +1 and
+        chlorine atoms have a charge of -1. What does this tell you about how charged
+        atoms interact? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[4].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[4].instruction
+      value: Positively charged atoms repel other positively charged atoms while negatively
+        charged atoms repel other positivity charged atoms. Positively charged atoms
+        attract negatively charged atoms. Since Sodium and Chlorine atoms have opposite
+        charges they attract each other to form an ionic bond. In an ionic bond, two
+        atoms with opposite charges bond to one another to form a structure with a
+        net charge of 0.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[4].gameObject
+      value: 
+      objectReference: {fileID: 1654523063}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[5].gameObject
+      value: 
+      objectReference: {fileID: 111088985}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[6].gameObject
+      value: 
+      objectReference: {fileID: 111088985}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[7].gameObject
+      value: 
+      objectReference: {fileID: 853432843}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[8].gameObject
+      value: 
+      objectReference: {fileID: 728321472}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[9].gameObject
+      value: 
+      objectReference: {fileID: 1402518135}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[10].gameObject
+      value: 
+      objectReference: {fileID: 599065679}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[0].gameObject
+      value: 
+      objectReference: {fileID: 38928915}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[3].gameObject
+      value: 
+      objectReference: {fileID: 1381688032}
+    - target: {fileID: 11460694, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_Elasticity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460694, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_DecelerationRate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478050, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_Elasticity
+      value: .00999999978
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478050, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_DecelerationRate
+      value: .699999988
+      objectReference: {fileID: 0}
+    - target: {fileID: 11478050, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_MovementType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[0].instruction
+      value: "Welcome to AtomTouch. \nIn this app, each of the spheres onscreen represents
+        one atom. \n\n(this is a menu bar that you can always tap to drop dwon and
+        up)"
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11404810, guid: 16074564d895b4a17a60338653483852, type: 2}
+    - {fileID: 11460694, guid: 16074564d895b4a17a60338653483852, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 16074564d895b4a17a60338653483852, type: 2}
+  m_IsPrefabParent: 0
+>>>>>>> a3bcc68a0d1b2cc199e945df369f5227943c4628
 --- !u!1 &1788141888
 GameObject:
   m_ObjectHideFlags: 0
@@ -15099,7 +15993,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11490078, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11451292, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
