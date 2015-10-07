@@ -162,15 +162,96 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
---- !u!1 &22318678 stripped
+--- !u!1 &22318678
 GameObject:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 141100, guid: 16074564d895b4a17a60338653483852, type: 2}
-  m_PrefabInternal: {fileID: 1786011927}
---- !u!224 &22318679 stripped
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22318679}
+  - 222: {fileID: 22318682}
+  - 114: {fileID: 22318681}
+  - 114: {fileID: 22318680}
+  - 114: {fileID: 22318685}
+  m_Layer: 5
+  m_Name: Content Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &22318679
 RectTransform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 22484954, guid: 16074564d895b4a17a60338653483852,
     type: 2}
-  m_PrefabInternal: {fileID: 1786011927}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 22318678}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3.81469727e-06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1643221958}
+  - {fileID: 1106419573}
+  m_Father: {fileID: 479600158}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 1.4999752, y: 248}
+  m_SizeDelta: {x: 3, y: 456}
+  m_Pivot: {x: .5, y: 1}
+--- !u!114 &22318680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11460424, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 22318678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2174c6331f5b405691790ae1c4c779a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigPanel: {fileID: 479600155}
+  contentPanel: {fileID: 22318678}
+  backButton: {fileID: 1300803758}
+  nextButton: {fileID: 436382545}
+  nextButtonText: {fileID: 449195359}
+  heading: {fileID: 1933707721}
+  instruction: {fileID: 1106419572}
+  controller: {fileID: 1960553280}
+  levelsPanel: {fileID: 2003053574}
+  LIS: {fileID: 479600157}
+--- !u!114 &22318681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11487244, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 22318678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a0d1ab7281a73488183e44d6a7aad667, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &22318682
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22204590, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 22318678}
 --- !u!114 &22318685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,8 +622,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 9.96589661e-05, y: 5.40004539}
-  m_SizeDelta: {x: 2134, y: 1099}
+  m_AnchoredPosition: {x: 1.33200002, y: -4}
+  m_SizeDelta: {x: 1606.30005, y: 828}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &64694909
 MonoBehaviour:
@@ -557,7 +638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 837e50c1c30214c4fae5db83b2f110b2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0f09f310178215c44ba313eee8006c3b, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -769,9 +850,9 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 0, y: .5}
-  m_AnchoredPosition: {x: 66, y: -7.62939453e-06}
+  m_AnchoredPosition: {x: 0, y: -7.62939453e-06}
   m_SizeDelta: {x: 132, y: 558}
-  m_Pivot: {x: .5, y: .5}
+  m_Pivot: {x: 0, y: .5}
 --- !u!1 &81157610
 GameObject:
   m_ObjectHideFlags: 0
@@ -2622,6 +2703,75 @@ RectTransform:
   m_AnchoredPosition: {x: 156.5, y: 37}
   m_SizeDelta: {x: 227, y: 852}
   m_Pivot: {x: 0, y: .5}
+--- !u!1 &298776545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112966, guid: 16074564d895b4a17a60338653483852, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 298776546}
+  - 222: {fileID: 298776548}
+  - 114: {fileID: 298776547}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &298776546
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22457964, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 298776545}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1300803760}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 6}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &298776547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11415688, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 298776545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Back
+--- !u!222 &298776548
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22270698, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 298776545}
 --- !u!1 &305916146
 GameObject:
   m_ObjectHideFlags: 0
@@ -2654,7 +2804,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2, y: -.399999619}
+  m_AnchoredPosition: {x: -2, y: 3}
   m_SizeDelta: {x: -3.9000001, y: -9}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &305916148
@@ -3559,8 +3709,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -461, y: -65}
-  m_SizeDelta: {x: 108, y: 130}
+  m_AnchoredPosition: {x: -148, y: -41}
+  m_SizeDelta: {x: 60, y: 81}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &421082740
 MonoBehaviour:
@@ -3650,6 +3800,125 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 426446553}
+--- !u!1 &436382544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 132048, guid: 16074564d895b4a17a60338653483852, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 436382547}
+  - 222: {fileID: 436382548}
+  - 114: {fileID: 436382546}
+  - 114: {fileID: 436382545}
+  m_Layer: 5
+  m_Name: Next
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &436382545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11469376, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 436382544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
+    m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
+    m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
+    m_ColorMultiplier: 1
+    m_FadeDuration: .100000001
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 436382546}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 479600156}
+        m_MethodName: NextButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &436382546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11408890, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 436382544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 298f181604f53409e8aaf3f0f592d416, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!224 &436382547
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22403686, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 436382544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: .800000012, z: 1}
+  m_Children:
+  - {fileID: 449195360}
+  m_Father: {fileID: 1643221958}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -17, y: -24}
+  m_SizeDelta: {x: 258, y: 92}
+  m_Pivot: {x: 1, y: 1}
+--- !u!222 &436382548
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22258334, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 436382544}
 --- !u!1 &440274186
 GameObject:
   m_ObjectHideFlags: 0
@@ -3677,14 +3946,14 @@ RectTransform:
   m_GameObject: {fileID: 440274186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .699999988, y: .699999988, z: .699999988}
   m_Children: []
   m_Father: {fileID: 1448304148}
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 3, y: 18}
-  m_SizeDelta: {x: 91, y: 103}
+  m_AnchoredPosition: {x: 10, y: 24}
+  m_SizeDelta: {x: 91, y: 70}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &440274188
 MonoBehaviour:
@@ -3834,6 +4103,75 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 443508289}
+--- !u!1 &449195358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 148946, guid: 16074564d895b4a17a60338653483852, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 449195360}
+  - 222: {fileID: 449195361}
+  - 114: {fileID: 449195359}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &449195359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11495190, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 449195358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Finish
+--- !u!224 &449195360
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22423300, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 449195358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 436382547}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -.25, y: 6}
+  m_SizeDelta: {x: -.5, y: 0}
+  m_Pivot: {x: .5, y: .5}
+--- !u!222 &449195361
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22260222, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 449195358}
 --- !u!1 &455780156
 GameObject:
   m_ObjectHideFlags: 0
@@ -3998,21 +4336,345 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 471495032}
---- !u!1 &479600155 stripped
+--- !u!1 &479600155
 GameObject:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 100372, guid: 16074564d895b4a17a60338653483852, type: 2}
-  m_PrefabInternal: {fileID: 1786011927}
---- !u!114 &479600156 stripped
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 479600158}
+  - 222: {fileID: 479600161}
+  - 114: {fileID: 479600160}
+  - 114: {fileID: 479600159}
+  - 114: {fileID: 479600157}
+  - 114: {fileID: 479600156}
+  m_Layer: 5
+  m_Name: Level Guide
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &479600156
 MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11450004, guid: 16074564d895b4a17a60338653483852,
     type: 2}
-  m_PrefabInternal: {fileID: 1786011927}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 479600155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2174c6331f5b405691790ae1c4c779a, type: 3}
---- !u!224 &479600158 stripped
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigPanel: {fileID: 479600155}
+  contentPanel: {fileID: 22318678}
+  backButton: {fileID: 1300803758}
+  nextButton: {fileID: 436382545}
+  nextButtonText: {fileID: 449195359}
+  heading: {fileID: 1933707721}
+  instruction: {fileID: 1106419572}
+  controller: {fileID: 1960553280}
+  levelsPanel: {fileID: 2003053574}
+  LIS: {fileID: 479600157}
+--- !u!114 &479600157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 479600155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53fe8de0209ff4621aacb8534b880109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelInstructions:
+  - instructions:
+    - heading: Welcome!
+      instruction: "Welcome to AtomTouch. \nIn this app, each of the spheres onscreen
+        represents one atom. \n\n(this is a menu bar that you can always drag up and
+        down)"
+      gameObject: {fileID: 0}
+    - heading: Moving Atoms
+      instruction: You are able to move an atom by dragging it.
+      gameObject: {fileID: 0}
+    - heading: Nearer/Farther
+      instruction: "To move an atom nearer or farther away, touch somewhere on the
+        screen while dragging up/down. \nWith a mouse, use the scroll wheel."
+      gameObject: {fileID: 0}
+    - heading: Changing Perspective
+      instruction: By touching somewhere empty in the box and dragging, you can move
+        the whole enviroment.
+      gameObject: {fileID: 0}
+    - heading: Reorient to Home position
+      instruction: To reset the box, touch the camera reset button
+      gameObject: {fileID: 1654523063}
+    - heading: Turn on time - slow speed
+      instruction: Tap the red clock one time, the  yellow clock icon indicates slow
+        time speed
+      gameObject: {fileID: 111088985}
+    - heading: Turn on time - normal speed
+      instruction: Tap the yellow clock one time, the green clock icon indicates normal
+        time speed
+      gameObject: {fileID: 111088985}
+    - heading: Reset
+      instruction: Tap the reset button to return AtomTouch to the home screen
+      gameObject: {fileID: 853432843}
+    - heading: Add more atoms
+      instruction: Click on the Na and Cl icons to add more sodium (Na) and Chlorine
+        (Cl) atoms
+      gameObject: {fileID: 728321472}
+    - heading: Select all atoms
+      instruction: Touch one atoms then touch the "select all" box that appears at
+        the top of the screen
+      gameObject: {fileID: 1402518135}
+    - heading: 'Delete atoms '
+      instruction: 'Delete selected atoms by touching the  "Delete" box '
+      gameObject: {fileID: 599065679}
+  - instructions:
+    - heading: Put an atom in its place
+      instruction: Select an atom and move it to the top right-hand corner of the
+        back of the box.
+      gameObject: {fileID: 0}
+    - heading: Put an atom in its place part 2
+      instruction: Select a second atom and move it to the left-hand corner in the
+        front of the  box
+      gameObject: {fileID: 0}
+  - instructions:
+    - heading: Action
+      instruction: "Turn time to normal speed. \n"
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: 'How many bonding partners does the highlighted atom have?
+
+        Hint: Bonds are indicated by lines between atoms. Bonds may form and break
+        as the atoms move, but the selected atom will keep the same bonding partners.'
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: The atom is bonded to three other atoms
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: What state of matter is this?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: This is a solid because the atoms are maintaining bonding partners
+        and relative position to all the other atoms in the structure, even though
+        the atoms are moving.
+      gameObject: {fileID: 0}
+    - heading: Action
+      instruction: Stop time and add 4 Na and 4 Cl atoms so they bond to the other
+        atoms in the structure.
+      gameObject: {fileID: 0}
+    - heading: Action
+      instruction: Start time again, and observe the structure for about 30 seconds
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: What state of matter is this?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: This is a solid because the atoms are maintaining bonding partners
+        and relative position to all the other atoms in the structure, even though
+        the atoms are moving.
+      gameObject: {fileID: 0}
+  - instructions:
+    - heading: Action
+      instruction: 'Set the temperature slider at 0.001 Kelvin. '
+      gameObject: {fileID: 38928915}
+    - heading: Question
+      instruction: How many degrees Celcius (C) is this?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: -273.15 degrees C
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: What happens to your atoms at 0.001 K?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: The atoms stop moving.
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: 0 K is known as absolute zero. Based upon what is happening with
+        your atoms, why do you think its called absolute zero?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: Absolute zero is the temperature at which all atomic motion stops
+      gameObject: {fileID: 0}
+    - heading: Action
+      instruction: Slowly heat the structure by increasing the temperature to around
+        1000 K. Observe the bonding partners of your highlighted atom, and its relative
+        position to the other atoms in the structure.
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: What state of matter is this?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: "This is a liquid because the highlighted atom is changing bonding
+        partners and doesn\u2019t keep the same relative position in the structure."
+      gameObject: {fileID: 0}
+    - heading: Action
+      instruction: Increase the temperature to 5000 K.
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: What state of matter is this?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: This is a gas because the distance between the atoms is much larger
+        than in a solid or a liquid, and there is no sustained bonding between the
+        atoms.
+      gameObject: {fileID: 0}
+  - instructions:
+    - heading: Action
+      instruction: Increase the temperature to 5000 K.
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: What state of matter is this?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: This is a gas because the distance between the atoms is much larger
+        than in a solid or a liquid, and there is no sustained bonding between the
+        atoms.
+      gameObject: {fileID: 0}
+    - heading: Action
+      instruction: Decrease the volume to 1 cubic nanometer (nm^3)
+      gameObject: {fileID: 1381688032}
+    - heading: Question
+      instruction: What state of matter is this?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: "This is a liquid because the highlighted atom is changing bonding
+        partners and doesn\u2019t keep the same relative position in the structure."
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: Can you make a solid at 5000 K?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: Yes, if you add enough atoms to a 1 nm^3 box (around 100 atoms)
+        it will become a solid.
+      gameObject: {fileID: 0}
+  - instructions:
+    - heading: Action Question
+      instruction: Use the grid in the box and its volume to roughly estimate the
+        width of a chlorine atom.
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: A chlorine atom is roughly 0.2nm in width
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: "When you changed the temperature, the structure formed by the
+        atoms changed. Is there anything you can do that will change the structure
+        of the individual atom you selected? \n"
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: No, atoms are indivisible units that make up all matter. It is
+        the bonding between them that determines the structure.
+      gameObject: {fileID: 0}
+  - instructions:
+    - heading: Action
+      instruction: Stop time and place 8 sodium atoms in one corner of the box and
+        8 chlorine atoms in the opposite corner. Set time to normal speed.
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: 'What are the atoms doing? '
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: Sodium atoms repel other sodium atoms. Chlorine atoms repel other
+        chlorine atoms. Sodium and Chlorine atoms attract each other.
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: 'In order to simulate salt (NaCl), sodium atoms have a charge of
+        +1 and chlorine atoms have a charge of -1. What does this tell you about how
+        charged atoms interact? '
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: Positively charged atoms repel other positively charged atoms while
+        negatively charged atoms repel other positivity charged atoms. Positively
+        charged atoms attract negatively charged atoms. Since Sodium and Chlorine
+        atoms have opposite charges they attract each other to form an ionic bond.
+        In an ionic bond, two atoms with opposite charges bond to one another to form
+        a structure with a net charge of 0.
+      gameObject: {fileID: 0}
+  - instructions:
+    - heading: Action
+      instruction: Build and observe different structures! What formation of atoms
+        stays solid at the highest temperature?
+      gameObject: {fileID: 0}
+--- !u!224 &479600158
 RectTransform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852,
     type: 2}
-  m_PrefabInternal: {fileID: 1786011927}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 479600155}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -34}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 22318679}
+  m_Father: {fileID: 729164636}
+  m_RootOrder: 3
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 30, y: -98}
+  m_SizeDelta: {x: -278, y: 208}
+  m_Pivot: {x: .5, y: 0}
+--- !u!114 &479600159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11478050, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 479600155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1367256648, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 22318679}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 2
+  m_Elasticity: .00999999978
+  m_Inertia: 1
+  m_DecelerationRate: .699999988
+  m_ScrollSensitivity: 1
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 0}
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &479600160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11499640, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 479600155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Sprite: {fileID: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &479600161
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22218606, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 479600155}
 --- !u!1 &487388367 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 185494, guid: a68afe71e8aaa3d46a11bef9e639ca71, type: 2}
@@ -4123,7 +4785,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &490858557
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4572,7 +5234,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2, y: -.399999619}
+  m_AnchoredPosition: {x: -2, y: 3.5999999}
   m_SizeDelta: {x: -3.9000001, y: -9}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &529971164
@@ -4705,7 +5367,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: .480285645, y: .499938965}
+  m_AnchoredPosition: {x: .480285645, y: 6}
   m_SizeDelta: {x: 250, y: 116.5}
   m_Pivot: {x: 1, y: 1}
 --- !u!1 &570083911 stripped
@@ -4956,7 +5618,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &594112169
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5805,11 +6467,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 421082739}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: 0}
-  m_AnchorMax: {x: .5, y: 1}
-  m_AnchoredPosition: {x: .5, y: 4.76837158e-06}
-  m_SizeDelta: {x: 37.2000008, y: 1}
-  m_Pivot: {x: .5, y: .5}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -11.3999996, y: .500004768}
+  m_SizeDelta: {x: 37.1999969, y: 89}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &719838376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6779,7 +7441,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2, y: -.399999619}
+  m_AnchoredPosition: {x: -2, y: 3.4000001}
   m_SizeDelta: {x: -3.9000001, y: -9}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &828929483
@@ -6959,7 +7621,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2, y: -.399999619}
+  m_AnchoredPosition: {x: -2, y: 3.4000001}
   m_SizeDelta: {x: -3.9000001, y: -9}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &839309757
@@ -7242,7 +7904,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 5, y: 0}
   m_SizeDelta: {x: 2533, y: 573}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &854001153
@@ -7413,8 +8075,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 397, y: -9}
-  m_SizeDelta: {x: 120, y: 94}
+  m_AnchoredPosition: {x: 123.599998, y: -14.6999998}
+  m_SizeDelta: {x: 96.2399979, y: 94}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &918035867
 MonoBehaviour:
@@ -7475,7 +8137,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2, y: -.399999619}
+  m_AnchoredPosition: {x: -2, y: 3.5999999}
   m_SizeDelta: {x: -3.9000001, y: -9}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &918902658
@@ -8393,7 +9055,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1058621210
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8700,6 +9362,75 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1105469934}
+--- !u!1 &1106419571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 140016, guid: 16074564d895b4a17a60338653483852, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1106419573}
+  - 222: {fileID: 1106419574}
+  - 114: {fileID: 1106419572}
+  m_Layer: 5
+  m_Name: Instructions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1106419572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11413752, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1106419571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Practice your skills! Press finnish when you feel comfortable moving on.
+--- !u!224 &1106419573
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22406134, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1106419571}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22318679}
+  m_RootOrder: 1
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -3, y: -280}
+  m_SizeDelta: {x: -105, y: 295}
+  m_Pivot: {x: .5, y: .5}
+--- !u!222 &1106419574
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22291556, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1106419571}
 --- !u!1 &1111078832 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 127928, guid: a68afe71e8aaa3d46a11bef9e639ca71, type: 2}
@@ -8757,7 +9488,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2, y: -.399999619}
+  m_AnchoredPosition: {x: -2, y: 4.0999999}
   m_SizeDelta: {x: -3.9000001, y: -9}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1112588107
@@ -8916,7 +9647,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -84.4803009, y: -1.90734863e-05}
+  m_AnchoredPosition: {x: -60, y: .250015259}
   m_SizeDelta: {x: 82, y: 116}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1174751044
@@ -9534,7 +10265,7 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -66, y: -40}
+  m_AnchoredPosition: {x: -66, y: -40.7999992}
   m_SizeDelta: {x: 66, y: 80}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1285126833
@@ -9691,6 +10422,125 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1299628874}
+--- !u!1 &1300803757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 193902, guid: 16074564d895b4a17a60338653483852, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1300803760}
+  - 222: {fileID: 1300803761}
+  - 114: {fileID: 1300803759}
+  - 114: {fileID: 1300803758}
+  m_Layer: 5
+  m_Name: Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1300803758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11409814, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1300803757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
+    m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
+    m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
+    m_ColorMultiplier: 1
+    m_FadeDuration: .100000001
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1300803759}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 479600156}
+        m_MethodName: BackButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1300803759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11462026, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1300803757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 1d5043e3c7f8b4cdb9122c19c954a993, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!224 &1300803760
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22407198, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1300803757}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: .800000012, z: 1}
+  m_Children:
+  - {fileID: 298776546}
+  m_Father: {fileID: 1643221958}
+  m_RootOrder: 2
+  m_AnchorMin: {x: 0, y: .5}
+  m_AnchorMax: {x: 0, y: .5}
+  m_AnchoredPosition: {x: 270, y: 32}
+  m_SizeDelta: {x: 258, y: 92}
+  m_Pivot: {x: 1, y: 1}
+--- !u!222 &1300803761
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22283642, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1300803757}
 --- !u!1 &1311763957
 GameObject:
   m_ObjectHideFlags: 0
@@ -9717,13 +10567,13 @@ RectTransform:
   m_GameObject: {fileID: 1311763957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children: []
   m_Father: {fileID: 1609269467}
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -107.949997, y: 219.800003}
+  m_AnchoredPosition: {x: -109.800003, y: 218.399994}
   m_SizeDelta: {x: 60.4000015, y: 58.2999992}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1311763959
@@ -9972,7 +10822,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2, y: -.399999619}
+  m_AnchoredPosition: {x: -2, y: 3.4000001}
   m_SizeDelta: {x: -3.9000001, y: -9}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1366914787
@@ -10107,7 +10957,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 334.746246, y: -34.5000191}
+  m_AnchoredPosition: {x: 334.746246, y: -31.8999996}
   m_SizeDelta: {x: 164, y: 63}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1393163934
@@ -10392,7 +11242,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 0, y: .5}
-  m_AnchoredPosition: {x: 0, y: 77}
+  m_AnchoredPosition: {x: 0, y: 85.3000031}
   m_SizeDelta: {x: 130, y: 218}
   m_Pivot: {x: 0, y: .5}
 --- !u!114 &1448304149
@@ -10547,14 +11397,14 @@ RectTransform:
   m_GameObject: {fileID: 1460494213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .699999988, y: .699999988, z: .699999988}
   m_Children: []
   m_Father: {fileID: 1977327372}
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 21}
-  m_SizeDelta: {x: 78, y: 74}
+  m_AnchoredPosition: {x: 4, y: 21}
+  m_SizeDelta: {x: 78, y: 70}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1460494215
 MonoBehaviour:
@@ -11677,6 +12527,73 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 199284, guid: a68afe71e8aaa3d46a11bef9e639ca71, type: 2}
   m_PrefabInternal: {fileID: 157047559}
+--- !u!1 &1643221957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 113392, guid: 16074564d895b4a17a60338653483852, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1643221958}
+  - 222: {fileID: 1643221960}
+  - 114: {fileID: 1643221959}
+  m_Layer: 5
+  m_Name: Top Bar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1643221958
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22472564, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1643221957}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1933707722}
+  - {fileID: 436382547}
+  - {fileID: 1300803760}
+  m_Father: {fileID: 22318679}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -54}
+  m_SizeDelta: {x: 0, y: 108}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1643221959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11475944, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1643221957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .772058845, g: .745436132, b: .658520758, a: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1643221960
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22295612, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1643221957}
 --- !u!1 &1643946227
 GameObject:
   m_ObjectHideFlags: 0
@@ -12752,7 +13669,7 @@ RectTransform:
   m_GameObject: {fileID: 1753813680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .699999988, y: .699999988, z: .699999988}
   m_Children: []
   m_Father: {fileID: 1625880881}
   m_RootOrder: 0
@@ -13035,831 +13952,6 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 132186, guid: a68afe71e8aaa3d46a11bef9e639ca71, type: 2}
   m_PrefabInternal: {fileID: 157047559}
---- !u!1001 &1786011927
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 729164636}
-    m_Modifications:
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.size
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.size
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.size
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[5].instructions.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[6].instructions.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[7].instructions.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -34
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -98
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: -278
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 208
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_Pivot.x
-      value: .5
-      objectReference: {fileID: 0}
-    - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11460424, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: controller
-      value: 
-      objectReference: {fileID: 1960553280}
-    - target: {fileID: 11460424, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelsPanel
-      value: 
-      objectReference: {fileID: 2003053574}
-    - target: {fileID: 11450004, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: controller
-      value: 
-      objectReference: {fileID: 1960553280}
-    - target: {fileID: 11450004, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelsPanel
-      value: 
-      objectReference: {fileID: 2003053574}
-    - target: {fileID: 100372, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22484954, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 22484954, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 22484954, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 456
-      objectReference: {fileID: 0}
-    - target: {fileID: 22484954, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 1.4999752
-      objectReference: {fileID: 0}
-    - target: {fileID: 11487244, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22484954, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 248
-      objectReference: {fileID: 0}
-    - target: {fileID: 22403686, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -17
-      objectReference: {fileID: 0}
-    - target: {fileID: 22472564, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -54
-      objectReference: {fileID: 0}
-    - target: {fileID: 22472564, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 108
-      objectReference: {fileID: 0}
-    - target: {fileID: 22415444, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -300
-      objectReference: {fileID: 0}
-    - target: {fileID: 22415444, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 46.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 22415444, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 615
-      objectReference: {fileID: 0}
-    - target: {fileID: 22415444, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463752, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_FontData.m_Alignment
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 11463752, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_FontData.m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 22406134, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -280
-      objectReference: {fileID: 0}
-    - target: {fileID: 22406134, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 22406134, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: -105
-      objectReference: {fileID: 0}
-    - target: {fileID: 22406134, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 295
-      objectReference: {fileID: 0}
-    - target: {fileID: 22407198, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 22407198, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 44
-      objectReference: {fileID: 0}
-    - target: {fileID: 22407198, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 258
-      objectReference: {fileID: 0}
-    - target: {fileID: 22407198, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 92
-      objectReference: {fileID: 0}
-    - target: {fileID: 11462026, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22403686, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -13
-      objectReference: {fileID: 0}
-    - target: {fileID: 22403686, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 258
-      objectReference: {fileID: 0}
-    - target: {fileID: 22403686, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 94.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 11408890, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11415688, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_FontData.m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 11495190, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_FontData.m_FontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 22464534, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 106
-      objectReference: {fileID: 0}
-    - target: {fileID: 22464534, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 22464534, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 270.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 22464534, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 40.0000153
-      objectReference: {fileID: 0}
-    - target: {fileID: 22464534, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22464534, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11413752, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_FontData.m_FontSize
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 22484954, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 3.81469727e-06
-      objectReference: {fileID: 0}
-    - target: {fileID: 22484954, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11478050, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_ScrollSensitivity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11460694, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_ScrollSensitivity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[6].heading
-      value: Turn on time - normal speed
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[6].instruction
-      value: Tap the yellow clock one time, the green clock icon indicates normal
-        time speed
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[7].heading
-      value: Reset
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[7].instruction
-      value: Tap the reset button to return AtomTouch to the home screen
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[8].heading
-      value: Add more atoms
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[8].instruction
-      value: Click on the Na and Cl icons to add more sodium (Na) and Chlorine (Cl)
-        atoms
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[9].heading
-      value: Select all atoms
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[9].instruction
-      value: Touch one atoms then touch the "select all" box that appears at the top
-        of the screen
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[10].heading
-      value: 'Delete atoms '
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[10].instruction
-      value: 'Delete selected atoms by touching the  "Delete" box '
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[4].heading
-      value: Reorient to Home position
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[5].heading
-      value: Turn on time - slow speed
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[5].instruction
-      value: Tap the red clock one time, the  yellow clock icon indicates slow time
-        speed
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[1].instructions.Array.data[0].heading
-      value: Put an atom in its place
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[1].instructions.Array.data[1].heading
-      value: Put an atom in its place part 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[1].instructions.Array.data[0].instruction
-      value: Select an atom and move it to the top right-hand corner of the back of
-        the box.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[1].instructions.Array.data[1].instruction
-      value: Select a second atom and move it to the left-hand corner in the front
-        of the  box
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[0].instruction
-      value: "Turn time to normal speed. \n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[1].instruction
-      value: 'How many bonding partners does the highlighted atom have?
-
-        Hint: Bonds are indicated by lines between atoms. Bonds may form and break
-        as the atoms move, but the selected atom will keep the same bonding partners.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[2].instruction
-      value: The atom is bonded to three other atoms
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[3].instruction
-      value: What state of matter is this?
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[4].instruction
-      value: This is a solid because the atoms are maintaining bonding partners and
-        relative position to all the other atoms in the structure, even though the
-        atoms are moving.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[5].instruction
-      value: Stop time and add 4 Na and 4 Cl atoms so they bond to the other atoms
-        in the structure.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[6].instruction
-      value: Start time again, and observe the structure for about 30 seconds
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[7].instruction
-      value: What state of matter is this?
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[0].heading
-      value: Action
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[8].instruction
-      value: This is a solid because the atoms are maintaining bonding partners and
-        relative position to all the other atoms in the structure, even though the
-        atoms are moving.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[1].heading
-      value: Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[2].heading
-      value: Answer
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[3].heading
-      value: Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[4].heading
-      value: Answer
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[5].heading
-      value: Action
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[6].heading
-      value: Action
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[7].heading
-      value: Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[8].heading
-      value: Answer
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[0].instruction
-      value: 'Set the temperature slider at 0.001 Kelvin. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[0].heading
-      value: Action
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[1].instruction
-      value: How many degrees Celcius (C) is this?
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[1].heading
-      value: Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[2].heading
-      value: Answer
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[2].instruction
-      value: -273.15 degrees C
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[3].heading
-      value: Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[3].instruction
-      value: What happens to your atoms at 0.001 K?
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[4].heading
-      value: Answer
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[4].instruction
-      value: The atoms stop moving.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[5].instruction
-      value: 0 K is known as absolute zero. Based upon what is happening with your
-        atoms, why do you think its called absolute zero?
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[5].heading
-      value: Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].heading
-      value: Answer
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].instruction
-      value: Absolute zero is the temperature at which all atomic motion stops
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[7].heading
-      value: Action
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[7].instruction
-      value: Slowly heat the structure by increasing the temperature to around 1000
-        K. Observe the bonding partners of your highlighted atom, and its relative
-        position to the other atoms in the structure.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[8].instruction
-      value: What state of matter is this?
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[8].heading
-      value: Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[9].heading
-      value: Answer
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[9].instruction
-      value: "This is a liquid because the highlighted atom is changing bonding partners
-        and doesn\u2019t keep the same relative position in the structure."
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[10].heading
-      value: Action
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[10].instruction
-      value: Increase the temperature to 5000 K.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[11].heading
-      value: Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[11].instruction
-      value: What state of matter is this?
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[12].heading
-      value: Answer
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[12].instruction
-      value: This is a gas because the distance between the atoms is much larger than
-        in a solid or a liquid, and there is no sustained bonding between the atoms.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[0].instruction
-      value: Increase the temperature to 5000 K.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[0].heading
-      value: Action
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[1].instruction
-      value: What state of matter is this?
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[1].heading
-      value: Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[2].instruction
-      value: This is a gas because the distance between the atoms is much larger than
-        in a solid or a liquid, and there is no sustained bonding between the atoms.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[2].heading
-      value: Answer
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[3].instruction
-      value: Decrease the volume to 1 cubic nanometer (nm^3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[3].heading
-      value: Action
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[4].instruction
-      value: What state of matter is this?
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[4].heading
-      value: Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[5].instruction
-      value: "This is a liquid because the highlighted atom is changing bonding partners
-        and doesn\u2019t keep the same relative position in the structure."
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[5].heading
-      value: Answer
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[6].instruction
-      value: Can you make a solid at 5000 K?
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[6].heading
-      value: Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[7].instruction
-      value: Yes, if you add enough atoms to a 1 nm^3 box (around 100 atoms) it will
-        become a solid.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[7].heading
-      value: Answer
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[0].heading
-      value: Action Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[0].instruction
-      value: Use the grid in the box and its volume to roughly estimate the width
-        of a chlorine atom.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[1].heading
-      value: Answer
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[1].instruction
-      value: A chlorine atom is roughly 0.2nm in width
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[2].heading
-      value: Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[2].instruction
-      value: "When you changed the temperature, the structure formed by the atoms
-        changed. Is there anything you can do that will change the structure of the
-        individual atom you selected? \n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[3].instruction
-      value: No, atoms are indivisible units that make up all matter. It is the bonding
-        between them that determines the structure.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[3].heading
-      value: Answer
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[0].heading
-      value: Action
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[0].instruction
-      value: Stop time and place 8 sodium atoms in one corner of the box and 8 chlorine
-        atoms in the opposite corner. Set time to normal speed.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[1].heading
-      value: Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[1].instruction
-      value: 'What are the atoms doing? '
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[2].heading
-      value: Answer
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[2].instruction
-      value: Sodium atoms repel other sodium atoms. Chlorine atoms repel other chlorine
-        atoms. Sodium and Chlorine atoms attract each other.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[3].instruction
-      value: 'In order to simulate salt (NaCl), sodium atoms have a charge of +1 and
-        chlorine atoms have a charge of -1. What does this tell you about how charged
-        atoms interact? '
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[3].heading
-      value: Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[4].heading
-      value: Answer
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[4].instruction
-      value: Positively charged atoms repel other positively charged atoms while negatively
-        charged atoms repel other positivity charged atoms. Positively charged atoms
-        attract negatively charged atoms. Since Sodium and Chlorine atoms have opposite
-        charges they attract each other to form an ionic bond. In an ionic bond, two
-        atoms with opposite charges bond to one another to form a structure with a
-        net charge of 0.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[0].heading
-      value: Action
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[0].instruction
-      value: Build and observe different structures! What formation of atoms stays
-        solid at the highest temperature?
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[1].heading
-      value: Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[1].instruction
-      value: 'What are the atoms doing? '
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[2].heading
-      value: Answer
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[2].instruction
-      value: Sodium atoms repel other sodium atoms. Chlorine atoms repel other chlorine
-        atoms. Sodium and Chlorine atoms attract each other.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[3].heading
-      value: Question
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[3].instruction
-      value: 'In order to simulate salt (NaCl), sodium atoms have a charge of +1 and
-        chlorine atoms have a charge of -1. What does this tell you about how charged
-        atoms interact? '
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[4].heading
-      value: Answer
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[4].instruction
-      value: Positively charged atoms repel other positively charged atoms while negatively
-        charged atoms repel other positivity charged atoms. Positively charged atoms
-        attract negatively charged atoms. Since Sodium and Chlorine atoms have opposite
-        charges they attract each other to form an ionic bond. In an ionic bond, two
-        atoms with opposite charges bond to one another to form a structure with a
-        net charge of 0.
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[4].gameObject
-      value: 
-      objectReference: {fileID: 1654523063}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[5].gameObject
-      value: 
-      objectReference: {fileID: 111088985}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[6].gameObject
-      value: 
-      objectReference: {fileID: 111088985}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[7].gameObject
-      value: 
-      objectReference: {fileID: 853432843}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[8].gameObject
-      value: 
-      objectReference: {fileID: 728321472}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[9].gameObject
-      value: 
-      objectReference: {fileID: 1402518135}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[10].gameObject
-      value: 
-      objectReference: {fileID: 599065679}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[0].gameObject
-      value: 
-      objectReference: {fileID: 38928915}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[3].gameObject
-      value: 
-      objectReference: {fileID: 1381688032}
-    - target: {fileID: 11460694, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_Elasticity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11460694, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_DecelerationRate
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11478050, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_Elasticity
-      value: .00999999978
-      objectReference: {fileID: 0}
-    - target: {fileID: 11478050, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_DecelerationRate
-      value: .699999988
-      objectReference: {fileID: 0}
-    - target: {fileID: 11478050, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: m_MovementType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[0].instruction
-      value: "Welcome to AtomTouch. \nIn this app, each of the spheres onscreen represents
-        one atom. \n\n(this is a menu bar that you can always drag up and down)"
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11404810, guid: 16074564d895b4a17a60338653483852, type: 2}
-    - {fileID: 11460694, guid: 16074564d895b4a17a60338653483852, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: 16074564d895b4a17a60338653483852, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1788141888
 GameObject:
   m_ObjectHideFlags: 0
@@ -14097,7 +14189,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 18}
+  m_AnchoredPosition: {x: 3, y: 18}
   m_SizeDelta: {x: 94, y: 90}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1836169547
@@ -14469,7 +14561,7 @@ RectTransform:
   m_GameObject: {fileID: 1904264388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .699999988, y: .699999988, z: .699999988}
   m_Children: []
   m_Father: {fileID: 2090151849}
   m_RootOrder: 0
@@ -14750,6 +14842,75 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
+--- !u!1 &1933707720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 125110, guid: 16074564d895b4a17a60338653483852, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1933707722}
+  - 222: {fileID: 1933707723}
+  - 114: {fileID: 1933707721}
+  m_Layer: 5
+  m_Name: Heading
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1933707721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11463752, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1933707720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_RichText: 0
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Practice
+--- !u!224 &1933707722
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22415444, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1933707720}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1643221958}
+  m_RootOrder: 0
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -300, y: 46.5}
+  m_SizeDelta: {x: 615, y: 100}
+  m_Pivot: {x: 0, y: 1}
+--- !u!222 &1933707723
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22273942, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1933707720}
 --- !u!1 &1945884883
 GameObject:
   m_ObjectHideFlags: 0
@@ -15046,11 +15207,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22446510, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -690.380005
+      value: -682.200012
       objectReference: {fileID: 0}
     - target: {fileID: 171000, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22464484, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_SizeDelta.y
@@ -15062,11 +15223,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22447152, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 27
+      value: 195
       objectReference: {fileID: 0}
     - target: {fileID: 22447152, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 148
+      value: 301
       objectReference: {fileID: 0}
     - target: {fileID: 22431290, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_AnchoredPosition.y
@@ -15102,7 +15263,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22446510, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 789
+      value: 797.5
       objectReference: {fileID: 0}
     - target: {fileID: 22446510, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_SizeDelta.x
@@ -15312,6 +15473,38 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 22447152, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
+      propertyPath: m_LocalScale.x
+      value: .800000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 22447152, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
+      propertyPath: m_LocalScale.y
+      value: .800000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 22447152, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
+      propertyPath: m_LocalScale.z
+      value: .800000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 119404, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 183414, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194156, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 126474, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 194168, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
   m_IsPrefabParent: 0
@@ -15467,7 +15660,7 @@ RectTransform:
   m_GameObject: {fileID: 1959639982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .699999988, y: .699999988, z: .699999988}
   m_Children: []
   m_Father: {fileID: 798991984}
   m_RootOrder: 0
@@ -15634,7 +15827,6 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_TargetEye: 3
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -16063,7 +16255,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 0, y: .5}
-  m_AnchoredPosition: {x: 2, y: -72}
+  m_AnchoredPosition: {x: 0, y: -72}
   m_SizeDelta: {x: 130, y: 218}
   m_Pivot: {x: 0, y: .5}
 --- !u!114 &1977327373
@@ -16104,7 +16296,7 @@ GameObject:
   - 222: {fileID: 1982931443}
   - 114: {fileID: 1982931442}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16140,7 +16332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Texture: {fileID: 2800000, guid: 837e50c1c30214c4fae5db83b2f110b2, type: 3}
+  m_Texture: {fileID: 2800000, guid: 0f09f310178215c44ba313eee8006c3b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -16548,7 +16740,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2, y: -.399999619}
+  m_AnchoredPosition: {x: -2, y: 3.4000001}
   m_SizeDelta: {x: -3.9000001, y: -9}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2039296317
@@ -16848,7 +17040,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 0, y: .5}
-  m_AnchoredPosition: {x: 0, y: -133}
+  m_AnchoredPosition: {x: .699999988, y: -133}
   m_SizeDelta: {x: 132, y: 228.5}
   m_Pivot: {x: 0, y: .5}
 --- !u!114 &2090151850
