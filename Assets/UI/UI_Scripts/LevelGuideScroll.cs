@@ -9,28 +9,30 @@ public class LevelGuideScroll : MonoBehaviour {
 
 	public float desiredBottom;
 	public float desiredTop;
-	public float kern;
+//	public float kern;
 
-	bool movingDown;
-	bool movingUp;
-	bool moveWasCalled;
+//	bool movingDown;
+//	bool movingUp;
+//	bool moveWasCalled;
+	bool isUp;
 
-	float currentY;
-	float previousY;
-	float startY;
+//	float currentY;
+//	float previousY;
+//	float startY;
 	
 
 	void Start () {
+		isUp = true;
 		desiredTop = panelGuide.anchoredPosition.y;
 		SetUpPanel ();
-		movingUp = false;
-		movingDown = false;
-		moveWasCalled = false;
-		currentY = panelGuide.anchoredPosition.y;
-		startY = currentY;
-		previousY = currentY;
+//		movingUp = false;
+//		movingDown = false;
+//		moveWasCalled = false;
+//		currentY = panelGuide.anchoredPosition.y;
+//		startY = currentY;
+//		previousY = currentY;
 	}
-
+	/*
 	void Update () {
 		previousY = currentY;
 		currentY = panelGuide.anchoredPosition.y;
@@ -51,7 +53,7 @@ public class LevelGuideScroll : MonoBehaviour {
 			panelGuide.anchoredPosition = new Vector2(panelGuide.localPosition.x, desiredBottom);
 
 		movingDown = true;
-		movingUp = false;*/
+		movingUp = false;
 		moveWasCalled = true;
 		Debug.Log ("moving down");
 		controller.changingTemp = true; // hack way to get the screen not to move the same way when using temp slider.
@@ -63,14 +65,24 @@ public class LevelGuideScroll : MonoBehaviour {
 		if (currentY - startY > kern && currentY < desiredTop)
 			panelGuide.anchoredPosition = new Vector2(panelGuide.localPosition.x, desiredTop);
 		movingDown = false;
-		movingUp = true;*/
+		movingUp = true;
 		moveWasCalled = true;
 		controller.changingTemp = true; // hack way to get the screen not to move the same way when using temp slider.
 		Debug.Log ("moving up");
-	}
+	}*/
 
 	public void SetUpPanel() {
 		panelGuide.anchoredPosition = new Vector2(panelGuide.anchoredPosition.x, desiredTop);
+	}
+
+	public void OnClick() {
+		if (isUp) {
+			panelGuide.anchoredPosition = new Vector2 (panelGuide.anchoredPosition.x, desiredBottom);
+			isUp = false;
+		} else {
+			panelGuide.anchoredPosition = new Vector2(panelGuide.anchoredPosition.x, desiredTop);
+			isUp = true;
+		}
 	}
 	
 }

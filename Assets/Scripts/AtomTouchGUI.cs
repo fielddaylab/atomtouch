@@ -141,7 +141,7 @@ public class AtomTouchGUI : MonoBehaviour
 
 	void Start ()
 	{	
-		//Handheld.PlayFullScreenMovie ("AtomTouchIntro.mp4", Color.black, FullScreenMovieControlMode.CancelOnInput);
+		Handheld.PlayFullScreenMovie ("AtomTouchIntro.mp4", Color.black, FullScreenMovieControlMode.CancelOnInput);
 		MainMenuInit ();
 		LevelsInit ();
 	}
@@ -819,8 +819,9 @@ public class AtomTouchGUI : MonoBehaviour
 	public void IntroVideoOpen ()
 	{
 //		introVideoGameObject.SetActive (true);
-		MainMenuClose ();
+//		MainMenuClose ();
 //		introVideoController.introVideo.Play ();
+		Handheld.PlayFullScreenMovie ("AtomTouchIntro.mp4", Color.black, FullScreenMovieControlMode.CancelOnInput);
 	}
 	
 	public void IntroVideoClose ()
