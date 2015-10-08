@@ -8,10 +8,10 @@ public class PicoSeconds : MonoBehaviour {
 	int tenth;
 
 	void Update () {
-		tenth = (int)Mathf.Round (((StaticVariables.currentTime - (Mathf.Floor (StaticVariables.currentTime))) * 10));
+		tenth = (int)Mathf.Floor (((StaticVariables.currentTime - (Mathf.Floor (StaticVariables.currentTime))) * 10));
 		if (tenth == 10) {
 			tenth = 0;
 		}
-		time.text = ((Mathf.Floor(StaticVariables.currentTime))).ToString() + "." + tenth.ToString() + "ps"; // rounding to 1 tenth for asthentics
+		time.text = ((Mathf.Floor(StaticVariables.currentTime))).ToString() + "." + tenth.ToString() + " ps"; // rounding to 1 tenth for asthentics
 	}
 }

@@ -486,9 +486,11 @@ public class AtomTouchGUI : MonoBehaviour
 		CreateEnvironment myEnvironment = CreateEnvironment.myEnvironment;
 		myEnvironment.InitAtoms (currentAtomPreset);
 		Atom.EnableSelectAtomGroup (false);
+		currentTimeSpeed = StaticVariables.TimeSpeed.Normal;
+		changeTimer ();
 		//reset temp and vol
 		tempSliderComponent.value = /*StaticVariables.tempRangeHigh*/ StaticVariables.desiredTemperature;
-		volSliderComponent.value = StaticVariables.volRangeHigh - StaticVariables.volDefault;
+		volSliderComponent.value = /*StaticVariables.volRangeHigh - */StaticVariables.volDefault;
 
 		SnapTempToInterval (10.0f);
 		SnapVolumeToInterval (0.5f);
@@ -497,6 +499,7 @@ public class AtomTouchGUI : MonoBehaviour
 		
 		changingVol = false;
 		changingTemp = false;
+
 		//SettingsControl.renderAtoms = true;
 	}
 
@@ -735,6 +738,16 @@ public class AtomTouchGUI : MonoBehaviour
 		}
 		changingTemp = true;
 
+	}
+
+	public void OnPointerDown_TempSlider ()
+	{
+		changingTemp = true;
+	}
+	
+	public void OnPointerDown_VolSlider ()
+	{
+		changingVol = true;
 	}
 
 	public void OnPointerUp_TempSlider ()

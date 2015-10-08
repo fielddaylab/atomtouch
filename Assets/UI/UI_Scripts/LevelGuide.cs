@@ -42,10 +42,10 @@ public class LevelGuide : MonoBehaviour
 	public void NextButton ()
 	{
 		if (instructionNumber == LIS.levelInstructions [levelNumber].instructions.Length - 1) {
-			controller.LevelGuideClose ();
-			controller.LevelsOpen ();
+			controller.hudController.activityCompletePanel.SetActive(true);
+			controller.LevelGuideClose();
+			controller.LevelsOpen();
 			levelsPanel.LevelComplete(levelNumber);
-			nextButtonText.text = "Next";
 			return;
 		}
 

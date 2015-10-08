@@ -17,6 +17,7 @@ public class LevelsPanel : MonoBehaviour {
 		public Image levelIcon;
 		public Text description;
 		public Button startButton;
+		Text startButtonText;
 	}
 
 	public LevelTile[] levelTiles;

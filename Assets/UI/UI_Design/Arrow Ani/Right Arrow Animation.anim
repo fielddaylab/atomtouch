@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Arrow Animation Left
+  m_Name: Right Arrow Animation
   serializedVersion: 6
   m_Legacy: 1
   m_Compressed: 0
@@ -19,14 +19,14 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 15.5
-        inSlope: 147
-        outSlope: 147
+        value: 2
+        inSlope: 168
+        outSlope: 168
         tangentMode: 10
       - time: .166666672
-        value: 40
-        inSlope: 147
-        outSlope: 147
+        value: 30
+        inSlope: 168
+        outSlope: 168
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -65,14 +65,14 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 15.5
-        inSlope: 147
-        outSlope: 147
+        value: 2
+        inSlope: 168
+        outSlope: 168
         tangentMode: 10
       - time: .166666672
-        value: 40
-        inSlope: 147
-        outSlope: 147
+        value: 30
+        inSlope: 168
+        outSlope: 168
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
