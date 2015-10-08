@@ -123,7 +123,7 @@ public class AtomTouchGUI : MonoBehaviour
 	void Awake ()
 	{
 		myAtomTouchGUI = this;
-
+		currentAtomPreset = "box";
 		tempSliderComponent = tempSlider.GetComponent<Slider> ();
 		volSliderComponent = volSlider.GetComponent<Slider> ();
 		//set slider range
@@ -841,6 +841,7 @@ public class AtomTouchGUI : MonoBehaviour
 	{
 //		introVideoGameObject.SetActive (false);
 		MainMenuOpen ();
+		//Handheld.PlayFullScreenMovie ("AtomTouchIntro.mp4", Color.black, FullScreenMovieControlMode.CancelOnInput);
 	}
 
 	public void CloseAllExMain() 

@@ -223,7 +223,7 @@ public class CreateEnvironment : MonoBehaviour {
 		preCompute ();
 		
 		//create the atoms
-		InitAtoms (atomTouchGUI.currentAtomPreset);
+		InitAtoms ("box");
 		
 		
 		//give all of the atoms a random velocity on startup
@@ -360,7 +360,7 @@ public class CreateEnvironment : MonoBehaviour {
 			else if (attr.Equals("temperature"))
 			{
 				string val = textArray2[1].Trim().ToLower();
-				StaticVariables.desiredTemperature = float.Parse(textArray2[1]);
+				StaticVariables.desiredTemperature = float.Parse(val);
 				//change temp slider value
 				atomTouchGUI.tempSliderComponent.value 
 					= /*StaticVariables.tempRangeHigh -*/ StaticVariables.desiredTemperature;
@@ -373,7 +373,7 @@ public class CreateEnvironment : MonoBehaviour {
 			else if (attr.Equals("volume"))
 			{
 				string val = textArray2[1].Trim().ToLower();
-				myEnvironment.volume = float.Parse(textArray2[1]);
+				myEnvironment.volume = float.Parse(val);
 				float depth = Mathf.Pow(myEnvironment.volume, 1f/3f);
 				float sliderVal = 
 					(StaticVariables.maxVol + StaticVariables.minVol-depth)/10.0f;

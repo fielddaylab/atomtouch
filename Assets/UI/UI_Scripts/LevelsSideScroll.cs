@@ -10,13 +10,13 @@ public class LevelsSideScroll : MonoBehaviour {
 	public float sideJumpDist;
 	public float speed;
 
-	float offset;
+//	float offset;
 
 	// Use this for initialization
 	void Start () {
 		rightButton.onClick.AddListener (OnRightButtonClicked);
 		leftButton.onClick.AddListener (OnLeftButtonClicked);
-		offset = sideJumpDist;
+//		offset = sideJumpDist;
 	}
 	
 	// Update is called once per frame

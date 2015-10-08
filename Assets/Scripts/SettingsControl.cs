@@ -46,9 +46,10 @@ public class SettingsControl : MonoBehaviour {
        	//set { this._Name = value; }  
     }
 	void Awake(){
+		mySettings = this;
 		mouseExitsSettingsPanel = true;
 		gamePaused = false;
-		mySettings = this;
+
 
 		atomTouchGUI = Camera.main.GetComponent<AtomTouchGUI>();
 		nmToggle = nmOn.GetComponent<Toggle>();
@@ -213,13 +214,13 @@ public class SettingsControl : MonoBehaviour {
 		}
 		//atomTouchGUI.SetAtomBtnsVisibility();
 		//atomTouchGUI.SelectAllAtoms ();
-		//atomTouchGUI.DeleteSelectedAtoms ();
+		//atomTouchGUI.DeleteSelectedAtoms ();*/
 	}
-	/*
+
 	public void OpenScreenLoader(){
 		PauseGame();
 	}
-	*/
+
 	public void OnClick_SceneLoader(){
 		PauseGame();
 		sceneLoader.SetActive(true);
