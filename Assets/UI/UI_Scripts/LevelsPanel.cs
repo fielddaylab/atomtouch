@@ -35,7 +35,7 @@ public class LevelsPanel : MonoBehaviour {
 
 	public void LevelComplete(int level) {
 		levelTiles [level].startButton.GetComponent<Image> ().sprite = complete;
-		levelTiles [level].startButton.GetComponentInChildren<Text> ().text = "Restart";
+		//levelTiles [level].startButton.GetComponentInChildren<Text> ().text = "Restart";
 	}
 
 }
