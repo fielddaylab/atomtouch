@@ -13,7 +13,8 @@ public class SelectPanelController : MonoBehaviour {
 	public Button selectAll;
 	public Button deselect;
 
-	private Text selectedAtomsText;
+	public Text selectedAtomsText;
+
 //	private Text deleteText;
 //	private Text selectAllText;
 //	private Text deselectText;
@@ -21,7 +22,6 @@ public class SelectPanelController : MonoBehaviour {
 	private int numberSelectedAtoms;
 
 	void Start () {
-		selectedAtomsText = selectedAtoms.GetComponentInChildren<Text> ();
 //		deleteText = delete.GetComponentInChildren<Text> ();
 //		selectAllText = selectAll.GetComponentInChildren<Text> ();
 //		deselectText = deselect.GetComponentInChildren<Text> ();
@@ -31,13 +31,21 @@ public class SelectPanelController : MonoBehaviour {
 	void Update () {
 		numberSelectedAtoms = controller.CountSelectedAtoms ();
 		selectedAtomsText.text = numberSelectedAtoms + " Atom(s) Selected";
-
-		if (numberSelectedAtoms > 0) {
-			delete.interactable = true;
-			selectPanel.SetActive (true);
+		/*if (Potential.currentPotential == Potential.potentialType.LennardJones) {
+			if (selectedAtomsLenard.gameObject.activeSelf == false) {
+				selectedAtomsLenard.gameObject.SetActive(true);
+				selectedAtomsBuck.gameObject.SetActive (false);
+			}
+			selectedAtomsTextLenard.text = numberSelectedAtoms + " Atom(s) Selected \n " +
+				"Cu: " + controller.copperCount.nam + 
+				"\nAu: " + controller.goldCount +
+				"\nPl: " + controller.platinumCount;
 		} else {
-			delete.interactable = false;
-			selectPanel.SetActive (false);
-		}
+			if (selectedAtomsBuck.gameObject.activeSelf == false) {
+				selectedAtomsBuck.gameObject.SetActive(true);
+				selectedAtomsLenard.gameObject.SetActive (false);
+			}
+			selectedAtomsTextBuck.text = numberSelectedAtoms + " Atom(s) Selected";
+		}*/
 	}
 }

@@ -44,7 +44,7 @@ public class LevelGuide : MonoBehaviour
 		if (instructionNumber == LIS.levelInstructions [levelNumber].instructions.Length - 1) {
 			controller.hudController.activityCompletePanel.SetActive(true);
 			controller.LevelGuideClose();
-			controller.LevelsOpen();
+			//controller.LevelsOpen();
 			levelsPanel.LevelComplete(levelNumber);
 			return;
 		}

@@ -3,17 +3,30 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class HUD : MonoBehaviour {
+	public AtomTouchGUI controller;
 
 	public GameObject settingsPanel;
 	public GameObject buckinghamPanel;
 	public GameObject lenardJonesPanel;
 	public GameObject activityCompletePanel;
 	public Button settingsButton;
+	public GameObject selectPanel;
+	private int numberSelectedAtoms;
 
 	ActivityComplete activityComplete;
 
 	void Start () {
 		activityComplete = activityCompletePanel.GetComponent<ActivityComplete>() as ActivityComplete;
+	}
+
+	void Update () {
+		numberSelectedAtoms = controller.CountSelectedAtoms ();
+		
+		if (numberSelectedAtoms > 0) {
+			selectPanel.SetActive (true);
+		} else {
+			selectPanel.SetActive (false);
+		}
 	}
 
 	public void SettingsOpen() {

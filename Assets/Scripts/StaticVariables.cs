@@ -83,7 +83,7 @@ public class StaticVariables {
 	
 	public static float volRangeLow = 1.0f;
 	public static float volRangeHigh = 4.0f;
-	public static float volDefault = 1.0f;
+	public static float volDefault = 2.0f;
 	//this variable causes the bond lines to either draw or not draw
 	public static bool drawBondLines = true;
 	//the variable pauses the simulation of physics

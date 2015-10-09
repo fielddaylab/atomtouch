@@ -34,6 +34,7 @@ public class AtomTouchGUI : MonoBehaviour
 	public string currentAtomPreset;
 	public GameObject mainCameraGameObject;
 	public CameraScript cameraScript;
+	public SplashScreen splashScreen;
 
 	//UI Panels Scripts
 	public HUD hudController;
@@ -141,7 +142,8 @@ public class AtomTouchGUI : MonoBehaviour
 
 	void Start ()
 	{	
-		Handheld.PlayFullScreenMovie ("AtomTouchIntro.mp4", Color.black, FullScreenMovieControlMode.CancelOnInput);
+//		splashScreen.Init ();
+//		Handheld.PlayFullScreenMovie ("AtomTouchIntro.mp4", Color.black, FullScreenMovieControlMode.CancelOnInput);
 		MainMenuInit ();
 		LevelsInit ();
 	}
@@ -596,17 +598,17 @@ public class AtomTouchGUI : MonoBehaviour
 		CreateEnvironment createEnvironment = CreateEnvironment.myEnvironment;
 		//these are in angstroms
 		float offset = StaticVariables.maxVol + StaticVariables.minVol;
-		createEnvironment.width = Math.Abs (offset - volSliderComponent.value * 10.0f);
-		createEnvironment.height = Math.Abs (offset - volSliderComponent.value * 10.0f);
-		createEnvironment.depth = Math.Abs (offset - volSliderComponent.value * 10.0f);
+		createEnvironment.width = Math.Abs (volSliderComponent.value * 10.0f);
+		createEnvironment.height = Math.Abs ( volSliderComponent.value * 10.0f);
+		createEnvironment.depth = Math.Abs (volSliderComponent.value * 10.0f);
 		createEnvironment.volume = 
 			createEnvironment.width *
 			createEnvironment.height *
 			createEnvironment.depth; //to nm^3
 		//since slider is upside down...
-		float realVol = createEnvironment.width * 0.1f;
+		//float realVol = createEnvironment.width * 0.1f;
 
-		ChangePlaneMaterial (realVol);
+		//ChangePlaneMaterial (realVol);
 		changingVol = true;
 	}
 
@@ -800,6 +802,8 @@ public class AtomTouchGUI : MonoBehaviour
 	public void FreePlayOpen ()
 	{
 		MainMenuClose ();
+		currentAtomPreset = "box";
+		ResetAll ();
 		mainMenuAnimation.SetActive (false);
 	}
 
@@ -834,7 +838,7 @@ public class AtomTouchGUI : MonoBehaviour
 //		introVideoGameObject.SetActive (true);
 //		MainMenuClose ();
 //		introVideoController.introVideo.Play ();
-		Handheld.PlayFullScreenMovie ("AtomTouchIntro.mp4", Color.black, FullScreenMovieControlMode.CancelOnInput);
+		Handheld.PlayFullScreenMovie ("Atomtouch_Intro_Movie_Ver1.0 17-05-06-204", Color.black, FullScreenMovieControlMode.CancelOnInput);
 	}
 	
 	public void IntroVideoClose ()
