@@ -6475,11 +6475,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1960553280}
   frames:
+  - {fileID: 21300000, guid: c97e0b249fd2c4861a97958420a80407, type: 3}
   - {fileID: 21300000, guid: 6ed145f765bc140ceb4ad983e06e6e27, type: 3}
   - {fileID: 21300000, guid: bc076fd875fa44fbd8644d8e5d27558a, type: 3}
   - {fileID: 21300000, guid: 966c50c5732464c32be07d0c585bc53c, type: 3}
-  - {fileID: 21300000, guid: c97e0b249fd2c4861a97958420a80407, type: 3}
-  framesPerSecond: 1
+  framesPerSecond: 3
   image: {fileID: 120406871}
 --- !u!114 &669515737
 MonoBehaviour:
