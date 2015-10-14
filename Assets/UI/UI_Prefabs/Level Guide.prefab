@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &112966
 GameObject:
   m_ObjectHideFlags: 1
@@ -311,12 +311,12 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -343,7 +343,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -412,17 +412,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelInstructions:
   - instructions:
-    - heading: Welcome!
-      instruction: "Welcome to AtomTouch. \nIn this app, each of the spheres onscreen
-        represents one atom. \n\n(this is a menu bar that you can always drag up and
-        down)"
+    - heading: Welcome to AtomTouch
+      instruction: 'This app allows us to look and play with with Atoms, the ultra-small
+        building blocks of everything.
+
+
+        To hide this box, tap anywhere within it.
+
+
+        Let''s start learning how to use the app! Touch <b>Next</b>'
       gameObject: {fileID: 0}
     - heading: Moving Atoms
-      instruction: You are able to move an atom by dragging it.
+      instruction: 'Let''s start by moving an Atom. It''s easy!
+
+
+        Touch (or click) on an Atom and drag it around.'
       gameObject: {fileID: 0}
     - heading: Nearer/Farther
-      instruction: "To move an atom nearer or farther away, touch somewhere on the
-        screen while dragging up/down. \nWith a mouse, use the scroll wheel."
+      instruction: 'Now you need to learn how to move Atoms closer and farther.
+
+
+        Start by dragging an Atom. Then, use a second finger and touch somewhere else
+        on the screen and slide up and down. If you are using a mouse, just click
+        on an atom and rotate the mouse wheel.'
       gameObject: {fileID: 0}
     - heading: Changing Perspective
       instruction: By touching somewhere empty in the box and dragging, you can move
@@ -431,49 +443,66 @@ MonoBehaviour:
     - heading: Reorient to Home position
       instruction: To reset the box, touch the camera reset button
       gameObject: {fileID: 0}
-    - heading: Turn on time - slow speed
-      instruction: Tap the red clock one time, the  yellow clock icon indicates slow
-        time speed
+    - heading: Starting Time
+      instruction: 'Right now, time is stopped. Let''s start it up!
+
+
+        Touch the clock button to change it from stopped to play. The atoms will start
+        to move around.'
       gameObject: {fileID: 0}
-    - heading: Turn on time - normal speed
-      instruction: Tap the yellow clock one time, the green clock icon indicates normal
-        time speed
+    - heading: Speeding it Up
+      instruction: "Touch the clock a second time to go full speed. \n\nNotice that
+        time in AtomTouch is <i>really</i> slowed down from real life."
       gameObject: {fileID: 0}
     - heading: Reset
-      instruction: Tap the reset button to return AtomTouch to the home screen
+      instruction: Sometimes things can get a little messy. If you ever want to reset,
+        tap the reset button. The atoms and settings will return to how the activty
+        started.
       gameObject: {fileID: 0}
     - heading: Add more atoms
       instruction: Click on the Na and Cl icons to add more sodium (Na) and Chlorine
         (Cl) atoms
       gameObject: {fileID: 0}
-    - heading: Select all atoms
-      instruction: Touch one atoms then touch the "select all" box that appears at
-        the top of the screen
+    - heading: Selecting Atoms
+      instruction: "Touch one atoms. See how it changes color and some new options
+        appear at the top of the screen? \nNow touch another atom to select it too.
+        Now if you drag one, they both move! \n\nAlso notice that some new options
+        appear at the top of the screen. Try touching the <b>Select All</b> button."
       gameObject: {fileID: 0}
-    - heading: 'Delete atoms '
-      instruction: 'Delete selected atoms by touching the  "Delete" box '
+    - heading: 'Deleting atoms '
+      instruction: Once you have selected some Atoms, touch the <b>Delete</b> button
+        to delete them.
+      gameObject: {fileID: 0}
+    - heading: 
+      instruction: Once you have selected some Atoms, touch the <b>Delete</b> button
+        to delete them.
       gameObject: {fileID: 0}
   - instructions:
-    - heading: Put an atom in its place
+    - heading: Put an atom in its Place
       instruction: Select an atom and move it to the top right-hand corner of the
         back of the box.
       gameObject: {fileID: 0}
-    - heading: Put an atom in its place part 2
-      instruction: Select a second atom and move it to the left-hand corner in the
-        front of the  box
+    - heading: Put another atom in Place
+      instruction: Now  can you move a different atom to the bottom left hand corner
+        in the front of the  box?
       gameObject: {fileID: 0}
   - instructions:
-    - heading: Action
-      instruction: "Turn time to normal speed. \n"
+    - heading: Starting the States of Matter Activity
+      instruction: "First select your favorite atom and then turn on the time to normal
+        speed. \n"
       gameObject: {fileID: 0}
     - heading: Question
-      instruction: 'How many bonding partners does the highlighted atom have?
+      instruction: 'How many potential bonding partners does the highlighted atom
+        have?
 
         Hint: Bonds are indicated by lines between atoms. Bonds may form and break
-        as the atoms move, but the selected atom will keep the same bonding partners.'
+        as the atoms move, but the selected atom will keep the same  potential bonding
+        partners.'
       gameObject: {fileID: 0}
     - heading: Answer
-      instruction: The atom is bonded to three other atoms
+      instruction: Depending upon the location of your favorite atom, it could have
+        3-6  potential bonding partners. Corner atoms have 3 potential bonding partners
+        while interior atoms have 6 potential bonding partners.
       gameObject: {fileID: 0}
     - heading: Question
       instruction: What state of matter is this?
@@ -483,7 +512,7 @@ MonoBehaviour:
         and relative position to all the other atoms in the structure, even though
         the atoms are moving.
       gameObject: {fileID: 0}
-    - heading: Action
+    - heading: Solid? or Not a solid?
       instruction: Stop time and add 4 Na and 4 Cl atoms so they bond to the other
         atoms in the structure.
       gameObject: {fileID: 0}
@@ -494,9 +523,9 @@ MonoBehaviour:
       instruction: What state of matter is this?
       gameObject: {fileID: 0}
     - heading: Answer
-      instruction: This is a solid because the atoms are maintaining bonding partners
-        and relative position to all the other atoms in the structure, even though
-        the atoms are moving.
+      instruction: This is still a solid because the atoms are maintaining bonding
+        partners and relative position to all the other atoms in the structure, even
+        though the atoms are moving.
       gameObject: {fileID: 0}
   - instructions:
     - heading: Action
@@ -958,7 +987,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1087,15 +1116,15 @@ RectTransform:
   m_GameObject: {fileID: 132048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: .800000012, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22423300}
   m_Father: {fileID: 22472564}
   m_RootOrder: 1
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -17, y: -24}
-  m_SizeDelta: {x: 258, y: 92}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1841, y: -18}
+  m_SizeDelta: {x: 258, y: 70}
   m_Pivot: {x: 1, y: 1}
 --- !u!224 &22406134
 RectTransform:
@@ -1122,15 +1151,15 @@ RectTransform:
   m_GameObject: {fileID: 193902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: .800000012, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22457964}
   m_Father: {fileID: 22472564}
   m_RootOrder: 2
-  m_AnchorMin: {x: 0, y: .5}
-  m_AnchorMax: {x: 0, y: .5}
-  m_AnchoredPosition: {x: 270, y: 32}
-  m_SizeDelta: {x: 258, y: 92}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 270, y: -18}
+  m_SizeDelta: {x: 258, y: 70}
   m_Pivot: {x: 1, y: 1}
 --- !u!224 &22415444
 RectTransform:
@@ -1144,9 +1173,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22472564}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -300, y: 46.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 629, y: -3.5}
   m_SizeDelta: {x: 615, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &22423300
@@ -1161,10 +1190,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22403686}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -.25, y: 6}
-  m_SizeDelta: {x: -.5, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 128.75, y: -32}
+  m_SizeDelta: {x: 257.5, y: 64}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22432962
 RectTransform:
@@ -1196,10 +1225,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22407198}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 6}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 129, y: -32}
+  m_SizeDelta: {x: 258, y: 64}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22469006
 RectTransform:
@@ -1237,7 +1266,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -54}
-  m_SizeDelta: {x: 0, y: 108}
+  m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22484954
 RectTransform:
@@ -1267,8 +1296,151 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[0].heading
       value: Welcome to AtomTouch
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[0].instruction
+      value: 'This app allows us to look and play with with Atoms, the ultra-small
+        building blocks of everything.
+
+
+        To hide this box, tap anywhere within it.
+
+
+        Let''s start learning how to use the app! Touch <b>Next</b>'
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FontData.m_FontSize
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[1].instruction
+      value: 'Let''s start by moving an Atom. It''s easy!
+
+
+        Touch (or click) on an Atom and drag it around.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[2].instruction
+      value: 'Now you need to learn how to move Atoms closer and farther.
+
+
+        Start by dragging an Atom. Then, use a second finger and touch somewhere else
+        on the screen and slide up and down. If you are using a mouse, just click
+        on an atom and rotate the mouse wheel.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[6].heading
+      value: Speeding it Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[6].instruction
+      value: "Touch the clock a second time to go full speed. \n\nNotice that time
+        in AtomTouch is <i>really</i> slowed down from real life."
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[7].instruction
+      value: Sometimes things can get a little messy. If you ever want to reset, tap
+        the reset button. The atoms and settings will return to how the activty started.
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[9].instruction
+      value: "Touch one atoms. See how it changes color and some new options appear
+        at the top of the screen? \nNow touch another atom to select it too. Now if
+        you drag one, they both move! \n\nAlso notice that some new options appear
+        at the top of the screen. Try touching the <b>Select All</b> button."
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[9].heading
+      value: Selecting Atoms
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[10].heading
+      value: 'Deleting atoms '
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[10].instruction
+      value: Once you have selected some Atoms, touch the <b>Delete</b> button to
+        delete them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[5].heading
+      value: Starting Time
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[5].instruction
+      value: 'Right now, time is stopped. Let''s start it up!
+
+
+        Touch the clock button to change it from stopped to play. The atoms will start
+        to move around.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[11].heading
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[1].instructions.Array.data[1].heading
+      value: Put another atom in Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[1].instructions.Array.data[0].heading
+      value: Put an atom in its Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[1].instructions.Array.data[1].instruction
+      value: Now  can you move a different atom to the bottom left hand corner in
+        the front of the  box?
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[0].instruction
+      value: "First select your favorite atom and then turn on the time to normal
+        speed. \n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[0].heading
+      value: Starting the States of Matter Activity
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[2].instruction
+      value: Depending upon the location of your favorite atom, it could have 3-6  potential
+        bonding partners. Corner atoms have 3 potential bonding partners while interior
+        atoms have 6 potential bonding partners.
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[1].instruction
+      value: 'How many potential bonding partners does the highlighted atom have?
+
+        Hint: Bonds are indicated by lines between atoms. Bonds may form and break
+        as the atoms move, but the selected atom will keep the same  potential bonding
+        partners.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[5].heading
+      value: Solid? or Not a solid?
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[8].instruction
+      value: This is still a solid because the atoms are maintaining bonding partners
+        and relative position to all the other atoms in the structure, even though
+        the atoms are moving.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

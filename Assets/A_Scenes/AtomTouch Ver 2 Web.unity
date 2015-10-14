@@ -3865,7 +3865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &594112169
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7174,6 +7174,26 @@ Prefab:
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[3].gameObject
       value: 
       objectReference: {fileID: 1381688032}
+    - target: {fileID: 100372, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22415444, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 298
+      objectReference: {fileID: 0}
+    - target: {fileID: 22415444, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 1256
+      objectReference: {fileID: 0}
+    - target: {fileID: 22415444, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 106
+      objectReference: {fileID: 0}
+    - target: {fileID: 22415444, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16074564d895b4a17a60338653483852, type: 2}
   m_IsPrefabParent: 0
