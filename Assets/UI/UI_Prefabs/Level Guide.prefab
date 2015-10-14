@@ -575,8 +575,9 @@ MonoBehaviour:
         atoms.
       gameObject: {fileID: 0}
   - instructions:
-    - heading: Action
-      instruction: Increase the temperature to 5000 K.
+    - heading: Let's explore the affect of volume on matter
+      instruction: 'Select your favorite atom.  Now, increase the temperature to 5000
+        K and turn time on to regular speed. '
       gameObject: {fileID: 0}
     - heading: Question
       instruction: What state of matter is this?
@@ -586,7 +587,7 @@ MonoBehaviour:
         than in a solid or a liquid, and there is no sustained bonding between the
         atoms.
       gameObject: {fileID: 0}
-    - heading: Action
+    - heading: Now let's change the volume of the box.
       instruction: Decrease the volume to 1 cubic nanometer (nm^3)
       gameObject: {fileID: 0}
     - heading: Question
@@ -600,11 +601,12 @@ MonoBehaviour:
       instruction: Can you make a solid at 5000 K?
       gameObject: {fileID: 0}
     - heading: Answer
-      instruction: Yes, if you add enough atoms to a 1 nm^3 box (around 100 atoms)
-        it will become a solid.
+      instruction: 'Yes, if you add enough atoms to a 1 nm^3 box (around 100 atoms)
+        it will become a solid.  To add more atoms, you may need to make the box bigger
+        and then reduce its size to 1 nm^3 when you have the number you want. '
       gameObject: {fileID: 0}
   - instructions:
-    - heading: Action Question
+    - heading: How wide is a chlorine atom?
       instruction: Use the grid in the box and its volume to roughly estimate the
         width of a chlorine atom.
       gameObject: {fileID: 0}
@@ -618,12 +620,13 @@ MonoBehaviour:
       gameObject: {fileID: 0}
     - heading: Answer
       instruction: No, atoms are indivisible units that make up all matter. It is
-        the bonding between them that determines the structure.
+        the bonding between them that determines the structure and the state of matter.
       gameObject: {fileID: 0}
   - instructions:
-    - heading: Action
-      instruction: Stop time and place 8 sodium atoms in one corner of the box and
-        8 chlorine atoms in the opposite corner. Set time to normal speed.
+    - heading: Let's explore forces.
+      instruction: Notice that there are 8 sodium atoms in one corner of the box and
+        8 chlorine atoms in the opposite corner with time stopped. Watch what happens
+        when you turn time on to normal speed.
       gameObject: {fileID: 0}
     - heading: Question
       instruction: 'What are the atoms doing? '
@@ -646,7 +649,7 @@ MonoBehaviour:
         a structure with a net charge of 0.
       gameObject: {fileID: 0}
   - instructions:
-    - heading: Action
+    - heading: Let's play with atoms.
       instruction: Build and observe different structures! What formation of atoms
         stays solid at the highest temperature?
       gameObject: {fileID: 0}
@@ -663,6 +666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigPanel: {fileID: 100372}
   contentPanel: {fileID: 141100}
+  levelGuideScroll: {fileID: 0}
   backButton: {fileID: 11409814}
   nextButton: {fileID: 11469376}
   nextButtonText: {fileID: 11495190}
@@ -736,6 +740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigPanel: {fileID: 100372}
   contentPanel: {fileID: 141100}
+  levelGuideScroll: {fileID: 0}
   backButton: {fileID: 11409814}
   nextButton: {fileID: 11469376}
   nextButtonText: {fileID: 11495190}
@@ -1468,6 +1473,48 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[10].instruction
       value: Increase the temperature all the way to 5000 K.
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[0].heading
+      value: Let's explore the affect of volume on matter
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[0].instruction
+      value: 'Select your favorite atom.  Now, increase the temperature to 5000 K
+        and turn time on to regular speed. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[3].heading
+      value: Now let's change the volume of the box.
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[7].instruction
+      value: 'Yes, if you add enough atoms to a 1 nm^3 box (around 100 atoms) it will
+        become a solid.  To add more atoms, you may need to make the box bigger and
+        then reduce its size to 1 nm^3 when you have the number you want. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[0].heading
+      value: How wide is a chlorine atom?
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[3].instruction
+      value: No, atoms are indivisible units that make up all matter. It is the bonding
+        between them that determines the structure and the state of matter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[0].heading
+      value: Let's explore forces.
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[0].instruction
+      value: Notice that there are 8 sodium atoms in one corner of the box and 8 chlorine
+        atoms in the opposite corner with time stopped. Watch what happens when you
+        turn time on to normal speed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[0].heading
+      value: Let's play with atoms.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
