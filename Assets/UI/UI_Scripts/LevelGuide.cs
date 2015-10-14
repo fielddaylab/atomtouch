@@ -7,6 +7,7 @@ public class LevelGuide : MonoBehaviour
 
 	public GameObject rigPanel;
 	public GameObject contentPanel;
+	public LevelGuideScroll levelGuideScroll;
 	public Button backButton;
 	public Button nextButton;
 	public Text nextButtonText;

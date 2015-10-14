@@ -490,6 +490,7 @@ public class AtomTouchGUI : MonoBehaviour
 		Atom.EnableSelectAtomGroup (false);
 		currentTimeSpeed = StaticVariables.TimeSpeed.Normal;
 		changeTimer ();
+		resetCamera ();
 		//reset temp and vol
 		tempSliderComponent.value = /*StaticVariables.tempRangeHigh*/ StaticVariables.desiredTemperature;
 		volSliderComponent.value = /*StaticVariables.volRangeHigh - */StaticVariables.volDefault;
@@ -824,6 +825,7 @@ public class AtomTouchGUI : MonoBehaviour
 	public void LevelGuideOpen ()
 	{
 		levelGuideGameObject.SetActive (true);
+		levelGuide.levelGuideScroll.SetUpPanel ();
 		hudController.settingsButton.interactable = false;
 	}
 	

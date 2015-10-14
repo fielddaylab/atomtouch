@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class LevelStates : MonoBehaviour
@@ -31,7 +31,7 @@ public class LevelStates : MonoBehaviour
 		controller.LevelGuideOpen ();
 		controller.ResetAll ();
 		Debug.Log ("Level eight started");
-		controller.hudController.LevelCompleted ("Practicing your Skills");
+		controller.hudController.LevelCompleted ("Practice Your Skills");
 	}
 
 	public void Level03 ()
