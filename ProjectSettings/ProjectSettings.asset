@@ -13,7 +13,7 @@ PlayerSettings:
   productName: AtomTouch
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_ShowUnitySplashScreen: 1
+  m_ShowUnitySplashScreen: 0
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
   defaultScreenWidthWeb: 960
@@ -71,8 +71,8 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleIdentifier: edu.wisc.wid.fielddaylab.atomtouch
-  bundleVersion: 1.5.5
+  bundleIdentifier: edu.wisc.fielddaylab.atomtouch
+  bundleVersion: 2.0.1
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
@@ -92,9 +92,6 @@ PlayerSettings:
   APKExpansionFiles: 0
   preloadShaders: 1
   StripUnusedMeshComponents: 1
-  VertexChannelCompressionMask:
-    serializedVersion: 2
-    m_Bits: 238
   iPhoneSdkVersion: 988
   iPhoneTargetOSVersion: 28
   uIPrerenderedIcon: 0
@@ -102,16 +99,22 @@ PlayerSettings:
   uIStatusBarHidden: 1
   uIExitOnSuspend: 0
   uIStatusBarStyle: 1
-  iPhoneSplashScreen: {fileID: 0}
-  iPhoneHighResSplashScreen: {fileID: 0}
-  iPhoneTallHighResSplashScreen: {fileID: 0}
-  iPhone47inSplashScreen: {fileID: 0}
+  iPhoneSplashScreen: {fileID: 2800000, guid: c13bc49fdf1259043b197085e7416f21, type: 3}
+  iPhoneHighResSplashScreen: {fileID: 2800000, guid: c13bc49fdf1259043b197085e7416f21,
+    type: 3}
+  iPhoneTallHighResSplashScreen: {fileID: 2800000, guid: cd734546b32d67a44be1bf981e570206,
+    type: 3}
+  iPhone47inSplashScreen: {fileID: 2800000, guid: a7d888912f51399428710e942c7e7aa3,
+    type: 3}
   iPhone55inPortraitSplashScreen: {fileID: 0}
-  iPhone55inLandscapeSplashScreen: {fileID: 0}
+  iPhone55inLandscapeSplashScreen: {fileID: 2800000, guid: b788d9bd32bb5cb4ab37bd6e7d22d30e,
+    type: 3}
   iPadPortraitSplashScreen: {fileID: 0}
   iPadHighResPortraitSplashScreen: {fileID: 0}
-  iPadLandscapeSplashScreen: {fileID: 0}
-  iPadHighResLandscapeSplashScreen: {fileID: 0}
+  iPadLandscapeSplashScreen: {fileID: 2800000, guid: dd61a6fcc8c04f74687a61389ddc3a0b,
+    type: 3}
+  iPadHighResLandscapeSplashScreen: {fileID: 2800000, guid: 4d86cb3775f44a64bba13e4914960e12,
+    type: 3}
   iOSLaunchScreenType: 0
   iOSLaunchScreenPortrait: {fileID: 0}
   iOSLaunchScreenLandscape: {fileID: 0}
@@ -234,8 +237,6 @@ PlayerSettings:
   ps4SaveDataImagePath: 
   ps4BGMPath: 
   ps4ShareFilePath: 
-  ps4ShareOverlayImagePath: 
-  ps4PrivacyGuardImagePath: 
   ps4NPtitleDatPath: 
   ps4RemotePlayKeyAssignment: -1
   ps4EnterButtonAssignment: 1
