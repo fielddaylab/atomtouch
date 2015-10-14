@@ -31,7 +31,7 @@ public class LevelStates : MonoBehaviour
 		controller.LevelGuideOpen ();
 		controller.ResetAll ();
 		Debug.Log ("Level eight started");
-		controller.hudController.LevelCompleted ("Introduction");
+		controller.hudController.LevelCompleted ("Practice Your Skills");
 	}
 
 	public void Level03 ()

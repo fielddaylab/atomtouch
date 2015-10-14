@@ -48,7 +48,7 @@ public class HUD : MonoBehaviour {
 	}
 
 	public void LevelCompleted(string levelName) {
-		activityComplete.text.text = "You completed " + levelName + "!";
+		activityComplete.text.text = "Nice work! You've completed " + levelName + "!";
 	}
 
 }
