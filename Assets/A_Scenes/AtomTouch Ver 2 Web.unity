@@ -10109,7 +10109,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22447152, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 195
+      value: 187
       objectReference: {fileID: 0}
     - target: {fileID: 22447152, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -10297,7 +10297,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22447152, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 2592
+      value: 2740
       objectReference: {fileID: 0}
     - target: {fileID: 11436838, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_Text
@@ -10305,7 +10305,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22447152, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 171
+      value: 181
       objectReference: {fileID: 0}
     - target: {fileID: 22447152, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_Pivot.y
