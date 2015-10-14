@@ -85,8 +85,8 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleIdentifier: edu.wisc.wid.fielddaylab.atomtouch
-  bundleVersion: 1.5.5
+  bundleIdentifier: edu.wisc.fielddaylab.atomtouch
+  bundleVersion: 2.0.1
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
@@ -101,7 +101,7 @@ PlayerSettings:
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
   iPhoneScriptCallOptimization: 1
-  iPhoneBuildNumber: 0
+  iPhoneBuildNumber: 2.0.1
   ForceInternetPermission: 0
   ForceSDCardPermission: 0
   CreateWallpaper: 0
