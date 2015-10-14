@@ -142,8 +142,6 @@ public class AtomTouchGUI : MonoBehaviour
 
 	void Start ()
 	{	
-//		splashScreen.Init ();
-//		Handheld.PlayFullScreenMovie ("AtomTouchIntro.mp4", Color.black, FullScreenMovieControlMode.CancelOnInput);
 		MainMenuInit ();
 		LevelsInit ();
 	}
@@ -837,17 +835,15 @@ public class AtomTouchGUI : MonoBehaviour
 	
 	public void IntroVideoOpen ()
 	{
-//		introVideoGameObject.SetActive (true);
-//		MainMenuClose ();
-//		introVideoController.introVideo.Play ();
-		Handheld.PlayFullScreenMovie ("Atomtouch_Intro_Movie_Ver1.0 17-05-06-204", Color.black, FullScreenMovieControlMode.CancelOnInput);
+		#if UNITY_IPHONE
+		Debug.Log("Iphone detected, starting intro video using handheld.");
+		Handheld.PlayFullScreenMovie ("intro.mp4", Color.black, FullScreenMovieControlMode.CancelOnInput);
+		#endif
 	}
 	
 	public void IntroVideoClose ()
 	{
-//		introVideoGameObject.SetActive (false);
 		MainMenuOpen ();
-		//Handheld.PlayFullScreenMovie ("AtomTouchIntro.mp4", Color.black, FullScreenMovieControlMode.CancelOnInput);
 	}
 
 	public void CloseAllExMain() 
