@@ -528,8 +528,8 @@ MonoBehaviour:
         though the atoms are moving.
       gameObject: {fileID: 0}
   - instructions:
-    - heading: Action
-      instruction: 'Set the temperature slider at 0.001 Kelvin. '
+    - heading: Let's explore how temperature affects matter
+      instruction: 'Set the temperature slider to  0.001 Kelvin. '
       gameObject: {fileID: 0}
     - heading: Question
       instruction: How many degrees Celcius (C) is this?
@@ -550,10 +550,11 @@ MonoBehaviour:
     - heading: Answer
       instruction: Absolute zero is the temperature at which all atomic motion stops
       gameObject: {fileID: 0}
-    - heading: Action
-      instruction: Slowly heat the structure by increasing the temperature to around
-        1000 K. Observe the bonding partners of your highlighted atom, and its relative
-        position to the other atoms in the structure.
+    - heading: Let's explore how temperature affects matter
+      instruction: Select your favorite atom and then slowly heat the structure by
+        increasing the temperature to around 1000 K. Observe the bonding partners
+        of your highlighted atom, and its relative position to the other atoms in
+        the structure.
       gameObject: {fileID: 0}
     - heading: Question
       instruction: What state of matter is this?
@@ -562,8 +563,8 @@ MonoBehaviour:
       instruction: "This is a liquid because the highlighted atom is changing bonding
         partners and doesn\u2019t keep the same relative position in the structure."
       gameObject: {fileID: 0}
-    - heading: Action
-      instruction: Increase the temperature to 5000 K.
+    - heading: Now let's really heat things up
+      instruction: Increase the temperature all the way to 5000 K.
       gameObject: {fileID: 0}
     - heading: Question
       instruction: What state of matter is this?
@@ -1441,6 +1442,32 @@ Prefab:
       value: This is still a solid because the atoms are maintaining bonding partners
         and relative position to all the other atoms in the structure, even though
         the atoms are moving.
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[0].heading
+      value: Let's explore how temperature affects matter
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[0].instruction
+      value: 'Set the temperature slider to  0.001 Kelvin. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[7].heading
+      value: Let's explore how temperature affects matter
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[7].instruction
+      value: Select your favorite atom and then slowly heat the structure by increasing
+        the temperature to around 1000 K. Observe the bonding partners of your highlighted
+        atom, and its relative position to the other atoms in the structure.
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[10].heading
+      value: Now let's really heat things up
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[10].instruction
+      value: Increase the temperature all the way to 5000 K.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -1084,7 +1084,7 @@ GameObject:
   - 114: {fileID: 11475526}
   - 114: {fileID: 11427016}
   m_Layer: 5
-  m_Name: Tempurature
+  m_Name: Temperature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
