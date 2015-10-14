@@ -1159,6 +1159,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 127800, guid: d23584a1279754ce6add9d9e89533e1e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d23584a1279754ce6add9d9e89533e1e, type: 2}
   m_IsPrefabParent: 0
@@ -1493,12 +1497,6 @@ GameObject:
 GameObject:
   m_PrefabParentObject: {fileID: 137884, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
   m_PrefabInternal: {fileID: 374185203}
---- !u!114 &986898250 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11409940, guid: 16074564d895b4a17a60338653483852,
-    type: 2}
-  m_PrefabInternal: {fileID: 1440663831}
-  m_Script: {fileID: 11500000, guid: 8b467970ed7854cd0b67c28a9faa83ca, type: 3}
 --- !u!1 &1097985657 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 101794, guid: 700aba05dcc0a8e4ab49235de7297ca7, type: 2}
@@ -1651,6 +1649,10 @@ Prefab:
       propertyPath: controller
       value: 
       objectReference: {fileID: 1960553280}
+    - target: {fileID: 170532, guid: 754c3f090544c458a8eeb15077508836, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 754c3f090544c458a8eeb15077508836, type: 2}
   m_IsPrefabParent: 0
@@ -1746,18 +1748,6 @@ Prefab:
       propertyPath: levelsPanel
       value: 
       objectReference: {fileID: 2003053574}
-    - target: {fileID: 11409940, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: controller
-      value: 
-      objectReference: {fileID: 1960553280}
-    - target: {fileID: 11450004, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: controller
-      value: 
-      objectReference: {fileID: 1960553280}
-    - target: {fileID: 11450004, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelsPanel
-      value: 
-      objectReference: {fileID: 2003053574}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[4].gameObject
       value: 
@@ -1794,14 +1784,18 @@ Prefab:
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[3].gameObject
       value: 
       objectReference: {fileID: 1381688032}
-    - target: {fileID: 11460424, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelGuideScroll
-      value: 
-      objectReference: {fileID: 986898250}
     - target: {fileID: 11450004, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelGuideScroll
+      propertyPath: controller
       value: 
-      objectReference: {fileID: 986898250}
+      objectReference: {fileID: 1960553280}
+    - target: {fileID: 11450004, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelsPanel
+      value: 
+      objectReference: {fileID: 2003053574}
+    - target: {fileID: 11409940, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 1960553280}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16074564d895b4a17a60338653483852, type: 2}
   m_IsPrefabParent: 0
@@ -2372,7 +2366,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 171000, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22464484, guid: e56803edc1ad64d3ba0b6a1df494ac7b, type: 2}
       propertyPath: m_SizeDelta.y
