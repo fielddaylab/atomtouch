@@ -20,6 +20,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &105266
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22491070}
+  - 222: {fileID: 22294384}
+  - 114: {fileID: 11460736}
+  m_Layer: 5
+  m_Name: Count Down Clock
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &112966
 GameObject:
   m_ObjectHideFlags: 1
@@ -49,6 +66,23 @@ GameObject:
   - 114: {fileID: 11475944}
   m_Layer: 5
   m_Name: Top Bar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &116222
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22450064}
+  - 222: {fileID: 22248290}
+  - 114: {fileID: 11472008}
+  m_Layer: 5
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -117,8 +151,9 @@ GameObject:
   - 222: {fileID: 22204590}
   - 114: {fileID: 11487244}
   - 114: {fileID: 11460424}
-  - 114: {fileID: 11404810}
-  - 114: {fileID: 11460694}
+  - 114: {fileID: 11436898}
+  - 114: {fileID: 11493836}
+  - 114: {fileID: 11421484}
   m_Layer: 5
   m_Name: Content Panel
   m_TagString: Untagged
@@ -143,23 +178,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &170640
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 22464534}
-  - 222: {fileID: 22203900}
-  - 114: {fileID: 11452098}
-  m_Layer: 5
-  m_Name: Icon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &193902
 GameObject:
   m_ObjectHideFlags: 1
@@ -178,53 +196,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &11404810
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 141100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 2
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 11460424}
-          m_MethodName: OnMouseDown
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 11460424}
-          m_MethodName: OnMouseUp
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
 --- !u!114 &11408890
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -240,7 +211,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: 298f181604f53409e8aaf3f0f592d416, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -313,7 +284,7 @@ MonoBehaviour:
   m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -339,7 +310,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -350,6 +321,34 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Back
+--- !u!114 &11421484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfcb2a47b89fd48dfb1f893311ef4c1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 11472008}
+  Timer: {fileID: 105266}
+--- !u!114 &11436898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b467970ed7854cd0b67c28a9faa83ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  panelGuide: {fileID: 22484954}
+  desiredBottom: 0
+  desiredTop: 248
 --- !u!114 &11441870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -363,30 +362,214 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelInstructions:
   - instructions:
-    - heading: Welcome!
+    - heading: Welcome to AtomTouch
       instruction: "Welcome to AtomTouch. \nIn this app, each of the spheres onscreen
-        represents one atom. "
+        represents one atom. \n\n(this is a menu bar that you can always drag up and
+        down)"
+      gameObject: {fileID: 0}
     - heading: Moving Atoms
       instruction: You are able to move an atom by dragging it.
+      gameObject: {fileID: 0}
     - heading: Nearer/Farther
       instruction: "To move an atom nearer or farther away, touch somewhere on the
         screen while dragging up/down. \nWith a mouse, use the scroll wheel."
+      gameObject: {fileID: 0}
     - heading: Changing Perspective
       instruction: By touching somewhere empty in the box and dragging, you can move
         the whole enviroment.
-    - heading: Reseting Perspective
+      gameObject: {fileID: 0}
+    - heading: Reorient to Home position
       instruction: To reset the box, touch the camera reset button
-    - heading: Practice
-      instruction: Practice your skills! Press finnish when you feel comfortable moving
-        on.
+      gameObject: {fileID: 0}
+    - heading: Turn on time - slow speed
+      instruction: Tap the red clock one time, the  yellow clock icon indicates slow
+        time speed
+      gameObject: {fileID: 0}
+    - heading: Turn on time - normal speed
+      instruction: Tap the yellow clock one time, the green clock icon indicates normal
+        time speed
+      gameObject: {fileID: 0}
+    - heading: Reset
+      instruction: Tap the reset button to return AtomTouch to the home screen
+      gameObject: {fileID: 0}
+    - heading: Add more atoms
+      instruction: Click on the Na and Cl icons to add more sodium (Na) and Chlorine
+        (Cl) atoms
+      gameObject: {fileID: 0}
+    - heading: Select all atoms
+      instruction: Touch one atoms then touch the "select all" box that appears at
+        the top of the screen
+      gameObject: {fileID: 0}
+    - heading: 'Delete atoms '
+      instruction: 'Delete selected atoms by touching the  "Delete" box '
+      gameObject: {fileID: 0}
   - instructions:
-    - heading: Blah
-      instruction: Bhadlkjf
-    - heading: dfd
-      instruction: dfdfd
-  - instructions: []
-  - instructions: []
-  - instructions: []
+    - heading: Put an atom in its place
+      instruction: Select an atom and move it to the top right-hand corner of the
+        back of the box.
+      gameObject: {fileID: 0}
+    - heading: Put an atom in its place part 2
+      instruction: Select a second atom and move it to the left-hand corner in the
+        front of the  box
+      gameObject: {fileID: 0}
+  - instructions:
+    - heading: Action
+      instruction: "Turn time to normal speed. \n"
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: 'How many bonding partners does the highlighted atom have?
+
+        Hint: Bonds are indicated by lines between atoms. Bonds may form and break
+        as the atoms move, but the selected atom will keep the same bonding partners.'
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: The atom is bonded to three other atoms
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: What state of matter is this?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: This is a solid because the atoms are maintaining bonding partners
+        and relative position to all the other atoms in the structure, even though
+        the atoms are moving.
+      gameObject: {fileID: 0}
+    - heading: Action
+      instruction: Stop time and add 4 Na and 4 Cl atoms so they bond to the other
+        atoms in the structure.
+      gameObject: {fileID: 0}
+    - heading: Action
+      instruction: Start time again, and observe the structure for about 30 seconds
+      gameObject: {fileID: 105266}
+    - heading: Question
+      instruction: What state of matter is this?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: This is a solid because the atoms are maintaining bonding partners
+        and relative position to all the other atoms in the structure, even though
+        the atoms are moving.
+      gameObject: {fileID: 0}
+  - instructions:
+    - heading: Action
+      instruction: 'Set the temperature slider at 0.001 Kelvin. '
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: How many degrees Celcius (C) is this?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: -273.15 degrees C
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: What happens to your atoms at 0.001 K?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: The atoms stop moving.
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: 0 K is known as absolute zero. Based upon what is happening with
+        your atoms, why do you think its called absolute zero?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: Absolute zero is the temperature at which all atomic motion stops
+      gameObject: {fileID: 0}
+    - heading: Action
+      instruction: Slowly heat the structure by increasing the temperature to around
+        1000 K. Observe the bonding partners of your highlighted atom, and its relative
+        position to the other atoms in the structure.
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: What state of matter is this?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: "This is a liquid because the highlighted atom is changing bonding
+        partners and doesn\u2019t keep the same relative position in the structure."
+      gameObject: {fileID: 0}
+    - heading: Action
+      instruction: Increase the temperature to 5000 K.
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: What state of matter is this?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: This is a gas because the distance between the atoms is much larger
+        than in a solid or a liquid, and there is no sustained bonding between the
+        atoms.
+      gameObject: {fileID: 0}
+  - instructions:
+    - heading: Action
+      instruction: Increase the temperature to 5000 K.
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: What state of matter is this?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: This is a gas because the distance between the atoms is much larger
+        than in a solid or a liquid, and there is no sustained bonding between the
+        atoms.
+      gameObject: {fileID: 0}
+    - heading: Action
+      instruction: Decrease the volume to 1 cubic nanometer (nm^3)
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: What state of matter is this?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: "This is a liquid because the highlighted atom is changing bonding
+        partners and doesn\u2019t keep the same relative position in the structure."
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: Can you make a solid at 5000 K?
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: Yes, if you add enough atoms to a 1 nm^3 box (around 100 atoms)
+        it will become a solid.
+      gameObject: {fileID: 0}
+  - instructions:
+    - heading: Action Question
+      instruction: Use the grid in the box and its volume to roughly estimate the
+        width of a chlorine atom.
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: A chlorine atom is roughly 0.2nm in width
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: "When you changed the temperature, the structure formed by the
+        atoms changed. Is there anything you can do that will change the structure
+        of the individual atom you selected? \n"
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: No, atoms are indivisible units that make up all matter. It is
+        the bonding between them that determines the structure.
+      gameObject: {fileID: 0}
+  - instructions:
+    - heading: Action
+      instruction: Stop time and place 8 sodium atoms in one corner of the box and
+        8 chlorine atoms in the opposite corner. Set time to normal speed.
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: 'What are the atoms doing? '
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: Sodium atoms repel other sodium atoms. Chlorine atoms repel other
+        chlorine atoms. Sodium and Chlorine atoms attract each other.
+      gameObject: {fileID: 0}
+    - heading: Question
+      instruction: 'In order to simulate salt (NaCl), sodium atoms have a charge of
+        +1 and chlorine atoms have a charge of -1. What does this tell you about how
+        charged atoms interact? '
+      gameObject: {fileID: 0}
+    - heading: Answer
+      instruction: Positively charged atoms repel other positively charged atoms while
+        negatively charged atoms repel other positivity charged atoms. Positively
+        charged atoms attract negatively charged atoms. Since Sodium and Chlorine
+        atoms have opposite charges they attract each other to form an ionic bond.
+        In an ionic bond, two atoms with opposite charges bond to one another to form
+        a structure with a net charge of 0.
+      gameObject: {fileID: 0}
+  - instructions:
+    - heading: Action
+      instruction: Build and observe different structures! What formation of atoms
+        stays solid at the highest temperature?
+      gameObject: {fileID: 0}
 --- !u!114 &11450004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -408,27 +591,6 @@ MonoBehaviour:
   controller: {fileID: 0}
   levelsPanel: {fileID: 0}
   LIS: {fileID: 11441870}
---- !u!114 &11452098
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: d6f8d60fc8e5d463b921fb655c24a0c6, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 1
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
 --- !u!114 &11460424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -450,32 +612,27 @@ MonoBehaviour:
   controller: {fileID: 0}
   levelsPanel: {fileID: 0}
   LIS: {fileID: 11441870}
---- !u!114 &11460694
+--- !u!114 &11460736
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 141100}
+  m_GameObject: {fileID: 105266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1367256648, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Content: {fileID: 22484954}
-  m_Horizontal: 0
-  m_Vertical: 1
-  m_MovementType: 1
-  m_Elasticity: .0500000007
-  m_Inertia: 1
-  m_DecelerationRate: .135000005
-  m_ScrollSensitivity: 1
-  m_HorizontalScrollbar: {fileID: 0}
-  m_VerticalScrollbar: {fileID: 0}
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 33dc70d2f19404417babc082c5d0ce79, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &11462026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -491,7 +648,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Sprite: {fileID: 21300000, guid: 1d5043e3c7f8b4cdb9122c19c954a993, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -512,7 +669,7 @@ MonoBehaviour:
   m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -575,6 +732,32 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &11472008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 30 Sec
 --- !u!114 &11475944
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -602,7 +785,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100372}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 1367256648, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
@@ -610,10 +793,10 @@ MonoBehaviour:
   m_Content: {fileID: 22484954}
   m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
-  m_Elasticity: .0500000007
+  m_MovementType: 2
+  m_Elasticity: .00999999978
   m_Inertia: 1
-  m_DecelerationRate: .135000005
+  m_DecelerationRate: .699999988
   m_ScrollSensitivity: 1
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 0}
@@ -643,6 +826,58 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11493836
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
+    m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
+    m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
+    m_ColorMultiplier: 1
+    m_FadeDuration: .5
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 11487244}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11436898}
+        m_MethodName: OnClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &11495190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -658,7 +893,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 15
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -690,12 +925,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!222 &22203900
-CanvasRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170640}
 --- !u!222 &22204590
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -708,6 +937,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100372}
+--- !u!222 &22248290
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116222}
 --- !u!222 &22258334
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -744,6 +979,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140016}
+--- !u!222 &22294384
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105266}
 --- !u!222 &22295612
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -758,15 +999,15 @@ RectTransform:
   m_GameObject: {fileID: 132048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: .800000012, z: 1}
   m_Children:
   - {fileID: 22423300}
   m_Father: {fileID: 22472564}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -6.9000001, y: -7.5}
-  m_SizeDelta: {x: 129, y: 30}
+  m_AnchoredPosition: {x: -17, y: -24}
+  m_SizeDelta: {x: 258, y: 92}
   m_Pivot: {x: 1, y: 1}
 --- !u!224 &22406134
 RectTransform:
@@ -782,8 +1023,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9, y: -124}
-  m_SizeDelta: {x: -205, y: 131}
+  m_AnchoredPosition: {x: -3, y: -280}
+  m_SizeDelta: {x: -105, y: 295}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22407198
 RectTransform:
@@ -793,15 +1034,15 @@ RectTransform:
   m_GameObject: {fileID: 193902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: .800000012, z: 1}
   m_Children:
   - {fileID: 22457964}
   m_Father: {fileID: 22472564}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_AnchorMin: {x: 0, y: .5}
   m_AnchorMax: {x: 0, y: .5}
-  m_AnchoredPosition: {x: 139.700012, y: 12.5}
-  m_SizeDelta: {x: 129, y: 30}
+  m_AnchoredPosition: {x: 270, y: 32}
+  m_SizeDelta: {x: 258, y: 92}
   m_Pivot: {x: 1, y: 1}
 --- !u!224 &22415444
 RectTransform:
@@ -817,8 +1058,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -359, y: 20}
-  m_SizeDelta: {x: 711.099976, y: 38}
+  m_AnchoredPosition: {x: -300, y: 46.5}
+  m_SizeDelta: {x: 615, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &22423300
 RectTransform:
@@ -834,7 +1075,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -.25, y: 0}
+  m_AnchoredPosition: {x: -.25, y: 6}
   m_SizeDelta: {x: -.5, y: 0}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22432962
@@ -852,9 +1093,26 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -141, y: 40}
+  m_AnchoredPosition: {x: 30, y: -98}
+  m_SizeDelta: {x: -278, y: 208}
   m_Pivot: {x: .5, y: 0}
+--- !u!224 &22450064
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116222}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 22491070}
+  m_RootOrder: 0
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 39, y: -2}
+  m_SizeDelta: {x: 203, y: 87}
+  m_Pivot: {x: .5, y: .5}
 --- !u!224 &22457964
 RectTransform:
   m_ObjectHideFlags: 1
@@ -869,26 +1127,9 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 6}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: .5, y: .5}
---- !u!224 &22464534
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170640}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 22472564}
-  m_RootOrder: 1
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -198, y: 15.5}
-  m_SizeDelta: {x: 35, y: 35}
-  m_Pivot: {x: 0, y: 1}
 --- !u!224 &22472564
 RectTransform:
   m_ObjectHideFlags: 1
@@ -900,15 +1141,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22415444}
-  - {fileID: 22464534}
   - {fileID: 22403686}
   - {fileID: 22407198}
   m_Father: {fileID: 22484954}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -19}
-  m_SizeDelta: {x: 0, y: 39}
+  m_AnchoredPosition: {x: 0, y: -54}
+  m_SizeDelta: {x: 0, y: 108}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22484954
 RectTransform:
@@ -917,25 +1157,48 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 3.81469727e-06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22472564}
   - {fileID: 22406134}
+  - {fileID: 22491070}
   m_Father: {fileID: 22432962}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.2201001e-10, y: 0}
-  m_SizeDelta: {x: 0, y: 159}
+  m_AnchoredPosition: {x: 1.4999752, y: 248}
+  m_SizeDelta: {x: 3, y: 456}
   m_Pivot: {x: .5, y: 1}
+--- !u!224 &22491070
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105266}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 22450064}
+  m_Father: {fileID: 22484954}
+  m_RootOrder: 2
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -24, y: 121.5}
+  m_SizeDelta: {x: 390, y: 109}
+  m_Pivot: {x: 1, y: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[0].heading
+      value: Welcome to AtomTouch
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100372}
