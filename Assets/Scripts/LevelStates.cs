@@ -55,6 +55,8 @@ public class LevelStates : MonoBehaviour
 		controller.LevelsClose ();
 		controller.CameraScriptOn (true);
 		levelGuide.SetLevelGuide (3, 0);
+		AtomTouchGUI.currentTimeSpeed = StaticVariables.TimeSpeed.SlowMotion;
+		controller.changeTimer ();
 		controller.LevelGuideOpen ();
 		Debug.Log ("Level three started");
 		controller.hudController.LevelCompleted ("the Temperature Activity");

@@ -20,14 +20,20 @@ public class SplashScreen : MonoBehaviour {
 		index = (Time.time * framesPerSecond);
 		index = index % frames.Length;
 		image.sprite = frames [(int)index];
-		Debug.Log (index);
-		if ((int)index == 0 && looped) {
-			Debug.Log("unactive");
-			controller.IntroVideoOpen();
-			this.gameObject.SetActive (false);
-		}
-		if ((int)index == frames.Length - 1) 
+		if ((int)index == 4) {			 
+			if (looped) {
+				this.gameObject.SetActive(false);
+			}
+			else {
+			#if UNITY_IOS
+			Debug.Log("Iphone detected, starting intro video using handheld.");	
+			Handheld.PlayFullScreenMovie ("intro.mp4", Color.black, FullScreenMovieControlMode.CancelOnInput);	
+			#endif
 			looped = true;
+			}
+		}
+
+
 	}
 
 

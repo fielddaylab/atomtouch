@@ -37,9 +37,6 @@ RenderSettings:
   m_ReflectionIntensity: .899999976
   m_CustomReflection: {fileID: 8900000, guid: 2e49736c05dfd433bbf4cd0296134856, type: 2}
   m_Sun: {fileID: 0}
---- !u!127 &3
-LevelGameManager:
-  m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -68,6 +65,7 @@ LightmapSettings:
     m_TextureCompression: 0
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
+    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 112000000, guid: b7fd60ee0f0db4086ab30cce8ff3fbb8,
     type: 2}
   m_RuntimeCPUUsage: 25
@@ -117,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AllowActivationOnStandalone: 0
+  m_ForceModuleActive: 0
 --- !u!114 &3332885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,7 +133,7 @@ MonoBehaviour:
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: .5
-  m_AllowActivationOnMobileDevice: 0
+  m_ForceModuleActive: 0
 --- !u!114 &3332886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,6 +727,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 729164636}
     m_Modifications:
+    - target: {fileID: 11418610, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 22448918, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -951,23 +953,23 @@ Prefab:
       objectReference: {fileID: 1809991221}
     - target: {fileID: 22473982, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22473982, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: .333333343
       objectReference: {fileID: 0}
     - target: {fileID: 22449710, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: .333333343
       objectReference: {fileID: 0}
     - target: {fileID: 22449710, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22449710, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: .333333343
       objectReference: {fileID: 0}
     - target: {fileID: 22457138, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.x
@@ -988,6 +990,30 @@ Prefab:
     - target: {fileID: 22440270, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11418610, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11418610, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11418610, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1960553280}
+    - target: {fileID: 11418610, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SnapTempToInterval
+      objectReference: {fileID: 0}
+    - target: {fileID: 11418610, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 11418610, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
@@ -1043,6 +1069,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 52029258b7f4147f8a137bec292b3642, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1159,6 +1191,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11437388, guid: d23584a1279754ce6add9d9e89533e1e, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d23584a1279754ce6add9d9e89533e1e, type: 2}
   m_IsPrefabParent: 0
@@ -1166,10 +1202,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 185494, guid: a68afe71e8aaa3d46a11bef9e639ca71, type: 2}
   m_PrefabInternal: {fileID: 157047559}
---- !u!1 &490858556 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 127800, guid: d23584a1279754ce6add9d9e89533e1e, type: 2}
-  m_PrefabInternal: {fileID: 486588648}
 --- !u!224 &490858557 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22402538, guid: d23584a1279754ce6add9d9e89533e1e,
@@ -1514,6 +1546,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 0dae090a7e51b410882ab40fdf592bc1, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -1563,6 +1601,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 729164636}
     m_Modifications:
+    - target: {fileID: 11451164, guid: 754c3f090544c458a8eeb15077508836, type: 2}
+      propertyPath: frames.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 22433436, guid: 754c3f090544c458a8eeb15077508836, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1643,6 +1685,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11451164, guid: 754c3f090544c458a8eeb15077508836, type: 2}
+      propertyPath: frames.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 966c50c5732464c32be07d0c585bc53c,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 754c3f090544c458a8eeb15077508836, type: 2}
   m_IsPrefabParent: 0
@@ -1658,6 +1705,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 729164636}
     m_Modifications:
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.size
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1789,6 +1840,11 @@ Prefab:
     - target: {fileID: 100372, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[11].instruction
+      value: Once you have selected some Atoms, touch the <b>Delete</b> button to
+        delete them.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16074564d895b4a17a60338653483852, type: 2}
@@ -2804,7 +2860,7 @@ MonoBehaviour:
   levelsGameObject: {fileID: 2003053570}
   levelGuideGameObject: {fileID: 479600155}
   creditsGameObject: {fileID: 602816344}
-  mainMenuAnimation: {fileID: 490858556}
+  mainMenuAnimation: {fileID: 0}
   matPlane1: {fileID: 2100000, guid: 6caeb595fd208064e9241450baf2b5be, type: 2}
   matPlane1_5: {fileID: 2100000, guid: f283477ca49c74b60bffc66538836f34, type: 2}
   matPlane2: {fileID: 2100000, guid: cae177c280a0049fabe27780b6b42137, type: 2}

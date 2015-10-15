@@ -202,7 +202,6 @@ public class SettingsControl : MonoBehaviour {
 			}
 			currentPotentialType = Potential.potentialType.LennardJones;
 			hud.ChangeHUDtoLenardJones();
-			Debug.Log("changing to LennardJones");
 		}else if(buckinghamOn.GetComponent<Toggle>().isOn){
 			Potential.currentPotential = Potential.potentialType.Buckingham;
 			if(currentPotentialType != Potential.potentialType.Buckingham){
@@ -210,7 +209,6 @@ public class SettingsControl : MonoBehaviour {
 			}
 			currentPotentialType = Potential.potentialType.Buckingham;
 			hud.ChangeHUDtoBuckingham();
-			Debug.Log("changing to buckingham");
 		}
 		//atomTouchGUI.SetAtomBtnsVisibility();
 		//atomTouchGUI.SelectAllAtoms ();

@@ -317,7 +317,6 @@ public class CreateEnvironment : MonoBehaviour {
 		//Debug.Log ("Uploading text file!");
 		TextAsset textFile = Resources.Load (filename) as TextAsset;
 		//Debug.Log("text file uploaded!");
-		Debug.Log("loading " + filename);
 		string allLines = textFile.text;
 		allLines = allLines.ToLower ();
 		string[] lineArray = allLines.Split ("\r\n".ToCharArray (), 
