@@ -1202,6 +1202,10 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 185494, guid: a68afe71e8aaa3d46a11bef9e639ca71, type: 2}
   m_PrefabInternal: {fileID: 157047559}
+--- !u!1 &490858556 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 127800, guid: d23584a1279754ce6add9d9e89533e1e, type: 2}
+  m_PrefabInternal: {fileID: 486588648}
 --- !u!224 &490858557 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22402538, guid: d23584a1279754ce6add9d9e89533e1e,
@@ -2860,7 +2864,7 @@ MonoBehaviour:
   levelsGameObject: {fileID: 2003053570}
   levelGuideGameObject: {fileID: 479600155}
   creditsGameObject: {fileID: 602816344}
-  mainMenuAnimation: {fileID: 0}
+  mainMenuAnimation: {fileID: 490858556}
   matPlane1: {fileID: 2100000, guid: 6caeb595fd208064e9241450baf2b5be, type: 2}
   matPlane1_5: {fileID: 2100000, guid: f283477ca49c74b60bffc66538836f34, type: 2}
   matPlane2: {fileID: 2100000, guid: cae177c280a0049fabe27780b6b42137, type: 2}
