@@ -419,7 +419,6 @@ MonoBehaviour:
 
         To hide this box, tap anywhere within it.
 
-
         Let''s start learning how to use the app! Touch <b>Next</b>'
       gameObject: {fileID: 0}
     - heading: Moving Atoms
@@ -464,10 +463,13 @@ MonoBehaviour:
         (Cl) atoms
       gameObject: {fileID: 0}
     - heading: Selecting Atoms
-      instruction: "Touch one atoms. See how it changes color and some new options
-        appear at the top of the screen? \nNow touch another atom to select it too.
-        Now if you drag one, they both move! \n\nAlso notice that some new options
-        appear at the top of the screen. Try touching the <b>Select All</b> button."
+      instruction: 'Touch one atom. See how it changes color and some new options
+        appear at the top of the screen.
+
+        Now touch another atom to select it too. Now if you drag one, they both move!
+
+
+        Also notice that some new options appear at the top of the screen.'
       gameObject: {fileID: 0}
     - heading: 'Deleting atoms '
       instruction: Once you have selected some Atoms, touch the <b>Delete</b> button
@@ -487,7 +489,7 @@ MonoBehaviour:
         in the front of the  box?
       gameObject: {fileID: 0}
   - instructions:
-    - heading: Starting the States of Matter Activity
+    - heading: States of Matter Activity
       instruction: "First select your favorite atom and then turn on the time to normal
         speed. \n"
       gameObject: {fileID: 0}
@@ -516,7 +518,7 @@ MonoBehaviour:
       instruction: Stop time and add 4 Na and 4 Cl atoms so they bond to the other
         atoms in the structure.
       gameObject: {fileID: 0}
-    - heading: Action
+    - heading: Solid? or Not a solid?
       instruction: Start time again, and observe the structure for about 30 seconds
       gameObject: {fileID: 133316}
     - heading: Question
@@ -528,7 +530,7 @@ MonoBehaviour:
         though the atoms are moving.
       gameObject: {fileID: 0}
   - instructions:
-    - heading: Let's explore how temperature affects matter
+    - heading: Let's explore temperature
       instruction: 'Set the temperature slider to  0.001 Kelvin. '
       gameObject: {fileID: 0}
     - heading: Question
@@ -548,9 +550,10 @@ MonoBehaviour:
         your atoms, why do you think its called absolute zero?
       gameObject: {fileID: 0}
     - heading: Answer
-      instruction: Absolute zero is the temperature at which all atomic motion stops
+      instruction: Absolute zero is the temperature at which all atomic motion stops.
+        It is the lowest possible tempature.
       gameObject: {fileID: 0}
-    - heading: Let's explore how temperature affects matter
+    - heading: Let's explore temperature
       instruction: Select your favorite atom and then slowly heat the structure by
         increasing the temperature to around 1000 K. Observe the bonding partners
         of your highlighted atom, and its relative position to the other atoms in
@@ -575,7 +578,7 @@ MonoBehaviour:
         atoms.
       gameObject: {fileID: 0}
   - instructions:
-    - heading: Let's explore the affect of volume on matter
+    - heading: Let's explore volume
       instruction: 'Select your favorite atom.  Now, increase the temperature to 5000
         K and turn time on to regular speed. '
       gameObject: {fileID: 0}
@@ -587,8 +590,8 @@ MonoBehaviour:
         than in a solid or a liquid, and there is no sustained bonding between the
         atoms.
       gameObject: {fileID: 0}
-    - heading: Now let's change the volume of the box.
-      instruction: Decrease the volume to 1 cubic nanometer (nm^3)
+    - heading: Changing volume
+      instruction: Decrease the volume of the box to 1 cubic nanometer (nm^3)
       gameObject: {fileID: 0}
     - heading: Question
       instruction: What state of matter is this?
@@ -607,8 +610,9 @@ MonoBehaviour:
       gameObject: {fileID: 0}
   - instructions:
     - heading: How wide is a chlorine atom?
-      instruction: Use the grid in the box and its volume to roughly estimate the
-        width of a chlorine atom.
+      instruction: "Start by changing the volume of the box to 1nm^3. \n\nUse the
+        grid in the box and its volume to roughly estimate the width of a chlorine
+        atom."
       gameObject: {fileID: 0}
     - heading: Answer
       instruction: A chlorine atom is roughly 0.2nm in width
@@ -623,7 +627,7 @@ MonoBehaviour:
         the bonding between them that determines the structure and the state of matter.
       gameObject: {fileID: 0}
   - instructions:
-    - heading: Let's explore forces.
+    - heading: Let's explore forces
       instruction: Notice that there are 8 sodium atoms in one corner of the box and
         8 chlorine atoms in the opposite corner with time stopped. Watch what happens
         when you turn time on to normal speed.
@@ -641,15 +645,14 @@ MonoBehaviour:
         charged atoms interact? '
       gameObject: {fileID: 0}
     - heading: Answer
-      instruction: Positively charged atoms repel other positively charged atoms while
-        negatively charged atoms repel other positivity charged atoms. Positively
-        charged atoms attract negatively charged atoms. Since Sodium and Chlorine
-        atoms have opposite charges they attract each other to form an ionic bond.
-        In an ionic bond, two atoms with opposite charges bond to one another to form
-        a structure with a net charge of 0.
+      instruction: 'Like charges repel, opposite charges attract.
+
+        Since Sodium and Chlorine atoms have opposite charges they attract each other
+        to form an ionic bond. In an ionic bond, two atoms with opposite charges bond
+        to one another to form a structure with a net charge of 0.'
       gameObject: {fileID: 0}
   - instructions:
-    - heading: Let's play with atoms.
+    - heading: Let's Play with Atoms
       instruction: Build and observe different structures! What formation of atoms
         stays solid at the highest temperature?
       gameObject: {fileID: 0}
@@ -1317,7 +1320,6 @@ Prefab:
 
         To hide this box, tap anywhere within it.
 
-
         Let''s start learning how to use the app! Touch <b>Next</b>'
       objectReference: {fileID: 0}
     - target: {fileID: 0}
@@ -1368,10 +1370,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[9].instruction
-      value: "Touch one atoms. See how it changes color and some new options appear
-        at the top of the screen? \nNow touch another atom to select it too. Now if
-        you drag one, they both move! \n\nAlso notice that some new options appear
-        at the top of the screen. Try touching the <b>Select All</b> button."
+      value: 'Touch one atom. See how it changes color and some new options appear
+        at the top of the screen.
+
+        Now touch another atom to select it too. Now if you drag one, they both move!
+
+
+        Also notice that some new options appear at the top of the screen.'
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[9].heading
@@ -1422,7 +1427,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[0].heading
-      value: Starting the States of Matter Activity
+      value: States of Matter Activity
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[2].instruction
@@ -1450,7 +1455,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[0].heading
-      value: Let's explore how temperature affects matter
+      value: Let's explore temperature
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[0].instruction
@@ -1458,7 +1463,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[7].heading
-      value: Let's explore how temperature affects matter
+      value: Let's explore temperature
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[7].instruction
@@ -1476,7 +1481,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[0].heading
-      value: Let's explore the affect of volume on matter
+      value: Let's explore volume
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[0].instruction
@@ -1485,7 +1490,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[3].heading
-      value: Now let's change the volume of the box.
+      value: Changing volume
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[7].instruction
@@ -1504,7 +1509,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[6].instructions.Array.data[0].heading
-      value: Let's explore forces.
+      value: Let's explore forces
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[6].instructions.Array.data[0].instruction
@@ -1514,7 +1519,33 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[7].instructions.Array.data[0].heading
-      value: Let's play with atoms.
+      value: Let's Play with Atoms
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[2].instructions.Array.data[6].heading
+      value: Solid? or Not a solid?
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].instruction
+      value: Absolute zero is the temperature at which all atomic motion stops. It
+        is the lowest possible tempature.
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[3].instruction
+      value: Decrease the volume of the box to 1 cubic nanometer (nm^3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[0].instruction
+      value: "Start by changing the volume of the box to 1nm^3. \n\nUse the grid in
+        the box and its volume to roughly estimate the width of a chlorine atom."
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[4].instruction
+      value: 'Like charges repel, opposite charges attract.
+
+        Since Sodium and Chlorine atoms have opposite charges they attract each other
+        to form an ionic bond. In an ionic bond, two atoms with opposite charges bond
+        to one another to form a structure with a net charge of 0.'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
