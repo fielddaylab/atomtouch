@@ -86,7 +86,7 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleIdentifier: edu.wisc.fielddaylab.atomtouch
-  bundleVersion: 2.0.4
+  bundleVersion: 2.0.7
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
@@ -101,7 +101,7 @@ PlayerSettings:
   stripEngineCode: 1
   iPhoneStrippingLevel: 0
   iPhoneScriptCallOptimization: 1
-  iPhoneBuildNumber: 2.0.4
+  iPhoneBuildNumber: 2.0.7
   ForceInternetPermission: 0
   ForceSDCardPermission: 0
   CreateWallpaper: 0
@@ -118,21 +118,22 @@ PlayerSettings:
   uIStatusBarHidden: 1
   uIExitOnSuspend: 0
   uIStatusBarStyle: 1
-  iPhoneSplashScreen: {fileID: 2800000, guid: c13bc49fdf1259043b197085e7416f21, type: 3}
-  iPhoneHighResSplashScreen: {fileID: 2800000, guid: c13bc49fdf1259043b197085e7416f21,
+  iPhoneSplashScreen: {fileID: 2800000, guid: 4c614b6f07c9f0242a76a1eac425b9bb, type: 3}
+  iPhoneHighResSplashScreen: {fileID: 2800000, guid: 96f3dc9933cca764dac9abf8575dfc43,
     type: 3}
-  iPhoneTallHighResSplashScreen: {fileID: 2800000, guid: cd734546b32d67a44be1bf981e570206,
+  iPhoneTallHighResSplashScreen: {fileID: 2800000, guid: 881d62fdd2b054e4aaa9b2d6637d34ff,
     type: 3}
-  iPhone47inSplashScreen: {fileID: 2800000, guid: a7d888912f51399428710e942c7e7aa3,
+  iPhone47inSplashScreen: {fileID: 2800000, guid: fd939d4d182728543b7198d11e18e3b1,
     type: 3}
-  iPhone55inPortraitSplashScreen: {fileID: 0}
-  iPhone55inLandscapeSplashScreen: {fileID: 2800000, guid: b788d9bd32bb5cb4ab37bd6e7d22d30e,
+  iPhone55inPortraitSplashScreen: {fileID: 2800000, guid: a30fd542583631247825d34b5bbe04a5,
+    type: 3}
+  iPhone55inLandscapeSplashScreen: {fileID: 2800000, guid: a30fd542583631247825d34b5bbe04a5,
     type: 3}
   iPadPortraitSplashScreen: {fileID: 0}
   iPadHighResPortraitSplashScreen: {fileID: 0}
-  iPadLandscapeSplashScreen: {fileID: 2800000, guid: dd61a6fcc8c04f74687a61389ddc3a0b,
+  iPadLandscapeSplashScreen: {fileID: 2800000, guid: 0009ec14804edd245865beb497316f1b,
     type: 3}
-  iPadHighResLandscapeSplashScreen: {fileID: 2800000, guid: 4d86cb3775f44a64bba13e4914960e12,
+  iPadHighResLandscapeSplashScreen: {fileID: 2800000, guid: 0009ec14804edd245865beb497316f1b,
     type: 3}
   iOSLaunchScreenType: 0
   iOSLaunchScreenPortrait: {fileID: 0}
@@ -154,7 +155,7 @@ PlayerSettings:
   iOSDeviceRequirements: []
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  androidSplashScreen: {fileID: 0}
+  androidSplashScreen: {fileID: 2800000, guid: 0009ec14804edd245865beb497316f1b, type: 3}
   AndroidKeystoreName: /Users/Tyler/Documents/Development/atomtouch/user.keystore
   AndroidKeyaliasName: field day
   AndroidTVCompatibility: 1
@@ -169,40 +170,8 @@ PlayerSettings:
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
-    - m_Icon: {fileID: 2800000, guid: 6baa4daa5074b884caa4a0f493622083, type: 3}
+    - m_Icon: {fileID: 2800000, guid: 11fe2773f10394a609743f1f67e1d974, type: 3}
       m_Size: 128
-  - m_BuildTarget: Android
-    m_Icons:
-    - m_Icon: {fileID: 2800000, guid: cbccc0108a9b14288a6d2d322bb762f2, type: 3}
-      m_Size: 192
-    - m_Icon: {fileID: 0}
-      m_Size: 144
-    - m_Icon: {fileID: 0}
-      m_Size: 96
-    - m_Icon: {fileID: 0}
-      m_Size: 72
-    - m_Icon: {fileID: 0}
-      m_Size: 48
-    - m_Icon: {fileID: 0}
-      m_Size: 36
-  - m_BuildTarget: iPhone
-    m_Icons:
-    - m_Icon: {fileID: 2800000, guid: 6baa4daa5074b884caa4a0f493622083, type: 3}
-      m_Size: 180
-    - m_Icon: {fileID: 0}
-      m_Size: 152
-    - m_Icon: {fileID: 0}
-      m_Size: 144
-    - m_Icon: {fileID: 0}
-      m_Size: 120
-    - m_Icon: {fileID: 0}
-      m_Size: 114
-    - m_Icon: {fileID: 0}
-      m_Size: 76
-    - m_Icon: {fileID: 0}
-      m_Size: 72
-    - m_Icon: {fileID: 0}
-      m_Size: 57
   m_BuildTargetBatching:
   - m_BuildTarget: Standalone
     m_StaticBatching: 1
@@ -356,7 +325,14 @@ PlayerSettings:
   psp2InfoBarColor: 0
   psmSplashimage: {fileID: 0}
   spritePackerPolicy: 
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    1: 
+    2: 
+    4: 
+    7: 
+    13: 
+    17: 
+    22: 
   metroPackageName: atomtouch
   metroPackageLogo: 
   metroPackageLogo140: 
