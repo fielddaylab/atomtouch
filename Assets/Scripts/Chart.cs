@@ -90,7 +90,7 @@ public class Chart : MonoBehaviour {
 			
 			
 			//Debug.Log(p1);
-			StaticVariables.DrawLine(p1, p2, Color.white, Color.white, 0.015f, mat);
+			//StaticVariables.DrawLine(p1, p2, Color.white, Color.white, 0.015f, mat);
 			
 		}
 	}

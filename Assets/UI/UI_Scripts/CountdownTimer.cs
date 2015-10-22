@@ -19,7 +19,6 @@ public class CountdownTimer : MonoBehaviour {
 	}
 	
 	void Update () {
-		Debug.Log (Timer.activeSelf);
 		if (Timer.activeSelf) {
 			if (!timerRunning) {
 				StartTimer (30);

@@ -120,25 +120,14 @@ public class StaticVariables {
 	// |		  |
 	// s4_________s3
 	public static void DrawLine(Vector3 c1, Vector3 c2, 
-		Color atomColor1, Color atomColor2, float lineWidth, Material mat){
-
-		Vector3 camPos = Camera.main.gameObject.transform.position;
-
-		
-		Vector3 c2ToCam = camPos-c2;
-		Vector3 c2ToS3 = Vector3.Cross(c1-c2, c2ToCam);
-		c2ToS3.Normalize();
-		Vector3 s1 = c1 - c2ToS3*lineWidth/2.0f;
-		Vector3 s2 = c2 - c2ToS3*lineWidth/2.0f;
-		Vector3 s3 = c2 + c2ToS3 * lineWidth/2.0f; 
-		Vector3 s4 = s3 + (s1-s2);
+		Color atomColor1, Color atomColor2, float lineWidth, Material mat, Vector3 camPos,Vector3 c2ToCam,Vector3 c2ToS3,Vector3 s1,Vector3 s2,Vector3 s3,Vector3 s4){
 	
 		if (!mat) {
 			return;
 		}
 		GL.LoadProjectionMatrix (Camera.main.projectionMatrix);
 		GL.PushMatrix();
-		mat.SetPass (0);
+		//mat.SetPass (0);
 		GL.Begin (GL.QUADS);
 		
 		GL.Color (atomColor1);

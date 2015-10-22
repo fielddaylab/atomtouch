@@ -101,7 +101,7 @@ public class AtomTouchGUI : MonoBehaviour
 	public Rigidbody sodiumPrefab;
 	public Rigidbody chlorinePrefab;
 	
-	
+	private bool bondSwitched; // hack for the bondline crash
 	
 	//time button
 	public Sprite normalTimeButton;
@@ -138,6 +138,8 @@ public class AtomTouchGUI : MonoBehaviour
 		settingsCanvas.SetActive (false);
 		eventSystem = GameObject.Find ("EventSystem").gameObject.GetComponent<EventSystem> ();
 
+		bondSwitched = false;
+
 	}
 
 	void Start ()
@@ -156,6 +158,7 @@ public class AtomTouchGUI : MonoBehaviour
 			//change delete selected to delete
 			// change selected to none selected
 		}
+
 	}
 	
 

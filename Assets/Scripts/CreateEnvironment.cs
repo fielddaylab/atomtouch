@@ -446,7 +446,7 @@ public class CreateEnvironment : MonoBehaviour {
 			Potential.myPotential.calculateVerletRadius (currAtom);
 		}
 		
-		preCompute ();
+		//preCompute ();
 		
 	}
 

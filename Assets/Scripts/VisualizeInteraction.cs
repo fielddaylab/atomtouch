@@ -20,7 +20,37 @@ public class VisualizeInteraction : MonoBehaviour {
 	public Color bondColor;
 	void OnPostRender(){
 
+		Vector3 c1;
+		Vector3 c2;
+		Vector3 camPos;
+		Vector3 c2ToCam;
+		Vector3 c2ToS3;
+		Vector3 s1;
+		Vector3 s2;
+		Vector3 s3;
+		Vector3 s4;
+		float lineWidth = 0.05f;
+
+		mat.SetPass (0);
+
+		int numberLinesDrawn = 0;
+		int maxLinesDrawn = (int)Time.realtimeSinceStartup;
+
+
+	
+
+
+
+
 		if (StaticVariables.drawBondLines) {
+
+			GL.LoadProjectionMatrix (Camera.main.projectionMatrix);
+			GL.PushMatrix();
+			//mat.SetPass (0);
+			GL.Begin (GL.QUADS);
+			
+			GL.Color (bondColor);
+		
 			for (int i = 0; i < Atom.AllAtoms.Count; i++) {
 				for(int j = i + 1; j < Atom.AllAtoms.Count; j++){
 					Atom currAtom = Atom.AllAtoms[i];
@@ -29,11 +59,30 @@ public class VisualizeInteraction : MonoBehaviour {
 						< currAtom.BondDistance(neighborAtom)){
 						//draw a line from currAtom to atomNeighbor
 						//if(bondColor == null)bondColor = Color.clear;
-						StaticVariables.DrawLine (currAtom.transform.position, 
-							neighborAtom.transform.position, bondColor, bondColor, 0.05f, mat);
+
+							c1 = currAtom.transform.position;
+							c2 = neighborAtom.transform.position;
+
+							camPos = Camera.main.gameObject.transform.position;
+
+							c2ToCam = camPos-c2;
+							c2ToS3 = Vector3.Cross(c1-c2, c2ToCam);
+							c2ToS3.Normalize();
+							s1 = c1 - c2ToS3*lineWidth/2.0f;
+							s2 = c2 - c2ToS3*lineWidth/2.0f;
+							s3 = c2 + c2ToS3 * lineWidth/2.0f; 
+							s4 = s3 + (s1-s2);
+
+							GL.Vertex (s1);
+							GL.Vertex (s2);
+							GL.Vertex (s3);
+							GL.Vertex (s4);
+
 					}
 				}
 			}
+			GL.End ();
+			GL.PopMatrix();
 		}
 	}
 
