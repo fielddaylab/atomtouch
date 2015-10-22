@@ -8,15 +8,24 @@ public class TextureAnimator : MonoBehaviour {
 	public int framesPerSecond;
 	public RawImage image;
 
+	private int loadCount;
+
 	private float index;
 
 	void Start () {
-		for (int i = 0; i < frames.Length; i++) {
-			frames[i] = Resources.Load ("MainMenuAnimation/mm00" + (i + 111)) as Texture2D;
-		}
+		loadCount = 0;
 	}
 
 	void Update () {
+	/*	if (loadCount < frames.Length) {
+			frames [loadCount] = Resources.Load ("MainMenuAnimation/mm00" + (loadCount + 111)) as Texture2D;
+			loadCount++;
+		} else {
+			index = Time.time * framesPerSecond;
+			index = index % frames.Length;
+			image.texture = frames [(int)index];
+		}
+		*/
 		index = Time.time * framesPerSecond;
 		index = index % frames.Length;
 		image.texture = frames [(int)index];
