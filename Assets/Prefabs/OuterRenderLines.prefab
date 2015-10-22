@@ -60,7 +60,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Text: 
+  m_Text: Hello World
   m_OffsetZ: 0
   m_CharacterSize: .0500000007
   m_LineSpacing: 1
@@ -83,7 +83,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_Text
-      value: 
+      value: Hello World
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

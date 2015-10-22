@@ -2963,7 +2963,7 @@ MonoBehaviour:
   centerPos: {x: 0, y: 0, z: 0}
   errorBuffer: .5
   lineMat: {fileID: 2100000, guid: 9647efc6732774f7191fa2cc8259d8f1, type: 2}
-  lineColor: {r: .80392158, g: .372549027, b: .184313729, a: .611764729}
+  lineColor: {r: 1, g: .641379297, b: 0, a: .611764729}
   lineWidth: .100000001
   width: 20
   height: 20
