@@ -144,10 +144,6 @@ Material:
         second: .5
       data:
         first:
-          name: _Lightmapping
-        second: 1
-      data:
-        first:
           name: _Parallax
         second: .0199999996
       data:
@@ -176,16 +172,20 @@ Material:
         second: 0
       data:
         first:
-          name: _EmissionScaleUI
-        second: 0
-      data:
-        first:
           name: _Mode
         second: 2
       data:
         first:
           name: _Metallic
         second: .800000012
+      data:
+        first:
+          name: _Lightmapping
+        second: 1
+      data:
+        first:
+          name: _EmissionScaleUI
+        second: 0
     m_Colors:
       data:
         first:
@@ -194,16 +194,16 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 0, g: .511218905, b: .676470578, a: .615686297}
+        second: {r: .106833912, g: .4484092, b: .558823526, a: .615686297}
       data:
         first:
           name: _SpecColor
-        second: {r: .135596886, g: .33115682, b: .558823526, a: 1}
-      data:
-        first:
-          name: _Emission
-        second: {r: 0, g: 0, b: 0, a: 0}
+        second: {r: .104455002, g: .341585159, b: .617647052, a: 1}
       data:
         first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 0}
