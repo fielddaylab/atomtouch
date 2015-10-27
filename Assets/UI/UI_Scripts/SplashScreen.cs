@@ -22,6 +22,7 @@ public class SplashScreen : MonoBehaviour {
 		image.sprite = frames [(int)index];
 		if ((int)index == 4) {			 
 			if (looped) {
+				controller.MainMenuOpen();
 				this.gameObject.SetActive(false);
 			}
 			else {

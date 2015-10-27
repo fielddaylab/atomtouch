@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
 public class LevelGuide : MonoBehaviour
 {
 
@@ -18,6 +19,13 @@ public class LevelGuide : MonoBehaviour
 	public LevelInstructionSet LIS;
 	private int levelNumber;
 	private int instructionNumber;
+
+	private AudioSource buttonSound;
+
+	void Start () {
+		buttonSound = GetComponent<AudioSource> ();
+	}
+
 
 	public void SetLevelGuide (int levelNumber, int instructionNumber)
 	{
@@ -42,6 +50,7 @@ public class LevelGuide : MonoBehaviour
 
 	public void NextButton ()
 	{
+		buttonSound.Play ();
 		if (instructionNumber == LIS.levelInstructions [levelNumber].instructions.Length - 1) {
 			controller.hudController.activityCompletePanel.SetActive(true);
 			controller.LevelGuideClose();
@@ -56,6 +65,7 @@ public class LevelGuide : MonoBehaviour
 	}
 
 	public void BackButton() {
+		buttonSound.Play ();
 		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject != null)
 			LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject.SetActive (false);
 		SetLevelGuide (levelNumber, this.instructionNumber - 1);
@@ -69,5 +79,10 @@ public class LevelGuide : MonoBehaviour
 	public void OnMouseUp ()
 	{
 		controller.cameraScript.enabled = true;
+	}
+
+	public void LevelGuideQuiteAnim () {
+		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject != null)
+			LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject.SetActive (false);
 	}
 }		

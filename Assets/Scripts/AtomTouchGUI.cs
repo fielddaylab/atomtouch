@@ -101,7 +101,7 @@ public class AtomTouchGUI : MonoBehaviour
 	public Rigidbody sodiumPrefab;
 	public Rigidbody chlorinePrefab;
 	
-	private bool bondSwitched; // hack for the bondline crash
+	private HUDSounds buttonSounds;
 	
 	//time button
 	public Sprite normalTimeButton;
@@ -138,14 +138,13 @@ public class AtomTouchGUI : MonoBehaviour
 		settingsCanvas.SetActive (false);
 		eventSystem = GameObject.Find ("EventSystem").gameObject.GetComponent<EventSystem> ();
 
-		bondSwitched = false;
-
 	}
 
 	void Start ()
 	{	
 		MainMenuInit ();
 		LevelsInit ();
+		buttonSounds = hudController.gameObject.GetComponent<HUDSounds> ();
 	}
 
 	void Update ()
@@ -786,6 +785,7 @@ public class AtomTouchGUI : MonoBehaviour
 	//UI GameObject Controllers
 	public void MainMenuClose ()
 	{
+		buttonSounds.PlayMainMenu();
 		mainMenuGameObject.SetActive (false);
 	}
 
@@ -803,6 +803,8 @@ public class AtomTouchGUI : MonoBehaviour
 
 	public void FreePlayOpen ()
 	{
+		buttonSounds.menu.Play ();
+		buttonSounds.PlayMainMenu ();
 		MainMenuClose ();
 		currentAtomPreset = "box";
 		ResetAll ();
@@ -819,8 +821,17 @@ public class AtomTouchGUI : MonoBehaviour
 	
 	public void LevelsClose ()
 	{
+		buttonSounds.menu.Play ();
+		buttonSounds.PlayMainMenu ();
 		levelsGameObject.SetActive (false);
 		mainMenuAnimation.SetActive (false);
+	}
+
+	public void LevelsBack() 
+	{		
+		buttonSounds.PlayButtonAudio ();
+		MainMenuOpen ();
+		levelsGameObject.SetActive (false);
 	}
 
 	public void LevelGuideOpen ()
@@ -832,12 +843,14 @@ public class AtomTouchGUI : MonoBehaviour
 	
 	public void LevelGuideClose ()
 	{
+
 		levelGuideGameObject.SetActive (false);
 		hudController.settingsButton.interactable = true;
 	}
 	
 	public void IntroVideoOpen ()
 	{
+		buttonSounds.PlayMainMenu ();
 		#if UNITY_IPHONE
 		Debug.Log("Iphone detected, starting intro video using handheld.");
 		Handheld.PlayFullScreenMovie ("intro.mp4", Color.black, FullScreenMovieControlMode.CancelOnInput);

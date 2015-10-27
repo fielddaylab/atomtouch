@@ -2,13 +2,20 @@
 using UnityEngine.UI;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
 public class LevelsPanel : MonoBehaviour {
 
 	public GameObject levelPanel;
 
 	public Sprite complete;
 
+	private AudioSource buttonSound;
+
 	private AtomTouchGUI controller;
+
+	void Start () {
+		buttonSound = GetComponent<AudioSource> ();
+	}
 
 	[System.Serializable]
 	public class LevelTile
@@ -31,6 +38,7 @@ public class LevelsPanel : MonoBehaviour {
 	{
 		controller.LevelsClose ();
 		controller.LevelGuideOpen ();
+		buttonSound.Play ();
 	}
 
 	public void LevelComplete(int level) {
