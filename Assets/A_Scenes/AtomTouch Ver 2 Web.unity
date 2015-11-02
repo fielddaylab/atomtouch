@@ -37,6 +37,9 @@ RenderSettings:
   m_ReflectionIntensity: .899999976
   m_CustomReflection: {fileID: 8900000, guid: 2e49736c05dfd433bbf4cd0296134856, type: 2}
   m_Sun: {fileID: 0}
+--- !u!127 &3
+LevelGameManager:
+  m_ObjectHideFlags: 0
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -65,7 +68,6 @@ LightmapSettings:
     m_TextureCompression: 0
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
-    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 112000000, guid: b7fd60ee0f0db4086ab30cce8ff3fbb8,
     type: 2}
   m_RuntimeCPUUsage: 25
@@ -115,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ForceModuleActive: 0
+  m_AllowActivationOnStandalone: 0
 --- !u!114 &3332885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +135,7 @@ MonoBehaviour:
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: .5
-  m_ForceModuleActive: 0
+  m_AllowActivationOnMobileDevice: 0
 --- !u!114 &3332886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,7 +213,6 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -281,7 +282,6 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -351,7 +351,6 @@ AudioSource:
   m_Pitch: .540000021
   Loop: 1
   Mute: 0
-  Spatialize: 0
   Priority: 185
   DopplerLevel: 1
   MinDistance: 1
@@ -871,7 +870,6 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
   Priority: 21
   DopplerLevel: 1
   MinDistance: 1
@@ -968,7 +966,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 1
-  m_Color: {r: .745025992, g: .842456222, b: .95588237, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 3.5
   m_Range: 10
   m_SpotAngle: 30
@@ -1328,43 +1326,43 @@ Prefab:
       objectReference: {fileID: 1809991221}
     - target: {fileID: 22473982, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22473982, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: .333333343
       objectReference: {fileID: 0}
     - target: {fileID: 22449710, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: .333333343
       objectReference: {fileID: 0}
     - target: {fileID: 22449710, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22449710, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: .333333343
       objectReference: {fileID: 0}
     - target: {fileID: 22457138, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22457138, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: .0599999987
       objectReference: {fileID: 0}
     - target: {fileID: 22440270, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: .0599999987
       objectReference: {fileID: 0}
     - target: {fileID: 22440270, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22440270, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: .0599999987
       objectReference: {fileID: 0}
     - target: {fileID: 11418610, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -1898,12 +1896,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 52029258b7f4147f8a137bec292b3642, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1952,7 +1944,6 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -2045,12 +2036,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 5aa1d20a7375a428fb9b1d9da7fa42d6, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -2111,7 +2096,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 1
-  m_Color: {r: .66955018, g: .878784597, b: .948529422, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1.39999998
   m_Range: 10
   m_SpotAngle: 30
@@ -2189,12 +2174,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: c2df86857d2ee45ee814647805fa8e7a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -2264,7 +2243,6 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -2582,12 +2560,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 0dae090a7e51b410882ab40fdf592bc1, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -2632,7 +2604,6 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -4104,7 +4075,6 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_TargetEye: 3
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -4340,7 +4310,6 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -4630,7 +4599,6 @@ AudioSource:
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
