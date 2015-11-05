@@ -2381,8 +2381,8 @@ RectTransform:
   m_Children:
   - {fileID: 1415486042}
   - {fileID: 479600158}
-  - {fileID: 669515735}
   - {fileID: 1150555741}
+  - {fileID: 669515735}
   - {fileID: 2003053571}
   - {fileID: 602816345}
   - {fileID: 172858661}
@@ -2786,7 +2786,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22433436, guid: 754c3f090544c458a8eeb15077508836, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 22433436, guid: 754c3f090544c458a8eeb15077508836, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -2834,7 +2834,7 @@ Prefab:
       objectReference: {fileID: 1960553280}
     - target: {fileID: 170532, guid: 754c3f090544c458a8eeb15077508836, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11451164, guid: 754c3f090544c458a8eeb15077508836, type: 2}
       propertyPath: frames.Array.data[4]
@@ -3090,7 +3090,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22440450, guid: afcbd0dfa87174458a42bad0ca10fb8a, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 22440450, guid: afcbd0dfa87174458a42bad0ca10fb8a, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -3138,7 +3138,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 189144, guid: afcbd0dfa87174458a42bad0ca10fb8a, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afcbd0dfa87174458a42bad0ca10fb8a, type: 2}
@@ -4670,7 +4670,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 126098, guid: 6dc523b0af32b47f5b8ba26770111343, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22428250, guid: 6dc523b0af32b47f5b8ba26770111343, type: 2}
       propertyPath: m_AnchorMin.y
