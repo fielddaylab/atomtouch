@@ -144,7 +144,7 @@ MonoBehaviour:
     type: 2}
   untexturedSelectedMaterial: {fileID: 2100000, guid: 18c9d8f5d4aec48a284de4c2c3cf6c93,
     type: 2}
-  untexturedTransparentMaterial: {fileID: 2100000, guid: 504698f4fdd6c452daa4d7b73de83d97,
+  untexturedTransparentMaterial: {fileID: 2100000, guid: 880b7a6b7e81b498fbd276f06bcb37d0,
     type: 2}
   defaultMaterial: {fileID: 2100000, guid: fdf9c51e76a004667b2b34fff6dadeee, type: 2}
   selectedMaterial: {fileID: 2100000, guid: 415b28c3b260f4c3189a72dc7cd3e9f7, type: 2}
@@ -174,7 +174,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: untexturedTransparentMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 880b7a6b7e81b498fbd276f06bcb37d0, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}

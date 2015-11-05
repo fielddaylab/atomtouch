@@ -69,7 +69,7 @@ public class CameraScript : MonoBehaviour {
 	//this function handles the rotation of the camera
 	void Update () {
 		if(SettingsControl.GamePaused){
-			Debug.Log ("game paused");
+//			Debug.Log ("game paused");
 			return;
 		}
 		//Debug.Log("resumed");

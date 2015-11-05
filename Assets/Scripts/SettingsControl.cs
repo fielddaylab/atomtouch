@@ -119,6 +119,7 @@ public class SettingsControl : MonoBehaviour {
 			}
 		}else{
 			textureOn = false;
+			Debug.Log("textures off");
 			for(int i=0; i < Atom.AllAtoms.Count; i++){
 				Atom atom = Atom.AllAtoms[i];
 				mr = atom.gameObject.GetComponent<MeshRenderer>();
