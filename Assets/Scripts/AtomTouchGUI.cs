@@ -31,6 +31,7 @@ using UnityEngine.EventSystems;
 
 public class AtomTouchGUI : MonoBehaviour
 {
+
 	public string currentAtomPreset;
 	public GameObject mainCameraGameObject;
 	public CameraScript cameraScript;

@@ -54,7 +54,8 @@ public class CameraScript : MonoBehaviour {
 		bool holdingAtom = HasAtomHeld();
 		if(!holdingAtom
 			&& !atomTouchGUI.changingTemp && !atomTouchGUI.changingVol){
-			
+			atomTouchGUI.levelGuideGameObject.GetComponent<TriggerOperator> ().ChangeingPerspective();
+		
 			Vector3 center = createEnvironment.centerPos;
 
 			RotateCam(ref center);
