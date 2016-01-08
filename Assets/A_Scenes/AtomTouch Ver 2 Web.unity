@@ -935,6 +935,12 @@ RectTransform:
 GameObject:
   m_PrefabParentObject: {fileID: 127850, guid: a68afe71e8aaa3d46a11bef9e639ca71, type: 2}
   m_PrefabInternal: {fileID: 157047559}
+--- !u!114 &238848611 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11466202, guid: 55d7a7885dbc2407d8d0da3c83e7de5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 374185203}
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &249334741 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 125798, guid: a68afe71e8aaa3d46a11bef9e639ca71, type: 2}
@@ -1019,6 +1025,12 @@ GameObject:
 GameObject:
   m_PrefabParentObject: {fileID: 129716, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
   m_PrefabInternal: {fileID: 374185203}
+--- !u!114 &357375299 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11401444, guid: 55d7a7885dbc2407d8d0da3c83e7de5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 374185203}
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &374185203
 Prefab:
   m_ObjectHideFlags: 0
@@ -2031,6 +2043,19 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &479600163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 479600155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7937dd2035c8442dda2817ef71962903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LG: {fileID: 479600156}
+  triggerID: 0
 --- !u!1 &487388367 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 185494, guid: a68afe71e8aaa3d46a11bef9e639ca71, type: 2}
@@ -2273,6 +2298,12 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 141100, guid: 16074564d895b4a17a60338653483852, type: 2}
   m_PrefabInternal: {fileID: 1440663831}
+--- !u!114 &675233230 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11459700, guid: 16074564d895b4a17a60338653483852,
+    type: 2}
+  m_PrefabInternal: {fileID: 1440663831}
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!82 &675233234
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2581,9 +2612,19 @@ GameObject:
 GameObject:
   m_PrefabParentObject: {fileID: 185468, guid: a68afe71e8aaa3d46a11bef9e639ca71, type: 2}
   m_PrefabInternal: {fileID: 157047559}
+--- !u!114 &940646007 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11426870, guid: 55d7a7885dbc2407d8d0da3c83e7de5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 374185203}
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &958072897 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 137884, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
+  m_PrefabInternal: {fileID: 374185203}
+--- !u!1 &1032085271 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 109976, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
   m_PrefabInternal: {fileID: 374185203}
 --- !u!1 &1097985657 stripped
 GameObject:
@@ -3021,6 +3062,119 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[0].instruction
+      value: 'This app allows us to look and play with with Atoms, the ultra-small
+        building blocks of everything.
+
+        You can tap anywhere on this dialogue box to minimize and maximize. Try it
+        to continue.
+
+        Once you have completed the instruction, you will be able to touch <b>Next</b>
+        to continue.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[0].buttonTriggerCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[0].trigger
+      value: 
+      objectReference: {fileID: 675233230}
+    - target: {fileID: 11450004, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: triggerOperator
+      value: 
+      objectReference: {fileID: 479600163}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[1].TriggerID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[2].TriggerID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[1].cleared
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[2].buttonTriggerCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[3].TriggerID
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[4].trigger
+      value: 
+      objectReference: {fileID: 238848611}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[4].buttonTriggerCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[5].buttonTriggerCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[5].trigger
+      value: 
+      objectReference: {fileID: 357375299}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[5].instruction
+      value: 'Right now, time is stopped. Let''s start it up!
+
+
+        Touch the clock button to change it from stopped to slow play. The atoms will
+        start to move around.
+
+        Also notice the pico seconds in the top right starting to count up. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[6].instruction
+      value: "Touch the clock a second time to go full speed. \nTouch the clock button
+        again to change it from slow play to fast play. The atoms will move around
+        \nfaster. The pico seconds are counting up faster, however  notice that time
+        in AtomTouch is <i>really</i> slowed down from real life. Here, seconds are
+        more like pico seconds."
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[6].buttonTriggerCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[7].trigger
+      value: 
+      objectReference: {fileID: 1569018412}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[7].buttonTriggerCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[10].trigger
+      value: 
+      objectReference: {fileID: 940646007}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[9].buttonSet
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[9].cleared
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[8].buttonSet
+      value: 
+      objectReference: {fileID: 1032085271}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[6].trigger
+      value: 
+      objectReference: {fileID: 357375299}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[8].cleared
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16074564d895b4a17a60338653483852, type: 2}
   m_IsPrefabParent: 0
@@ -3138,7 +3292,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 189144, guid: afcbd0dfa87174458a42bad0ca10fb8a, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afcbd0dfa87174458a42bad0ca10fb8a, type: 2}
@@ -3330,6 +3484,12 @@ GameObject:
 GameObject:
   m_PrefabParentObject: {fileID: 103310, guid: a68afe71e8aaa3d46a11bef9e639ca71, type: 2}
   m_PrefabInternal: {fileID: 157047559}
+--- !u!114 &1569018412 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11410836, guid: 55d7a7885dbc2407d8d0da3c83e7de5d,
+    type: 2}
+  m_PrefabInternal: {fileID: 374185203}
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1580156324 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 137282, guid: 700aba05dcc0a8e4ab49235de7297ca7, type: 2}

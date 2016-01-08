@@ -18,7 +18,12 @@ public class LevelInstructionSet : MonoBehaviour {
 		[Multiline]
 		public string instruction;
 		public GameObject gameObject;
+		public Button trigger;
+		public int buttonTriggerCount;
+		public GameObject buttonSet;
+		public bool cleared;
+		public int TriggerID;
 	}
-	
+
 	
 }

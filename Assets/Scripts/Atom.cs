@@ -472,6 +472,10 @@ public abstract class Atom : MonoBehaviour
 					curPosition = CheckPosition(curPosition);
 					transform.position = curPosition;
 					this.position = curPosition;
+					if (diffVector.z != 0)
+						atomTouchGUI.levelGuideGameObject.GetComponent<TriggerOperator> ().ScrollingAtom ();
+
+					atomTouchGUI.levelGuideGameObject.GetComponent<TriggerOperator> ().MovingAtom ();
 				}
 			}
 			else{
@@ -541,6 +545,7 @@ public abstract class Atom : MonoBehaviour
 		if (Application.isMobilePlatform)return;
 		
 		if(Time.realtimeSinceStartup - dragStartTime > 0.1f){
+			atomTouchGUI.levelGuideGameObject.GetComponent<TriggerOperator> ().MovingAtom ();
 			dragCalled = true;
 			Quaternion cameraRotation = Camera.main.transform.rotation;
 			ApplyTransparency();
@@ -557,6 +562,9 @@ public abstract class Atom : MonoBehaviour
 				}
 				//this is the implementation of moving the atom in the z-direction
 				float deltaZ = -Input.GetAxis("Mouse ScrollWheel");
+				if (deltaZ != 0)
+					atomTouchGUI.levelGuideGameObject.GetComponent<TriggerOperator> ().ScrollingAtom ();
+
 				Vector3 projectPosition = transform.position;
 				projectPosition += (cameraRotation * new Vector3(0.0f, 0.0f, deltaZ));
 				Vector3 newPosition = CheckPosition(projectPosition);
