@@ -17,9 +17,18 @@ public class LevelGuide : MonoBehaviour
 	public AtomTouchGUI controller;
 	public LevelsPanel levelsPanel;
 	public LevelInstructionSet LIS;
+	public GameObject yesNoButtonSet;
+	public GameObject multipleChoiceButtonSet;
+
 	private int levelNumber;
 	private int instructionNumber;
+	private GameObject target;
 	private int buttonTriggerCount;
+	private Button[] buttonTrggers;
+	private GameObject yesNo;
+	private GameObject multipleChoice;
+	private int answer;
+	private string[] buttonAnswers;
 
 	private AudioSource buttonSound;
 
@@ -29,29 +38,68 @@ public class LevelGuide : MonoBehaviour
 
 	public void SetLevelGuide (int levelNumber, int instructionNumber)
 	{
+		// Set variables for current instruction
 		this.levelNumber = levelNumber;
 		this.instructionNumber = instructionNumber;
-		// Set variables for current instruction
+		this.target = LIS.levelInstructions [levelNumber].instructions [instructionNumber].target;
+		this.buttonTrggers = LIS.levelInstructions [levelNumber].instructions [instructionNumber].buttonTriggers;
 		heading.text = LIS.levelInstructions [levelNumber].instructions [instructionNumber].heading;
-		instruction.text = LIS.levelInstructions [levelNumber].instructions [instructionNumber].instruction;
-		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject != null)
-			LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject.SetActive (true);
 
-		// If button trigger exists: 1) add listener 2) set next unactive;
-		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].trigger != null) {
-			// check if level is cleared so Next doesn't always disable on back button
-			if (!LIS.levelInstructions [levelNumber].instructions [instructionNumber].cleared) nextButton.interactable = false;
-			LIS.levelInstructions [levelNumber].instructions [instructionNumber].trigger.onClick.AddListener (delegate {
-				ButtonTriggered();
-			});
+
+		// Set instructions based on answer
+		if (instructionNumber != 0) {
+			if (LIS.levelInstructions [levelNumber].instructions [instructionNumber - 1].hasYesNo) {
+				instruction.text = LIS.levelInstructions [levelNumber].instructions [instructionNumber].instructions [answer];
+			} else if (LIS.levelInstructions [levelNumber].instructions [instructionNumber - 1].hasMultipleChoice) {
+				instruction.text = LIS.levelInstructions [levelNumber].instructions [instructionNumber].instructions [answer];
+			} else {
+				instruction.text = LIS.levelInstructions [levelNumber].instructions [instructionNumber].instruction;
+			}
+		} else {
+			instruction.text = LIS.levelInstructions [levelNumber].instructions [instructionNumber].instruction;
 		}
+		this.buttonAnswers = LIS.levelInstructions [levelNumber].instructions [instructionNumber].buttonAnswers;
+
+		// Target
+		if (target != null)
+			target.SetActive (true);
+
+		// ButtonTriggers
+		if (buttonTrggers != null) {
+			if (!LIS.levelInstructions [levelNumber].instructions [instructionNumber].cleared) 
+				nextButton.interactable = false;
+				foreach (Button button in buttonTrggers) {
+					button.onClick.AddListener(delegate {
+					ButtonTriggered();
+				});
+			}
+		}
+
+		// Question Buttons Activate
+		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].hasYesNo) {
+			yesNoButtonSet.SetActive (true);
+		}
+
+		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].hasMultipleChoice) {
+			multipleChoiceButtonSet.SetActive (true);
+			Button[] buttons = multipleChoiceButtonSet.GetComponentsInChildren<Button> ();
+			for (int i = 0; i < buttonAnswers.Length; i++) {
+				buttons [i].GetComponentInChildren<Text> ().text = buttonAnswers [i];
+			}
+		}
+
+		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].hasZones) {
+			ChangeZones(LIS.levelInstructions [levelNumber].instructions [instructionNumber].zone);
+		}
+
+		// NextButton
 		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].cleared) {
 			nextButton.interactable = true;
 		} else {
 			nextButton.interactable = false;
 		}
 
-		// set trigger ID
+		// Set Trigger ID
 		triggerOperator.triggerID = LIS.levelInstructions [levelNumber].instructions [instructionNumber].TriggerID;
 
 		if (instructionNumber == 0) {
@@ -72,12 +120,14 @@ public class LevelGuide : MonoBehaviour
 		buttonTriggerCount++;
 		if (buttonTriggerCount == LIS.levelInstructions [levelNumber].instructions [instructionNumber].buttonTriggerCount) {
 			nextButton.interactable = true;
-			LIS.levelInstructions [levelNumber].instructions [instructionNumber].trigger.onClick.RemoveListener (delegate {
-				ButtonTriggered();
-			});
+			foreach (Button button in buttonTrggers) {
+				button.onClick.RemoveListener (delegate {
+					ButtonTriggered ();
+				});
+			}
 			LIS.levelInstructions [levelNumber].instructions [instructionNumber].cleared = true;
-			if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject != null)
-			LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject.SetActive(false);
+			if (target != null)
+				target.SetActive (false);
 			buttonTriggerCount = 0;
 		}
 	}
@@ -85,12 +135,19 @@ public class LevelGuide : MonoBehaviour
 	public void EventTriggered () {
 		nextButton.interactable = true;
 		LIS.levelInstructions [levelNumber].instructions [instructionNumber].cleared = true;
-
 	}
 
 	public void NextButton ()
 	{
 		buttonSound.Play ();
+		// reset answer buttons - MUST STAY ABOVE LIS CHANGE!
+		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].hasYesNo) {
+			yesNoButtonSet.SetActive (false);
+		}
+
+		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].hasMultipleChoice) {
+			multipleChoiceButtonSet.SetActive (false);
+		}
 		if (instructionNumber == LIS.levelInstructions [levelNumber].instructions.Length - 1) {
 			controller.hudController.activityCompletePanel.SetActive(true);
 			controller.LevelGuideClose();
@@ -99,15 +156,23 @@ public class LevelGuide : MonoBehaviour
 			return;
 		}
 
-		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject != null)
-			LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject.SetActive (false);
+		if (target != null)
+			target.SetActive (false);
 		SetLevelGuide (levelNumber, this.instructionNumber + 1);
 	}
 
 	public void BackButton() {
 		buttonSound.Play ();
-		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject != null)
-			LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject.SetActive (false);
+		// reset answer buttons - MUST STAY ABOVE LIS CHANGE!
+		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].hasYesNo) {
+			yesNoButtonSet.SetActive (false);
+		}
+
+		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].hasMultipleChoice) {
+			multipleChoiceButtonSet.SetActive (false);
+		}
+		if (target != null)
+			target.SetActive (false);
 		SetLevelGuide (levelNumber, this.instructionNumber - 1);
 	}
 
@@ -121,8 +186,40 @@ public class LevelGuide : MonoBehaviour
 		controller.cameraScript.enabled = true;
 	}
 
-	public void LevelGuideQuiteAnim () {
-		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject != null)
-			LIS.levelInstructions [levelNumber].instructions [instructionNumber].gameObject.SetActive (false);
+	public void LevelGuideQuite () {
+		// reset answer buttons - MUST STAY ABOVE LIS CHANGE!
+		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].hasYesNo) {
+			yesNoButtonSet.SetActive (false);
+		}
+
+		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].hasMultipleChoice) {
+			multipleChoiceButtonSet.SetActive (false);
+		}
+		if (target != null)
+			target.SetActive (false);
+	}
+	// No = 0, Yes = 1
+	public void YesNo (int answer) {
+		this.answer = answer; 
+		EventTriggered ();
+	}
+
+	// A = 0, B = 1, C = 2, D = 3
+	public void MultipleChoice (int answer) {
+		this.answer = answer;
+		EventTriggered ();
+	}
+
+	public void ChangeZones(int zone) {
+		Debug.Log ("ZoneChange");
+		for (int i = 0; i < Atom.AllAtoms.Count; i++) {
+			Atom currAtom = Atom.AllAtoms [i];
+			if (currAtom.selectionZone == zone) {
+				currAtom.SetSelected (true);
+				Debug.Log ("Selected Atom: " + zone );
+			} else {
+				currAtom.SetSelected (false);
+			}	
+		}
 	}
 }		

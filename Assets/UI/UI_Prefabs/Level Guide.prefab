@@ -13,13 +13,15 @@ GameObject:
   - 114: {fileID: 11478050}
   - 114: {fileID: 11441870}
   - 114: {fileID: 11450004}
+  - 82: {fileID: 8296426}
+  - 114: {fileID: 11404614}
   m_Layer: 5
   m_Name: Level Guide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &112966
 GameObject:
   m_ObjectHideFlags: 1
@@ -137,6 +139,7 @@ GameObject:
   - 114: {fileID: 11409940}
   - 114: {fileID: 11459700}
   - 114: {fileID: 11439530}
+  - 82: {fileID: 8276372}
   m_Layer: 5
   m_Name: Content Panel
   m_TagString: Untagged
@@ -196,6 +199,159 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!82 &8276372
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141100}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 91df1cf6754054bf5b9b0badd1ac0bc0, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &8296426
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100372}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2128d14d01941444491ff4ae22d43948, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!114 &11404614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7937dd2035c8442dda2817ef71962903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LG: {fileID: 11450004}
+  triggerID: 0
 --- !u!114 &11408890
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -416,17 +572,29 @@ MonoBehaviour:
       instruction: 'This app allows us to look and play with with Atoms, the ultra-small
         building blocks of everything.
 
+        You can tap anywhere on this dialogue box to minimize and maximize. Try it
+        to continue.
 
-        To hide this box, tap anywhere within it.
-
-        Let''s start learning how to use the app! Touch <b>Next</b>'
-      gameObject: {fileID: 0}
+        Once you have completed the instruction, you will be able to touch <b>Next</b>
+        to continue.'
+      target: {fileID: 0}
+      buttonTriggers:
+      - {fileID: 11459700}
+      buttonTriggerCount: 2
+      triggerButtonSet: {fileID: 141100}
+      cleared: 0
+      TriggerID: 0
     - heading: Moving Atoms
       instruction: 'Let''s start by moving an Atom. It''s easy!
 
 
         Touch (or click) on an Atom and drag it around.'
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 1
     - heading: Nearer/Farther
       instruction: 'Now you need to learn how to move Atoms closer and farther.
 
@@ -434,34 +602,75 @@ MonoBehaviour:
         Start by dragging an Atom. Then, use a second finger and touch somewhere else
         on the screen and slide up and down. If you are using a mouse, just click
         on an atom and rotate the mouse wheel.'
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 1
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 2
     - heading: Changing Perspective
       instruction: By touching somewhere empty in the box and dragging, you can move
         the whole enviroment.
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 3
     - heading: Reorient to Home position
       instruction: To reset the box, touch the camera reset button
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers:
+      - {fileID: 0}
+      buttonTriggerCount: 1
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Starting Time
       instruction: 'Right now, time is stopped. Let''s start it up!
 
 
-        Touch the clock button to change it from stopped to play. The atoms will start
-        to move around.'
-      gameObject: {fileID: 0}
+        Touch the clock button to change it from stopped to slow play. The atoms will
+        start to move around.
+
+        Also notice the pico seconds in the top right starting to count up. '
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 1
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Speeding it Up
-      instruction: "Touch the clock a second time to go full speed. \n\nNotice that
-        time in AtomTouch is <i>really</i> slowed down from real life."
-      gameObject: {fileID: 0}
+      instruction: "Touch the clock a second time to go full speed. \nTouch the clock
+        button again to change it from slow play to fast play. The atoms will move
+        around \nfaster. The pico seconds are counting up faster, however  notice
+        that time in AtomTouch is <i>really</i> slowed down from real life. Here,
+        seconds are more like pico seconds."
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 1
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Reset
       instruction: Sometimes things can get a little messy. If you ever want to reset,
         tap the reset button. The atoms and settings will return to how the activty
         started.
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 1
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Add more atoms
       instruction: Click on the Na and Cl icons to add more sodium (Na) and Chlorine
         (Cl) atoms
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 1
+      TriggerID: 0
     - heading: Selecting Atoms
       instruction: 'Touch one atom. See how it changes color and some new options
         appear at the top of the screen.
@@ -470,29 +679,50 @@ MonoBehaviour:
 
 
         Also notice that some new options appear at the top of the screen.'
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 1
+      TriggerID: 0
     - heading: 'Deleting atoms '
       instruction: Once you have selected some Atoms, touch the <b>Delete</b> button
         to delete them.
-      gameObject: {fileID: 0}
-    - heading: 
-      instruction: Once you have selected some Atoms, touch the <b>Delete</b> button
-        to delete them.
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
   - instructions:
     - heading: Put an atom in its Place
       instruction: Select an atom and move it to the top right-hand corner of the
         back of the box.
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Put another atom in Place
       instruction: Now  can you move a different atom to the bottom left hand corner
         in the front of the  box?
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
   - instructions:
     - heading: States of Matter Activity
       instruction: "First select your favorite atom and then turn on the time to normal
         speed. \n"
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Question
       instruction: 'How many potential bonding partners does the highlighted atom
         have?
@@ -500,162 +730,357 @@ MonoBehaviour:
         Hint: Bonds are indicated by lines between atoms. Bonds may form and break
         as the atoms move, but the selected atom will keep the same  potential bonding
         partners.'
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Answer
       instruction: Depending upon the location of your favorite atom, it could have
         3-6  potential bonding partners. Corner atoms have 3 potential bonding partners
         while interior atoms have 6 potential bonding partners.
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Question
       instruction: What state of matter is this?
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Answer
       instruction: This is a solid because the atoms are maintaining bonding partners
         and relative position to all the other atoms in the structure, even though
         the atoms are moving.
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Solid? or Not a solid?
       instruction: Stop time and add 4 Na and 4 Cl atoms so they bond to the other
         atoms in the structure.
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Solid? or Not a solid?
       instruction: Start time again, and observe the structure for about 30 seconds
-      gameObject: {fileID: 133316}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Question
       instruction: What state of matter is this?
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Answer
       instruction: This is still a solid because the atoms are maintaining bonding
         partners and relative position to all the other atoms in the structure, even
         though the atoms are moving.
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
   - instructions:
     - heading: Let's explore temperature
       instruction: 'Set the temperature slider to  0.001 Kelvin. '
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Question
       instruction: How many degrees Celcius (C) is this?
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Answer
       instruction: -273.15 degrees C
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Question
       instruction: What happens to your atoms at 0.001 K?
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Answer
       instruction: The atoms stop moving.
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Question
       instruction: 0 K is known as absolute zero. Based upon what is happening with
         your atoms, why do you think its called absolute zero?
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Answer
       instruction: Absolute zero is the temperature at which all atomic motion stops.
         It is the lowest possible tempature.
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Let's explore temperature
       instruction: Select your favorite atom and then slowly heat the structure by
         increasing the temperature to around 1000 K. Observe the bonding partners
         of your highlighted atom, and its relative position to the other atoms in
         the structure.
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Question
       instruction: What state of matter is this?
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Answer
       instruction: "This is a liquid because the highlighted atom is changing bonding
         partners and doesn\u2019t keep the same relative position in the structure."
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Now let's really heat things up
       instruction: Increase the temperature all the way to 5000 K.
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Question
       instruction: What state of matter is this?
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Answer
       instruction: This is a gas because the distance between the atoms is much larger
         than in a solid or a liquid, and there is no sustained bonding between the
         atoms.
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
   - instructions:
     - heading: Let's explore volume
       instruction: 'Select your favorite atom.  Now, increase the temperature to 5000
         K and turn time on to regular speed. '
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Question
       instruction: What state of matter is this?
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Answer
       instruction: This is a gas because the distance between the atoms is much larger
         than in a solid or a liquid, and there is no sustained bonding between the
         atoms.
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Changing volume
       instruction: Decrease the volume of the box to 1 cubic nanometer (nm^3)
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Question
       instruction: What state of matter is this?
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Answer
       instruction: "This is a liquid because the highlighted atom is changing bonding
         partners and doesn\u2019t keep the same relative position in the structure."
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Question
       instruction: Can you make a solid at 5000 K?
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Answer
       instruction: 'Yes, if you add enough atoms to a 1 nm^3 box (around 100 atoms)
         it will become a solid.  To add more atoms, you may need to make the box bigger
         and then reduce its size to 1 nm^3 when you have the number you want. '
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
   - instructions:
     - heading: How wide is a chlorine atom?
       instruction: "Start by changing the volume of the box to 1nm^3. \n\nUse the
         grid in the box and its volume to roughly estimate the width of a chlorine
         atom."
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Answer
       instruction: A chlorine atom is roughly 0.2nm in width
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Question
       instruction: "When you changed the temperature, the structure formed by the
         atoms changed. Is there anything you can do that will change the structure
         of the individual atom you selected? \n"
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Answer
       instruction: No, atoms are indivisible units that make up all matter. It is
         the bonding between them that determines the structure and the state of matter.
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
   - instructions:
     - heading: Let's explore forces
       instruction: Notice that there are 8 sodium atoms in one corner of the box and
         8 chlorine atoms in the opposite corner with time stopped. Watch what happens
         when you turn time on to normal speed.
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Question
       instruction: 'What are the atoms doing? '
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Answer
       instruction: Sodium atoms repel other sodium atoms. Chlorine atoms repel other
         chlorine atoms. Sodium and Chlorine atoms attract each other.
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Question
       instruction: 'In order to simulate salt (NaCl), sodium atoms have a charge of
         +1 and chlorine atoms have a charge of -1. What does this tell you about how
         charged atoms interact? '
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
     - heading: Answer
       instruction: 'Like charges repel, opposite charges attract.
 
         Since Sodium and Chlorine atoms have opposite charges they attract each other
         to form an ionic bond. In an ionic bond, two atoms with opposite charges bond
         to one another to form a structure with a net charge of 0.'
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
   - instructions:
     - heading: Let's Play with Atoms
       instruction: Build and observe different structures! What formation of atoms
         stays solid at the highest temperature?
-      gameObject: {fileID: 0}
+      target: {fileID: 0}
+      buttonTriggers: []
+      buttonTriggerCount: 0
+      triggerButtonSet: {fileID: 0}
+      cleared: 0
+      TriggerID: 0
 --- !u!114 &11450004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -667,6 +1092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2174c6331f5b405691790ae1c4c779a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerOperator: {fileID: 11404614}
   rigPanel: {fileID: 100372}
   contentPanel: {fileID: 141100}
   levelGuideScroll: {fileID: 11409940}
@@ -728,6 +1154,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8276372}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &11460424
@@ -741,6 +1178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2174c6331f5b405691790ae1c4c779a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerOperator: {fileID: 0}
   rigPanel: {fileID: 100372}
   contentPanel: {fileID: 141100}
   levelGuideScroll: {fileID: 11409940}
@@ -1307,6 +1745,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.size
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[4].buttonTriggers.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[0].heading

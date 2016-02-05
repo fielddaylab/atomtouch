@@ -45,6 +45,7 @@ public abstract class Atom : MonoBehaviour
 	public bool isTransparent = false;
 	[HideInInspector]public bool selected = false;
 	[HideInInspector]public bool doubleTapped = false;
+	[HideInInspector]public int selectionZone;
 	//these dictionaries are used when moving groups of atoms. The key is the atom's name: (i.e "0" or "1")
 	public static Dictionary<string, Vector3> gameObjectOffsets;
 	public static Dictionary<string, Vector3> gameObjectScreenPoints;
@@ -480,6 +481,9 @@ public abstract class Atom : MonoBehaviour
 			}
 			else{
 				//only move the atoms if none of them have been double tapped
+
+				atomTouchGUI.levelGuideGameObject.GetComponent<TriggerOperator> ().SelectingAtoms ();
+
 				
 				List<Vector3> atomPositions = new List<Vector3>();
 				bool moveAtoms = true;
@@ -580,6 +584,9 @@ public abstract class Atom : MonoBehaviour
 				//this is for a group of atoms
 				
 				//only move the atoms if none of them have been double tapped
+
+				atomTouchGUI.levelGuideGameObject.GetComponent<TriggerOperator> ().SelectingAtoms ();
+
 				
 				List<Vector3> atomPositions = new List<Vector3>();
 				bool moveAtoms = true;

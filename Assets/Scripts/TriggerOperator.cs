@@ -23,4 +23,16 @@ public class TriggerOperator : MonoBehaviour {
 			LG.EventTriggered();
 		}
 	}
+
+	public void SelectingAtoms() {
+		if (triggerID == 4) {
+			LG.EventTriggered ();
+		}
+	}
+
+	public void DeletingAtoms() {
+		if (triggerID == 5) {
+			LG.EventTriggered ();
+		}
+	}
 }

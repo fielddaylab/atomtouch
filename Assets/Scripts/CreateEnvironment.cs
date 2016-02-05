@@ -433,12 +433,17 @@ public class CreateEnvironment : MonoBehaviour {
 			}
 			Quaternion curRotation = Quaternion.Euler(0, 0, 0);
 			Instantiate(preFab, myEnvironment.centerPos, curRotation);
+			preFab.gameObject.GetComponent<MeshRenderer>().enabled = SettingsControl.renderAtoms;
 			
 			int i = Atom.AllAtoms.Count-1;
 			Atom currAtom = Atom.AllAtoms[i];
 			currAtom.gameObject.name = currAtom.GetInstanceID().ToString();
 			currAtom.GetComponent<Rigidbody>().freezeRotation = true;
-			
+			if (textArray1.Length == 8) {
+				currAtom.selectionZone = Int16.Parse (textArray1 [7]);
+				Debug.Log ("Loaded zones");
+			}
+
 			currAtom.position =  pos;
 			currAtom.transform.position = currAtom.position;
 			//kick it
@@ -494,6 +499,7 @@ public class CreateEnvironment : MonoBehaviour {
 		CreateEnvironment myEnvironment = CreateEnvironment.myEnvironment;
 		Quaternion curRotation = Quaternion.Euler(0, 0, 0);
 		preFab.gameObject.GetComponent<MeshRenderer>().enabled = SettingsControl.renderAtoms;
+		Debug.Log ("Rendering Atoms");
 
 		Instantiate(preFab, myEnvironment.centerPos, curRotation);
 

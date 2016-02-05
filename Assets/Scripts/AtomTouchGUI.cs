@@ -186,6 +186,8 @@ public class AtomTouchGUI : MonoBehaviour
 
 	public void DeleteSelectedAtoms ()
 	{
+
+		this.levelGuideGameObject.GetComponent<TriggerOperator> ().DeletingAtoms ();
 		Debug.Log ("DeleteSelectedAtoms called");
 		for (int i=Atom.AllAtoms.Count-1; i >= 0; i--) {
 			Atom currAtom = Atom.AllAtoms [i];
@@ -212,6 +214,7 @@ public class AtomTouchGUI : MonoBehaviour
 		}
 		AtomTouchGUI.myAtomTouchGUI.TryEnableAddAtomBtns ();
 		Atom.EnableSelectAtomGroup (false);
+
 	}
 	//this function returns the number of atoms that are selected
 	public int CountSelectedAtoms ()
