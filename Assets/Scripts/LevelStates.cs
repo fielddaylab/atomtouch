@@ -45,6 +45,10 @@ public class LevelStates : MonoBehaviour
 		controller.LevelGuideOpen ();
 		Debug.Log ("Level two started");
 		controller.hudController.LevelCompleted ("the States of Matter Activity");
+		controller.hudController.blockPanel.SetActive (true);
+		StaticVariables.canSelectAtoms = false;
+		controller.changeTimer ();
+		controller.changeTimer ();
 	}
 
 	public void Level04 ()

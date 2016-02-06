@@ -76,6 +76,7 @@ public abstract class Atom : MonoBehaviour
 	public abstract float epsilon{ get; } // J
 	public abstract float sigma { get; }
 	public abstract float massamu{ get; } //amu
+
 	//change material
 	public void SetSelected (bool selected){
 		MeshRenderer mr = GetComponent<MeshRenderer>();
@@ -342,6 +343,7 @@ public abstract class Atom : MonoBehaviour
 	void OnTouch(){
 		if (!Application.isMobilePlatform)return;
 		if(SettingsControl.GamePaused)return;
+		if (!StaticVariables.canSelectAtoms)return;
 		//Debug.Log("touch");
 		/*
 		RectTransform rt = AtomTouchGUI.myAtomTouchGUI.buttonPanel.GetComponent<RectTransform>();
@@ -391,6 +393,7 @@ public abstract class Atom : MonoBehaviour
 	void OnMouseDown (){
 		if(SettingsControl.GamePaused)return;
 		if (Application.isMobilePlatform)return;
+		if (!StaticVariables.canSelectAtoms)return;
 		/*
 		RectTransform rt = AtomTouchGUI.myAtomTouchGUI.buttonPanel.GetComponent<RectTransform>();
 
@@ -441,6 +444,8 @@ public abstract class Atom : MonoBehaviour
 		if(atomTouchGUI.changingTemp || atomTouchGUI.changingVol){
 			return;
 		}
+		if (!StaticVariables.canSelectAtoms)
+			return;
 		StaticVariables.draggingAtoms = true;
 		/*
 		RectTransform rt = AtomTouchGUI.myAtomTouchGUI.buttonPanel.GetComponent<RectTransform>();
@@ -535,6 +540,8 @@ public abstract class Atom : MonoBehaviour
 		Debug.Log("calling pc drag");
 		if(!Tooltip.fadePlayed)
 			ShowHelpTip();
+		if (!StaticVariables.canSelectAtoms)
+			return;
 		/*
 		RectTransform rt = AtomTouchGUI.myAtomTouchGUI.buttonPanel.GetComponent<RectTransform>();
 
@@ -545,6 +552,7 @@ public abstract class Atom : MonoBehaviour
 			return;
 		}
 		*/
+
 		StaticVariables.draggingAtoms = true;
 		if (Application.isMobilePlatform)return;
 		
@@ -652,6 +660,8 @@ public abstract class Atom : MonoBehaviour
 	
 	//this function is the equivalent of OnMouseUp for iOS
 	void OnMouseUpIOS(){
+		if (!StaticVariables.canSelectAtoms)
+			return;
 		StaticVariables.draggingAtoms = false;
 		if (!dragCalled) {
 			//if the user only tapped the atom, this is executed
@@ -703,6 +713,8 @@ public abstract class Atom : MonoBehaviour
 	
 	void OnMouseUp (){
 		if(SettingsControl.GamePaused)return;
+		if (!StaticVariables.canSelectAtoms)
+			return;
 		StaticVariables.draggingAtoms = false;
 		if (Application.isMobilePlatform)return;
 		if(!dragCalled){

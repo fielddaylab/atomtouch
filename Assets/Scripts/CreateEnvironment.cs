@@ -525,6 +525,7 @@ public class CreateEnvironment : MonoBehaviour {
 			proximityFlag = myEnvironment.checkProximity(currAtom);
 		}
 		currAtom.transform.position = currAtom.position;
+		StartCoroutine(Blink(currAtom));
 		//kick it
 		atomTouchGUI.AtomKick(i);
 		Potential.myPotential.calculateVerletRadius (currAtom);
@@ -535,7 +536,20 @@ public class CreateEnvironment : MonoBehaviour {
 			Destroy (currAtom.gameObject);
 			Debug.Log ("No space for atoms!");
 		}
-		
+	}
+
+	// This is a blink effect for adding atoms
+	IEnumerator Blink(Atom currAtom) {
+		float blinkspeed = 0.05f;
+		int numberofBlinks = 5;
+		MeshRenderer mr = currAtom.GetComponent<MeshRenderer>();
+		while (numberofBlinks > 0) {
+			numberofBlinks--;
+			mr.material = currAtom.selectedMaterial;
+			yield return new WaitForSeconds(blinkspeed);
+			mr.material = currAtom.defaultMaterial;
+			yield return new WaitForSeconds(blinkspeed);
+		}
 	}
 	
 	//check the distance between the atoms, if it is larger than the equilibrium position move accept the random number, otherwise pick another set of random positions.

@@ -11,6 +11,7 @@ public class HUD : MonoBehaviour {
 	public GameObject activityCompletePanel;
 	public Button settingsButton;
 	public GameObject selectPanel;
+	public GameObject blockPanel;
 	private int numberSelectedAtoms;
 
 	ActivityComplete activityComplete;

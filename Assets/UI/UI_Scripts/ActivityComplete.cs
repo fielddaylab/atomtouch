@@ -15,6 +15,8 @@ public class ActivityComplete : MonoBehaviour {
 	public void onNext () {
 		controller.LevelsOpen ();
 		controller.hudController.activityCompletePanel.SetActive (false);
+		controller.hudController.blockPanel.SetActive (false);
+		StaticVariables.canSelectAtoms = true;
 	}
 
 }
