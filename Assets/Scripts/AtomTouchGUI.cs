@@ -615,6 +615,7 @@ public class AtomTouchGUI : MonoBehaviour
 
 		//ChangePlaneMaterial (realVol);
 		changingVol = true;
+
 	}
 
 	public void ChangePlaneMaterial (float realVol)

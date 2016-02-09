@@ -52,4 +52,11 @@ public class TriggerOperator : MonoBehaviour {
 			LG.EventTriggered ();
 		}
 	}
+
+	public void VolumeSlider() {
+		if (triggerID == 9) {
+			LG.EventTriggered ();
+		}
+	}
 }
+

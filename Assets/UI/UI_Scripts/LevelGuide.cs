@@ -19,6 +19,7 @@ public class LevelGuide : MonoBehaviour
 	public LevelInstructionSet LIS;
 	public GameObject yesNoButtonSet;
 	public GameObject multipleChoiceButtonSet;
+	public GameObject[] hideObjects;
 
 	private int levelNumber;
 	private int instructionNumber;
@@ -117,11 +118,23 @@ public class LevelGuide : MonoBehaviour
 
 		// Blocker
 		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].blockerOn) {
-			controller.hudController.blockPanel.SetActive (true);
+			foreach (GameObject ob in hideObjects) {
+				ob.SetActive (false);
+			}
 			StaticVariables.canSelectAtoms = false;
 		} else {
-			controller.hudController.blockPanel.SetActive (false);
+			foreach (GameObject ob in hideObjects) {
+				ob.SetActive (true);
+			}
 			StaticVariables.canSelectAtoms = true;
+		}
+
+		// ShowObjects
+		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].showObjects.Length > 0) {
+			foreach (GameObject ob in LIS.levelInstructions [levelNumber].instructions [instructionNumber].showObjects) {
+				ob.SetActive (true);
+			}
+			StaticVariables.canSelectAtoms = false;
 		}
 
 		buttonTriggerCount = 0;

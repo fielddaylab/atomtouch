@@ -20,6 +20,7 @@ public class LevelInstructionSet : MonoBehaviour {
 		[Multiline]
 		public string[] instructions;
 		public GameObject target;
+		public GameObject[] showObjects;
 		public Button[] buttonTriggers;
 		public int buttonTriggerCount;
 		public GameObject triggerButtonSet;
