@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class UpdateTemperature : MonoBehaviour {
 
+	public AtomTouchGUI controller;
+
 	Text text;
 	// Use this for initialization
 	void Start () {
@@ -15,6 +17,13 @@ public class UpdateTemperature : MonoBehaviour {
 		//if(oldTemperature < 0)
 		if(StaticVariables.desiredTemperature < 0.001f){
 			StaticVariables.desiredTemperature = 0.001f;
+			controller.levelGuideGameObject.GetComponent<TriggerOperator> ().TempSliderZero ();
+		}
+		if (StaticVariables.desiredTemperature >= 1000f) {
+			controller.levelGuideGameObject.GetComponent<TriggerOperator> ().TempSlider1000 ();
+		}
+		if (StaticVariables.desiredTemperature >= 5000f) {
+			controller.levelGuideGameObject.GetComponent<TriggerOperator> ().TempSlider5000 ();
 		}
 		text.text = "Temp" + System.Environment.NewLine 
 		+  (StaticVariables.desiredTemperature / StaticVariables.tempScaler) + "K"

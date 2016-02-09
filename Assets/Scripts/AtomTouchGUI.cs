@@ -744,7 +744,6 @@ public class AtomTouchGUI : MonoBehaviour
 			}
 		}
 		changingTemp = true;
-
 	}
 
 	public void OnPointerDown_TempSlider ()

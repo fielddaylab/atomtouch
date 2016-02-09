@@ -77,6 +77,8 @@ public class LevelStates : MonoBehaviour
 		controller.LevelGuideOpen ();
 		Debug.Log ("Level four started");
 		controller.hudController.LevelCompleted ("Volume");
+		controller.changeTimer ();
+		controller.changeTimer ();
 	}
 
 	public void Level06 ()

@@ -81,15 +81,18 @@ public class LevelGuide : MonoBehaviour
 		}
 
 		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].hasMultipleChoice) {
+			LIS.levelInstructions [levelNumber].instructions [instructionNumber].cleared = false;
 			multipleChoiceButtonSet.SetActive (true);
 			Button[] buttons = multipleChoiceButtonSet.GetComponentsInChildren<Button> ();
 			for (int i = 0; i < buttonAnswers.Length; i++) {
 				buttons [i].GetComponentInChildren<Text> ().text = buttonAnswers [i];
 			}
 		}
-
-		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].hasZones) {
-			ChangeZones(LIS.levelInstructions [levelNumber].instructions [instructionNumber].zone);
+		// Zones
+		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].zone > 0) {
+			ChangeZones (LIS.levelInstructions [levelNumber].instructions [instructionNumber].zone);
+		} else {
+			ChangeZones (100);
 		}
 
 		// NextButton
@@ -111,6 +114,15 @@ public class LevelGuide : MonoBehaviour
 			nextButtonText.text = "Finish";
 		if (instructionNumber < LIS.levelInstructions [levelNumber].instructions.Length - 1) 
 			nextButtonText.text = "Next";
+
+		// Blocker
+		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].blockerOn) {
+			controller.hudController.blockPanel.SetActive (true);
+			StaticVariables.canSelectAtoms = false;
+		} else {
+			controller.hudController.blockPanel.SetActive (false);
+			StaticVariables.canSelectAtoms = true;
+		}
 
 		buttonTriggerCount = 0;
 
@@ -211,12 +223,12 @@ public class LevelGuide : MonoBehaviour
 	}
 
 	public void ChangeZones(int zone) {
-		Debug.Log ("ZoneChange");
 		for (int i = 0; i < Atom.AllAtoms.Count; i++) {
 			Atom currAtom = Atom.AllAtoms [i];
+
 			if (currAtom.selectionZone == zone) {
 				currAtom.SetSelected (true);
-				Debug.Log ("Selected Atom: " + zone );
+				Debug.Log (i);
 			} else {
 				currAtom.SetSelected (false);
 			}	

@@ -35,4 +35,21 @@ public class TriggerOperator : MonoBehaviour {
 			LG.EventTriggered ();
 		}
 	}
+
+	public void TempSliderZero() {
+		if (triggerID == 6) {
+			LG.EventTriggered ();
+		}
+	}
+
+	public void TempSlider1000() {
+		if (triggerID == 7) {
+			LG.EventTriggered ();
+		}
+	}
+	public void TempSlider5000() {
+		if (triggerID == 8) {
+			LG.EventTriggered ();
+		}
+	}
 }
