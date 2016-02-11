@@ -2331,23 +2331,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22457138, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22457138, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 22440270, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 22440270, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22440270, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 11418610, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -7220,7 +7220,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[2].cleared
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[3].cleared
