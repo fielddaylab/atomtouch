@@ -20,6 +20,7 @@ public class LevelGuide : MonoBehaviour
 	public GameObject yesNoButtonSet;
 	public GameObject multipleChoiceButtonSet;
 	public GameObject[] hideObjects;
+	public AudioSource activityComplete;
 
 	private int levelNumber;
 	private int instructionNumber;
@@ -173,7 +174,9 @@ public class LevelGuide : MonoBehaviour
 		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].hasMultipleChoice) {
 			multipleChoiceButtonSet.SetActive (false);
 		}
+		// Activity Complete
 		if (instructionNumber == LIS.levelInstructions [levelNumber].instructions.Length - 1) {
+			activityComplete.Play ();
 			controller.hudController.activityCompletePanel.SetActive(true);
 			controller.LevelGuideClose();
 			//controller.LevelsOpen();

@@ -615,6 +615,10 @@ public class AtomTouchGUI : MonoBehaviour
 
 		//ChangePlaneMaterial (realVol);
 		changingVol = true;
+		if (volSliderComponent.value == 1) {
+			levelGuideGameObject.GetComponent<TriggerOperator> ().VolumeSlider ();
+
+		}
 
 	}
 

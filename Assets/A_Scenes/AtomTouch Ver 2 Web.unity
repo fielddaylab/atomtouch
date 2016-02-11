@@ -418,7 +418,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -440,7 +440,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &81157617
 AudioSource:
   m_ObjectHideFlags: 0
@@ -492,7 +492,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -514,7 +514,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!82 &81157618
 AudioSource:
   m_ObjectHideFlags: 0
@@ -566,7 +566,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -588,7 +588,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!1 &99976327
 GameObject:
   m_ObjectHideFlags: 0
@@ -3076,7 +3076,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -28, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &444899772
 MonoBehaviour:
@@ -3136,6 +3136,80 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22432962, guid: 16074564d895b4a17a60338653483852,
     type: 2}
   m_PrefabInternal: {fileID: 1440663831}
+--- !u!82 &479600164
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 479600155}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 35b24d15902654851b312154c16cb894, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &487388367 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 185494, guid: a68afe71e8aaa3d46a11bef9e639ca71, type: 2}
@@ -4226,7 +4300,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 452.90387, y: -65}
+  m_AnchoredPosition: {x: 452.90234, y: -65}
   m_SizeDelta: {x: 895.80774, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &770085672
@@ -5504,6 +5578,10 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 374185203}
   m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!1 &1077451389 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 164188, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
+  m_PrefabInternal: {fileID: 374185203}
 --- !u!1 &1097985657 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 101794, guid: 700aba05dcc0a8e4ab49235de7297ca7, type: 2}
@@ -5572,8 +5650,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 985.5221, y: -110}
-  m_SizeDelta: {x: 376.20883, y: 220}
+  m_AnchoredPosition: {x: 1076.6346, y: -64.8725}
+  m_SizeDelta: {x: 412.65384, y: 129.745}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1111116757
 MonoBehaviour:
@@ -5825,6 +5903,10 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1179847589 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 133642, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
+  m_PrefabInternal: {fileID: 374185203}
 --- !u!1 &1185538389
 GameObject:
   m_ObjectHideFlags: 0
@@ -5953,6 +6035,10 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 127878, guid: a68afe71e8aaa3d46a11bef9e639ca71, type: 2}
   m_PrefabInternal: {fileID: 157047559}
+--- !u!1 &1201752475 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 106602, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
+  m_PrefabInternal: {fileID: 374185203}
 --- !u!1 &1228304834
 GameObject:
   m_ObjectHideFlags: 0
@@ -6699,7 +6785,7 @@ Prefab:
       objectReference: {fileID: 1960553280}
     - target: {fileID: 170532, guid: 754c3f090544c458a8eeb15077508836, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11451164, guid: 754c3f090544c458a8eeb15077508836, type: 2}
       propertyPath: frames.Array.data[4]
@@ -6735,6 +6821,10 @@ Prefab:
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[0].showObjects.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -6748,6 +6838,42 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[3].showObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[7].showObjects.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[0].showObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[0].showObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[1].showObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[1].showObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[2].showObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[4].showObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].showObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[1].showObjects.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
@@ -6812,11 +6938,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[5].instructions.Array.data[1].instructions.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[5].instructions.Array.data[3].instructions.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[10].showObjects.Array.size
@@ -6829,6 +6955,22 @@ Prefab:
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[11].showObjects.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[2].instructions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[4].instructions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[2].instructions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[4].instructions.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[1].buttonAnswers.Array.size
@@ -6892,11 +7034,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[5].instructions.Array.data[0].buttonAnswers.Array.size
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[2].buttonAnswers.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[1].buttonAnswers.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[3].buttonAnswers.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[1].buttonAnswers.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[5].buttonTriggers.Array.size
@@ -6929,6 +7083,10 @@ Prefab:
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[11].buttonAnswers.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[0].buttonTriggers.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[10].buttonTriggers.Array.size
@@ -7080,7 +7238,7 @@ Prefab:
       objectReference: {fileID: 940646007}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[8].cleared
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[9].TriggerID
@@ -7092,35 +7250,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[0].cleared
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[1].cleared
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[2].cleared
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[3].cleared
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[4].cleared
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[5].cleared
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[6].cleared
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[7].cleared
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[9].cleared
@@ -7936,11 +8094,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[0].zone
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[3].cleared
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[4].hasMultipleChoice
@@ -7981,15 +8139,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[7].instructions.Array.data[0]
-      value: 'Yes, if you add enough atoms to a 1 nm^3 box (around 100 atoms) it will
-        become a solid.  To add more atoms, you may need to make the box bigger and
-        then reduce its size to 1 nm^3 when you have the number you want. '
+      value: 'Actually you can! <b>Try</b> this: if you add enough atoms to a 1 nm^3
+        box (around 100 atoms) it will become a solid.  To add more atoms, you may
+        need to make the box bigger and then reduce its size to 1 nm^3 when you have
+        the number you want. '
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[7].instructions.Array.data[1]
-      value: 'Yes, if you add enough atoms to a 1 nm^3 box (around 100 atoms) it will
-        become a solid.  To add more atoms, you may need to make the box bigger and
-        then reduce its size to 1 nm^3 when you have the number you want. '
+      value: 'Yes! <b>Try</b> this: if you add enough atoms to a 1 nm^3 box (around
+        100 atoms) it will become a solid.  To add more atoms, you may need to make
+        the box bigger and then reduce its size to 1 nm^3 when you have the number
+        you want. '
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[7].cleared
@@ -7997,7 +8157,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[5].instructions.Array.data[0].hasMultipleChoice
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[5].instructions.Array.data[0].buttonAnswers.Array.data[0]
@@ -8026,21 +8186,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[5].instructions.Array.data[1].cleared
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
-      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[2].cleared
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[2].cleared
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[5].instructions.Array.data[2].instruction
-      value: When you changed the temperature, the structure formed by the atoms changed.
-        Is there anything you can do that will change the structure of an individual
-        atom?
+      value: A chlorine atom is roughly 0.2nm in width
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[5].instructions.Array.data[2].hasYesNo
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[5].instructions.Array.data[3].instructions.Array.data[0]
@@ -8054,15 +8212,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[5].instructions.Array.data[3].instruction
-      value: 
+      value: When you changed the temperature, the structure formed by the atoms changed.
+        Is there anything you can do that will change the structure of an individual
+        atom?
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[5].instructions.Array.data[3].cleared
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[6].instructions.Array.data[0].cleared
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[6].instructions.Array.data[2].cleared
@@ -8070,11 +8230,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[6].instructions.Array.data[1].cleared
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[6].instructions.Array.data[3].cleared
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[6].instructions.Array.data[4].cleared
@@ -8110,7 +8270,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[0].cleared
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[2].hasMultipleChoice
@@ -8272,6 +8432,325 @@ Prefab:
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[12].blockerOn
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[0].TriggerID
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[3].TriggerID
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[7].showObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 46770053}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[4].instructions.Array.data[7].showObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 105069879}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[0].blockerOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[0].showObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 46770053}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[0].cleared
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[1].blockerOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[2].blockerOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[3].blockerOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[0].zone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[0].TriggerID
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[0].instruction
+      value: Notice that there are 8 sodium atoms in one corner of the box and 8 chlorine
+        atoms in the opposite corner with time stopped. Turn the time to normal speed
+        and observe what happens!
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[0].buttonTriggers.Array.data[0]
+      value: 
+      objectReference: {fileID: 357375299}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[0].buttonTriggerCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[0].showObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 70371580}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[1].hasMultipleChoice
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[1].buttonAnswers.Array.data[0]
+      value: Not moving
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[1].buttonAnswers.Array.data[1]
+      value: Randomly moving
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[1].buttonAnswers.Array.data[2]
+      value: Moving twoards the other atoms
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[1].blockerOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[2].instructions.Array.data[2]
+      value: Correct! Sodium atoms repel other sodium atoms. Chlorine atoms repel
+        other chlorine atoms. Sodium and Chlorine atoms attract each other.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[2].instructions.Array.data[1]
+      value: Close! Sodium atoms repel other sodium atoms. Chlorine atoms repel other
+        chlorine atoms. Sodium and Chlorine atoms attract each other.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[2].instructions.Array.data[0]
+      value: They would only not be moving if the time wasn't running. Try going back
+        and turning the time on.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[1].showObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 70371580}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[2].blockerOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[3].buttonAnswers.Array.data[0]
+      value: Same charges repel
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[3].buttonAnswers.Array.data[1]
+      value: Opposite charges attract
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[3].buttonAnswers.Array.data[2]
+      value: 'Same charges repel and opposite charges attract. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[3].blockerOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[4].instructions.Array.data[0]
+      value: 'It is true that <b>same charges repel</b>, but it is important to see
+        that <b>opposite charges attract</b>, as well. Since Sodium and Chlorine atoms
+        have opposite charges they attract each other to form an ionic bond. In an
+        ionic bond, two atoms with opposite charges bond to one another to form a
+        structure with a net charge of 0.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[4].instructions.Array.data[1]
+      value: It is true that <b>opposite charges attract</b>, but it is important
+        to see that <b>same charges repel</b>, as well. Since Sodium and Chlorine
+        atoms have opposite charges they attract each other to form an ionic bond.
+        In an ionic bond, two atoms with opposite charges bond to one another to form
+        a structure with a net charge of 0.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[4].instructions.Array.data[2]
+      value: Very good! <b>Same charges repel</b> and <b>opposite charges attract</b>.
+        Since Sodium and Chlorine atoms have opposite charges they attract each other
+        to form an ionic bond. In an ionic bond, two atoms with opposite charges bond
+        to one another to form a structure with a net charge of 0.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[4].blockerOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[4].target
+      value: 
+      objectReference: {fileID: 1179847589}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[5].target
+      value: 
+      objectReference: {fileID: 1077451389}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[6].target
+      value: 
+      objectReference: {fileID: 1077451389}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[7].showObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1778633809}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[7].target
+      value: 
+      objectReference: {fileID: 1778633809}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[8].target
+      value: 
+      objectReference: {fileID: 1201752475}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[8].buttonTriggerCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[1].showObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1613673741}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[2].showObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1613673741}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[4].showObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1613673741}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].showObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 1613673741}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[3].instructions.Array.data[10].showObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[1].heading
+      value: How wide is a chlorine atom?
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[1].instruction
+      value: Use the grid in the box and its volume to roughly estimate the width
+        of a chlorine atom.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[1].showObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 46770053}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[1].hasMultipleChoice
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[1].buttonAnswers.Array.data[0]
+      value: 0.2nm
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[1].buttonAnswers.Array.data[1]
+      value: 1nm
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[1].buttonAnswers.Array.data[2]
+      value: 1mm
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[1].TriggerID
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[2].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[2].instructions.Array.data[0]
+      value: Good eye! A chlorine atom is roughly <b>0.2nm</b> in width
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[2].instructions.Array.data[1]
+      value: Close! A chlorine atom is roughly <b>0.2nm</b> in width
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[2].instructions.Array.data[2]
+      value: That would be really big! Actually, a chlorine atom is roughly <b>0.2nm</b>
+        in width
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[3].heading
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[3].hasYesNo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[4].heading
+      value: Answer
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[4].instructions.Array.data[0]
+      value: Correct! <b>No</b>, atoms are indivisible units that make up all matter.
+        It is the bonding between them that determines the structure and the state
+        of matter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[4].instructions.Array.data[1]
+      value: Actually, <b>No</b>, atoms are indivisible units that make up all matter.
+        It is the bonding between them that determines the structure and the state
+        of matter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[4].blockerOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[4].cleared
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[5].instructions.Array.data[0].instruction
+      value: 'Start by changing the volume of the box to 1nm^3. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[0].instructions.Array.data[0].instruction
+      value: This app allows us to look and play with with Atoms, the ultra-small
+        building blocks of everything. You can tap anywhere on this dialogue box to
+        minimize and maximize. Try it to continue. Once you have completed the instruction,
+        you will be able to touch <b>Next</b> to continue.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[2].hasMultipleChoice
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[6].instructions.Array.data[3].hasMultipleChoice
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[0].cleared
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296426, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8296426, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11450004, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: activityComplete
+      value: 
+      objectReference: {fileID: 479600164}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16074564d895b4a17a60338653483852, type: 2}
   m_IsPrefabParent: 0
@@ -9335,6 +9814,10 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1777884202}
+--- !u!1 &1778633809 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 141898, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
+  m_PrefabInternal: {fileID: 374185203}
 --- !u!1 &1795939055
 GameObject:
   m_ObjectHideFlags: 0
@@ -9688,8 +10171,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 193.10442, y: -110}
-  m_SizeDelta: {x: 376.20883, y: 220}
+  m_AnchoredPosition: {x: 211.32692, y: -64.8725}
+  m_SizeDelta: {x: 412.65384, y: 129.745}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1824645916
 MonoBehaviour:
@@ -9809,8 +10292,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 589.31323, y: -110}
-  m_SizeDelta: {x: 376.20883, y: 220}
+  m_AnchoredPosition: {x: 643.9808, y: -64.8725}
+  m_SizeDelta: {x: 412.65384, y: 129.745}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1834302631
 MonoBehaviour:
@@ -11967,7 +12450,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -28, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2066566026
 MonoBehaviour:
@@ -12116,7 +12599,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -28, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2092256142
 MonoBehaviour:
