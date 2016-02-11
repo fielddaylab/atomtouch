@@ -160,6 +160,8 @@ public class LevelGuide : MonoBehaviour
 
 	public void EventTriggered () {
 		nextButton.interactable = true;
+		if (target != null)
+			target.SetActive (false);
 		LIS.levelInstructions [levelNumber].instructions [instructionNumber].cleared = true;
 	}
 
@@ -174,19 +176,22 @@ public class LevelGuide : MonoBehaviour
 		if (LIS.levelInstructions [levelNumber].instructions [instructionNumber].hasMultipleChoice) {
 			multipleChoiceButtonSet.SetActive (false);
 		}
-		// Activity Complete
-		if (instructionNumber == LIS.levelInstructions [levelNumber].instructions.Length - 1) {
-			activityComplete.Play ();
-			controller.hudController.activityCompletePanel.SetActive(true);
-			controller.LevelGuideClose();
-			//controller.LevelsOpen();
-			levelsPanel.LevelComplete(levelNumber);
-			return;
-		}
 
 		if (target != null)
 			target.SetActive (false);
-		SetLevelGuide (levelNumber, this.instructionNumber + 1);
+		
+		// Activity Complete
+		if (instructionNumber == LIS.levelInstructions [levelNumber].instructions.Length - 1) {
+			activityComplete.Play ();
+			controller.hudController.activityCompletePanel.SetActive (true);
+			controller.LevelGuideClose ();
+			//controller.LevelsOpen();
+			levelsPanel.LevelComplete (levelNumber);
+			return;
+		} else {
+			// Continue the level guide
+			SetLevelGuide (levelNumber, this.instructionNumber + 1);
+		}
 	}
 
 	public void BackButton() {

@@ -6747,7 +6747,7 @@ Prefab:
       objectReference: {fileID: 1960553280}
     - target: {fileID: 170532, guid: 754c3f090544c458a8eeb15077508836, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11451164, guid: 754c3f090544c458a8eeb15077508836, type: 2}
       propertyPath: frames.Array.data[4]
