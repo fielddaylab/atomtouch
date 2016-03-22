@@ -7284,8 +7284,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[1].instructions.Array.data[0]
-      value: How awsome! You must be old! Well <b>Sea Turtle</b> press  <b>Next</b>
-        to continue with the activity.
+      value: Good! Press <b>Next</b> to continue with the activity.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[1].instruction
@@ -7298,11 +7297,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[2].instructions.Array.data[0]
-      value: You said <b>One</b>. There are actaully <b>Three</b>.
+      value: You said <b>One</b>. There are actually <b>Three</b>.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[2].instructions.Array.data[1]
-      value: You said <b>Two</b>. There are actaully <b>Three</b>.
+      value: You said <b>Two</b>. There are actually <b>Three</b>.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[2].instructions.Array.data[2]
@@ -7322,8 +7321,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[1].instructions.Array.data[1]
-      value: How fierce! You must be brave! Well <b>Lion</b> press <b>Next</b> to
-        continue with the activity.
+      value: Good! Press <b>Next</b> to continue with the activity.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[0].hasZones
@@ -7352,20 +7350,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[0].buttonAnswers.Array.data[0]
-      value: I am a Sea Turtle
+      value: Button 1
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[0].buttonAnswers.Array.data[1]
-      value: I am a Lion
+      value: Button 2
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[0].buttonAnswers.Array.data[2]
-      value: I am a Mountain
+      value: Button 3
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[1].instructions.Array.data[2]
-      value: How cool! You must be strong! Well <b>Mountain</b> start the time and
-        press <b>Next</b> to continue with the activity.
+      value: Good! Press <b>Next</b> to continue with the activity.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[1].heading
@@ -7377,8 +7374,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[2].instruction
-      value: How many bonds are present with individual highlighted atom? <b>NOTICE
-        THE CORNERS</b>
+      value: How many bonds are connected to each of the highlighted <b>corner</b> atoms?
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[2].hasMultipleChoice
@@ -7474,8 +7470,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[6].instruction
-      value: One more to really test you. How many bonds are present with an individual
-        highlighted atom? <b>NOTICE THE INSIDE</b>
+      value: One more to really test you. How many bonds are connected to each of the highlighted <b>inner</b> atoms?
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[7].heading
@@ -7491,7 +7486,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[8].instruction
-      value: What state of mattler is this molecule in?
+      value: What state of matter is this molecule in?
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[9].heading
@@ -7531,8 +7526,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[4].instruction
-      value: How many bonds are present with an individual highlighted atom? <b>NOTICE
-        THE SIDES</b>
+      value: How many bonds are connected to each of the highlighted <b>side</b> atoms?
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[4].hasZones
@@ -7622,12 +7616,12 @@ Prefab:
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[3].instructions.Array.data[0]
       value: The answer was <b>Three</b>.  Look closely at the lines of one of these
-        highlited atoms. The lines represent bonds.
+        highlighted atoms. The lines represent bonds.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[3].instructions.Array.data[2]
       value: The answer was <b>Three</b>.  Look closely at the lines of one of these
-        highlited atoms. The lines represent bonds.
+        highlighted atoms. The lines represent bonds.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[3].instructions.Array.data[1]
@@ -7840,15 +7834,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[3].buttonAnswers.Array.data[0]
-      value: 'Stop '
+      value: Slow down
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[3].buttonAnswers.Array.data[1]
-      value: Dance
+      value: Stop
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[3].buttonAnswers.Array.data[2]
-      value: Talk
+      value: Speed up
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[4].buttonTriggerCount
@@ -7856,15 +7850,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[4].instructions.Array.data[0]
-      value: Correct! They <b>stop</b> moving.
+      value: Correct! They <b>slow down</b>.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[4].instructions.Array.data[1]
-      value: No silly, they <b>stop</b> moving.
+      value: Not quite; they are actually still moving. They've just <b>slowed down</b>.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[4].instructions.Array.data[2]
-      value: No that would be rediculous! They <b>stop</b> moving.
+      value: Nope; they are <b>slowed down</b>.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[5].hasMultipleChoice
@@ -7872,15 +7866,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[5].buttonAnswers.Array.data[0]
-      value: Absolutly annoying
+      value: There are zero atoms
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[5].buttonAnswers.Array.data[2]
-      value: Absolutly lowest temperature
+      value: It's the absolute lowest temperature
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[5].buttonAnswers.Array.data[1]
-      value: Absolutly amazing at dancing
+      value: The atoms move absolutely everywhere
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].instructions.Array.data[2]
@@ -7889,13 +7883,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].instructions.Array.data[1]
-      value: They are not even moving! Absolute zero is the temperature at which all
-        atomic motion stops. It is the lowest possible tempature.
+      value: Not quite. Absolute zero is the temperature at which all
+        atomic motion stops. It is the <b>lowest possible tempature</b>.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].instructions.Array.data[0]
-      value: They cat be that annoying! Absolute zero is the temperature at which
-        all atomic motion stops. It is the lowest possible tempature.
+      value: Not quite. Absolute zero is the temperature at which all
+        atomic motion stops. It is the <b>lowest possible tempature</b>.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].cleared
@@ -7937,19 +7931,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[9].instructions.Array.data[0]
-      value: "It is no longer a solid. This is a <b>liquid</b> because the highlighted
+      value: "It is no longer a solid. This is a <b>liquid</b> because each
         atom is changing bonding partners and doesn\u2019t keep the same relative
         position in the structure."
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[9].instructions.Array.data[2]
-      value: "It is not quite a gas yet. This is a <b>liquid</b> because the highlighted
+      value: "It is not quite a gas yet. This is a <b>liquid</b> because each
         atom is changing bonding partners and doesn\u2019t keep the same relative
         position in the structure."
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[9].instructions.Array.data[1]
-      value: "Yes!  This is a <b>liquid</b> because the highlighted atom is changing
+      value: "Yes!  This is a <b>liquid</b> because each atom is changing
         bonding partners and doesn\u2019t keep the same relative position in the structure."
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
@@ -8080,18 +8074,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[5].instructions.Array.data[0]
-      value: "Not quite. This is a <b>liquid</b> because the highlighted atom is changing
+      value: "Not quite. This is a <b>liquid</b> because each atom is changing
         bonding partners and doesn\u2019t keep the same relative position in the structure."
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[5].instructions.Array.data[2]
-      value: "Not anymore. This is a <b>liquid</b> because the highlighted atom is
+      value: "Not anymore. This is a <b>liquid</b> because each atom is
         changing bonding partners and doesn\u2019t keep the same relative position
         in the structure."
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[5].instructions.Array.data[1]
-      value: "Good thinking! This is a <b>liquid</b> because the highlighted atom
+      value: "Good thinking! This is a <b>liquid</b> because each atom
         is changing bonding partners and doesn\u2019t keep the same relative position
         in the structure."
       objectReference: {fileID: 0}
@@ -10659,7 +10653,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Learn about they ways atoms bond in different states of matter
+  m_Text: Learn about the ways atoms bond in different states of matter
 --- !u!222 &1865435305
 CanvasRenderer:
   m_ObjectHideFlags: 0
