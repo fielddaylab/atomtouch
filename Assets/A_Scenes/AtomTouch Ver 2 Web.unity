@@ -11609,7 +11609,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .0314955786, g: .387948453, b: .501960814, a: 1}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -11797,7 +11797,7 @@ MonoBehaviour:
   centerPos: {x: 0, y: 0, z: 0}
   errorBuffer: .5
   lineMat: {fileID: 2100000, guid: 9647efc6732774f7191fa2cc8259d8f1, type: 2}
-  lineColor: {r: 1, g: .641379297, b: 0, a: .611764729}
+  lineColor: {r: 1, g: 1, b: 1, a: .611764729}
   lineWidth: .100000001
   width: 20
   height: 20

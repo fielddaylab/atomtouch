@@ -139,6 +139,7 @@ MonoBehaviour:
   isTransparent: 0
   selected: 0
   doubleTapped: 0
+  selectionZone: 0
   textMeshPrefab: {fileID: 10200000, guid: e0c19431a83a34054b4e5ee48e8429c2, type: 2}
   untexturedDefaultMaterial: {fileID: 2100000, guid: 6dbb3d64b456f438f80ace9a582db70f,
     type: 2}
