@@ -624,7 +624,7 @@ public class AtomTouchGUI : MonoBehaviour
 
 	public void ChangePlaneMaterial (float realVol)
 	{
-
+		print ("ChangePlaneMaterial");
 		MeshRenderer topMesh = CreateEnvironment.topPlane.GetComponent<MeshRenderer> ();
 		MeshRenderer backMesh = CreateEnvironment.backPlane.GetComponent<MeshRenderer> ();
 		MeshRenderer frontMesh = CreateEnvironment.frontPlane.GetComponent<MeshRenderer> ();

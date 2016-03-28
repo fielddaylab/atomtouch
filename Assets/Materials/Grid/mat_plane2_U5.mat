@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: mat_plane2_U5
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 0e7ed4fbd9924480bbb918e339c570e6, type: 3}
   m_ShaderKeywords: _ALPHABLEND_ON _LIGHTMAPPING_REALTIME
   m_LightmapFlags: 5
   m_CustomRenderQueue: 2000
@@ -194,11 +194,11 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .106833912, g: .4484092, b: .558823526, a: .615686297}
+        second: {r: .111916102, g: .149453208, b: .33088237, a: .615686297}
       data:
         first:
           name: _SpecColor
-        second: {r: .104455002, g: .341585159, b: .617647052, a: 1}
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _EmissionColorUI
