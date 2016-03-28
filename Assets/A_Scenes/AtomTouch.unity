@@ -2313,43 +2313,43 @@ Prefab:
       objectReference: {fileID: 1809991221}
     - target: {fileID: 22473982, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22473982, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: .333333343
       objectReference: {fileID: 0}
     - target: {fileID: 22449710, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: .333333343
       objectReference: {fileID: 0}
     - target: {fileID: 22449710, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22449710, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22457138, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 22449710, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: .333333343
+      objectReference: {fileID: 0}
+    - target: {fileID: 22457138, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 22457138, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.y
-      value: .0599999987
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22440270, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMin.y
-      value: .0599999987
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22440270, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22440270, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.y
-      value: .0599999987
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11418610, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -11564,7 +11564,6 @@ GameObject:
   - 92: {fileID: 1960553275}
   - 124: {fileID: 1960553274}
   - 81: {fileID: 1960553273}
-  - 45: {fileID: 1960553278}
   - 114: {fileID: 1960553281}
   - 114: {fileID: 1960553280}
   - 114: {fileID: 1960553279}
@@ -11646,14 +11645,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!45 &1960553278
-Skybox:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1960553272}
-  m_Enabled: 0
-  m_CustomSkybox: {fileID: 2100000, guid: b6a90f2536a08064eb4aa03f3e28120e, type: 2}
 --- !u!114 &1960553279
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: mat_AtomBond
+  m_Name: AtomBond
   m_Shader: {fileID: 4800000, guid: c494c890ec8664fd9aa7d66ebfa1a7e6, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -38,6 +38,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _Detail
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
@@ -46,13 +53,6 @@ Material:
       data:
         first:
           name: _Illum
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _Detail
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -68,12 +68,12 @@ Material:
         second: .0199999996
       data:
         first:
-          name: _EmissionLM
-        second: 0
-      data:
-        first:
           name: _InvFade
         second: 3
+      data:
+        first:
+          name: _EmissionLM
+        second: 0
       data:
         first:
           name: _Stencil
