@@ -7,9 +7,9 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Mat_Sodium_Selected_Untextured
-  m_Shader: {fileID: 4800000, guid: 0e7ed4fbd9924480bbb918e339c570e6, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _EMISSION
+  m_LightmapFlags: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   m_SavedProperties:
@@ -101,7 +101,7 @@ Material:
       data:
         first:
           name: _Shininess
-        second: .0199999996
+        second: .00999999978
       data:
         first:
           name: _Parallax
@@ -113,7 +113,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: .5
+        second: .486999989
       data:
         first:
           name: _BumpScale
@@ -132,29 +132,29 @@ Material:
         second: 0
       data:
         first:
-          name: _EmissionScaleUI
-        second: 0
-      data:
-        first:
           name: _Mode
         second: 0
       data:
         first:
           name: _Metallic
         second: 0
+      data:
+        first:
+          name: _EmissionScaleUI
+        second: 0
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+        second: {r: .588235259, g: .588235259, b: .588235259, a: 1}
       data:
         first:
           name: _Color
-        second: {r: .289251745, g: .333856225, b: .786764741, a: 1}
+        second: {r: .301960796, g: .521568656, b: .65882355, a: 1}
       data:
         first:
           name: _SpecColor
-        second: {r: .478431374, g: .431372553, b: .56078434, a: 1}
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _EmissionColorUI
