@@ -7,9 +7,9 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Mat_Chlorine_Transparent
-  m_Shader: {fileID: 4800000, guid: e1f50dc041f1545edbb228f8daea22a1, type: 3}
-  m_ShaderKeywords: _ALPHABLEND_ON
-  m_LightmapFlags: 5
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON
+  m_LightmapFlags: 0
   m_CustomRenderQueue: 3000
   stringTagMap:
     RenderType: Transparent
@@ -20,7 +20,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 9567aff1f0c3df44eb530f0acedab122, type: 3}
+          m_Texture: {fileID: 2800000, guid: 9f9fc5bc945534709969c73b3fafa23c, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -46,6 +46,13 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _EmissionMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 9f9fc5bc945534709969c73b3fafa23c, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
@@ -54,13 +61,6 @@ Material:
       data:
         first:
           name: _OcclusionMap
-        second:
-          m_Texture: {fileID: 0}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _EmissionMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -96,28 +96,28 @@ Material:
     m_Floats:
       data:
         first:
+          name: _Reflection
+        second: 0.66071427
+      data:
+        first:
           name: _SrcBlend
-        second: 5
+        second: 1
       data:
         first:
           name: _DstBlend
         second: 10
       data:
         first:
-          name: _Reflection
-        second: .660714269
-      data:
-        first:
           name: _Cutoff
-        second: .5
+        second: 0.5
       data:
         first:
           name: _Shininess
-        second: .171000004
+        second: 0.171
       data:
         first:
           name: _Parallax
-        second: .0199999996
+        second: 0.02
       data:
         first:
           name: _ZWrite
@@ -125,7 +125,7 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: .00499999989
+        second: 0
       data:
         first:
           name: _BumpScale
@@ -145,11 +145,11 @@ Material:
       data:
         first:
           name: _Mode
-        second: 2
+        second: 3
       data:
         first:
           name: _Metallic
-        second: 1
+        second: 0
       data:
         first:
           name: _EdgeAlpha
@@ -161,7 +161,7 @@ Material:
       data:
         first:
           name: _FrezPow
-        second: .535714269
+        second: 0.53571427
       data:
         first:
           name: _FrezFalloff
@@ -169,7 +169,7 @@ Material:
       data:
         first:
           name: _Metalics
-        second: .357142866
+        second: 0.35714287
     m_Colors:
       data:
         first:
@@ -178,11 +178,11 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .661764741, g: .661764741, b: .661764741, a: .517647088}
+        second: {r: 1, g: 1, b: 1, a: 0.5176471}
       data:
         first:
           name: _SpecColor
-        second: {r: .894117653, g: .788803279, b: .199999988, a: 1}
+        second: {r: 0.89411765, g: 0.7888033, b: 0.19999999, a: 1}
       data:
         first:
           name: _Emission
