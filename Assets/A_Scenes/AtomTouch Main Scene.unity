@@ -4093,6 +4093,7 @@ Canvas:
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -7374,7 +7375,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[2].instruction
-      value: How many bonds are connected to each of the highlighted <b>corner</b> atoms?
+      value: How many bonds are connected to each of the highlighted <b>corner</b>
+        atoms?
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[2].hasMultipleChoice
@@ -7470,7 +7472,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[6].instruction
-      value: One more to really test you. How many bonds are connected to each of the highlighted <b>inner</b> atoms?
+      value: One more to really test you. How many bonds are connected to each of
+        the highlighted <b>inner</b> atoms?
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[7].heading
@@ -7883,13 +7886,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].instructions.Array.data[1]
-      value: Not quite. Absolute zero is the temperature at which all
-        atomic motion stops. It is the <b>lowest possible tempature</b>.
+      value: Not quite. Absolute zero is the temperature at which all atomic motion
+        stops. It is the <b>lowest possible tempature</b>.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].instructions.Array.data[0]
-      value: Not quite. Absolute zero is the temperature at which all
-        atomic motion stops. It is the <b>lowest possible tempature</b>.
+      value: Not quite. Absolute zero is the temperature at which all atomic motion
+        stops. It is the <b>lowest possible tempature</b>.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].cleared
@@ -7931,20 +7934,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[9].instructions.Array.data[0]
-      value: "It is no longer a solid. This is a <b>liquid</b> because each
-        atom is changing bonding partners and doesn\u2019t keep the same relative
-        position in the structure."
+      value: "It is no longer a solid. This is a <b>liquid</b> because each atom is
+        changing bonding partners and doesn\u2019t keep the same relative position
+        in the structure."
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[9].instructions.Array.data[2]
-      value: "It is not quite a gas yet. This is a <b>liquid</b> because each
-        atom is changing bonding partners and doesn\u2019t keep the same relative
-        position in the structure."
+      value: "It is not quite a gas yet. This is a <b>liquid</b> because each atom
+        is changing bonding partners and doesn\u2019t keep the same relative position
+        in the structure."
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[9].instructions.Array.data[1]
-      value: "Yes!  This is a <b>liquid</b> because each atom is changing
-        bonding partners and doesn\u2019t keep the same relative position in the structure."
+      value: "Yes!  This is a <b>liquid</b> because each atom is changing bonding
+        partners and doesn\u2019t keep the same relative position in the structure."
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[10].TriggerID
@@ -8074,20 +8077,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[5].instructions.Array.data[0]
-      value: "Not quite. This is a <b>liquid</b> because each atom is changing
-        bonding partners and doesn\u2019t keep the same relative position in the structure."
+      value: "Not quite. This is a <b>liquid</b> because each atom is changing bonding
+        partners and doesn\u2019t keep the same relative position in the structure."
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[5].instructions.Array.data[2]
-      value: "Not anymore. This is a <b>liquid</b> because each atom is
-        changing bonding partners and doesn\u2019t keep the same relative position
-        in the structure."
+      value: "Not anymore. This is a <b>liquid</b> because each atom is changing bonding
+        partners and doesn\u2019t keep the same relative position in the structure."
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[5].instructions.Array.data[1]
-      value: "Good thinking! This is a <b>liquid</b> because each atom
-        is changing bonding partners and doesn\u2019t keep the same relative position
-        in the structure."
+      value: "Good thinking! This is a <b>liquid</b> because each atom is changing
+        bonding partners and doesn\u2019t keep the same relative position in the structure."
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[4].instructions.Array.data[6].hasYesNo

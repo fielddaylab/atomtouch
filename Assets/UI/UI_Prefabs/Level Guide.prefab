@@ -239,6 +239,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -249,6 +250,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -259,6 +261,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -269,6 +272,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!82 &8296426
 AudioSource:
   m_ObjectHideFlags: 1
@@ -309,6 +313,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -319,6 +324,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -329,6 +335,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 4
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -339,6 +346,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11404614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -399,11 +407,11 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
-    m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
-    m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
-    m_FadeDuration: .100000001
+    m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -458,7 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -473,6 +481,7 @@ MonoBehaviour:
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 1
+    m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -505,6 +514,7 @@ MonoBehaviour:
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
+    m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -537,6 +547,7 @@ MonoBehaviour:
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
+    m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -577,24 +588,38 @@ MonoBehaviour:
 
         Once you have completed the instruction, you will be able to touch <b>Next</b>
         to continue.'
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers:
       - {fileID: 11459700}
       buttonTriggerCount: 2
       triggerButtonSet: {fileID: 141100}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Moving Atoms
       instruction: 'Let''s start by moving an Atom. It''s easy!
 
 
         Touch (or click) on an Atom and drag it around.'
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 1
+      blockerOn: 0
+      cleared: 0
     - heading: Nearer/Farther
       instruction: 'Now you need to learn how to move Atoms closer and farther.
 
@@ -602,30 +627,51 @@ MonoBehaviour:
         Start by dragging an Atom. Then, use a second finger and touch somewhere else
         on the screen and slide up and down. If you are using a mouse, just click
         on an atom and rotate the mouse wheel.'
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 1
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 2
+      blockerOn: 0
+      cleared: 0
     - heading: Changing Perspective
       instruction: By touching somewhere empty in the box and dragging, you can move
         the whole enviroment.
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 3
+      blockerOn: 0
+      cleared: 0
     - heading: Reorient to Home position
       instruction: To reset the box, touch the camera reset button
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers:
       - {fileID: 0}
       buttonTriggerCount: 1
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Starting Time
       instruction: 'Right now, time is stopped. Let''s start it up!
 
@@ -634,43 +680,71 @@ MonoBehaviour:
         start to move around.
 
         Also notice the pico seconds in the top right starting to count up. '
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 1
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Speeding it Up
       instruction: "Touch the clock a second time to go full speed. \nTouch the clock
         button again to change it from slow play to fast play. The atoms will move
         around \nfaster. The pico seconds are counting up faster, however  notice
         that time in AtomTouch is <i>really</i> slowed down from real life. Here,
         seconds are more like pico seconds."
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 1
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Reset
       instruction: Sometimes things can get a little messy. If you ever want to reset,
         tap the reset button. The atoms and settings will return to how the activty
         started.
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 1
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Add more atoms
       instruction: Click on the Na and Cl icons to add more sodium (Na) and Chlorine
         (Cl) atoms
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 1
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 1
     - heading: Selecting Atoms
       instruction: 'Touch one atom. See how it changes color and some new options
         appear at the top of the screen.
@@ -679,50 +753,85 @@ MonoBehaviour:
 
 
         Also notice that some new options appear at the top of the screen.'
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 1
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 1
     - heading: 'Deleting atoms '
       instruction: Once you have selected some Atoms, touch the <b>Delete</b> button
         to delete them.
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
   - instructions:
     - heading: Put an atom in its Place
       instruction: Select an atom and move it to the top right-hand corner of the
         back of the box.
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Put another atom in Place
       instruction: Now  can you move a different atom to the bottom left hand corner
         in the front of the  box?
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
   - instructions:
     - heading: States of Matter Activity
       instruction: "First select your favorite atom and then turn on the time to normal
         speed. \n"
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Question
       instruction: 'How many potential bonding partners does the highlighted atom
         have?
@@ -730,357 +839,630 @@ MonoBehaviour:
         Hint: Bonds are indicated by lines between atoms. Bonds may form and break
         as the atoms move, but the selected atom will keep the same  potential bonding
         partners.'
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Answer
       instruction: Depending upon the location of your favorite atom, it could have
         3-6  potential bonding partners. Corner atoms have 3 potential bonding partners
         while interior atoms have 6 potential bonding partners.
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Question
       instruction: What state of matter is this?
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Answer
       instruction: This is a solid because the atoms are maintaining bonding partners
         and relative position to all the other atoms in the structure, even though
         the atoms are moving.
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Solid? or Not a solid?
       instruction: Stop time and add 4 Na and 4 Cl atoms so they bond to the other
         atoms in the structure.
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Solid? or Not a solid?
       instruction: Start time again, and observe the structure for about 30 seconds
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Question
       instruction: What state of matter is this?
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Answer
       instruction: This is still a solid because the atoms are maintaining bonding
         partners and relative position to all the other atoms in the structure, even
         though the atoms are moving.
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
   - instructions:
     - heading: Let's explore temperature
       instruction: 'Set the temperature slider to  0.001 Kelvin. '
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Question
       instruction: How many degrees Celcius (C) is this?
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Answer
       instruction: -273.15 degrees C
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Question
       instruction: What happens to your atoms at 0.001 K?
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Answer
       instruction: The atoms stop moving.
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Question
       instruction: 0 K is known as absolute zero. Based upon what is happening with
         your atoms, why do you think its called absolute zero?
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Answer
       instruction: Absolute zero is the temperature at which all atomic motion stops.
         It is the lowest possible tempature.
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Let's explore temperature
       instruction: Select your favorite atom and then slowly heat the structure by
         increasing the temperature to around 1000 K. Observe the bonding partners
         of your highlighted atom, and its relative position to the other atoms in
         the structure.
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Question
       instruction: What state of matter is this?
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Answer
       instruction: "This is a liquid because the highlighted atom is changing bonding
         partners and doesn\u2019t keep the same relative position in the structure."
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Now let's really heat things up
       instruction: Increase the temperature all the way to 5000 K.
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Question
       instruction: What state of matter is this?
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Answer
       instruction: This is a gas because the distance between the atoms is much larger
         than in a solid or a liquid, and there is no sustained bonding between the
         atoms.
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
   - instructions:
     - heading: Let's explore volume
       instruction: 'Select your favorite atom.  Now, increase the temperature to 5000
         K and turn time on to regular speed. '
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Question
       instruction: What state of matter is this?
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Answer
       instruction: This is a gas because the distance between the atoms is much larger
         than in a solid or a liquid, and there is no sustained bonding between the
         atoms.
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Changing volume
       instruction: Decrease the volume of the box to 1 cubic nanometer (nm^3)
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Question
       instruction: What state of matter is this?
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Answer
       instruction: "This is a liquid because the highlighted atom is changing bonding
         partners and doesn\u2019t keep the same relative position in the structure."
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Question
       instruction: Can you make a solid at 5000 K?
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Answer
       instruction: 'Yes, if you add enough atoms to a 1 nm^3 box (around 100 atoms)
         it will become a solid.  To add more atoms, you may need to make the box bigger
         and then reduce its size to 1 nm^3 when you have the number you want. '
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
   - instructions:
     - heading: How wide is a chlorine atom?
       instruction: "Start by changing the volume of the box to 1nm^3. \n\nUse the
         grid in the box and its volume to roughly estimate the width of a chlorine
         atom."
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Answer
       instruction: A chlorine atom is roughly 0.2nm in width
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Question
       instruction: "When you changed the temperature, the structure formed by the
         atoms changed. Is there anything you can do that will change the structure
         of the individual atom you selected? \n"
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Answer
       instruction: No, atoms are indivisible units that make up all matter. It is
         the bonding between them that determines the structure and the state of matter.
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
   - instructions:
     - heading: Let's explore forces
       instruction: Notice that there are 8 sodium atoms in one corner of the box and
         8 chlorine atoms in the opposite corner with time stopped. Watch what happens
         when you turn time on to normal speed.
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Question
       instruction: 'What are the atoms doing? '
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Answer
       instruction: Sodium atoms repel other sodium atoms. Chlorine atoms repel other
         chlorine atoms. Sodium and Chlorine atoms attract each other.
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Question
       instruction: 'In order to simulate salt (NaCl), sodium atoms have a charge of
         +1 and chlorine atoms have a charge of -1. What does this tell you about how
         charged atoms interact? '
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
     - heading: Answer
       instruction: 'Like charges repel, opposite charges attract.
 
         Since Sodium and Chlorine atoms have opposite charges they attract each other
         to form an ionic bond. In an ionic bond, two atoms with opposite charges bond
         to one another to form a structure with a net charge of 0.'
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
   - instructions:
     - heading: Let's Play with Atoms
       instruction: Build and observe different structures! What formation of atoms
         stays solid at the highest temperature?
+      instructions: []
       target: {fileID: 0}
+      showObjects: []
       buttonTriggers: []
       buttonTriggerCount: 0
       triggerButtonSet: {fileID: 0}
-      cleared: 0
+      hasYesNo: 0
+      hasMultipleChoice: 0
+      buttonAnswers: []
+      zone: 0
       TriggerID: 0
+      blockerOn: 0
+      cleared: 0
 --- !u!114 &11450004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1104,6 +1486,10 @@ MonoBehaviour:
   controller: {fileID: 0}
   levelsPanel: {fileID: 0}
   LIS: {fileID: 11441870}
+  yesNoButtonSet: {fileID: 0}
+  multipleChoiceButtonSet: {fileID: 0}
+  hideObjects: []
+  activityComplete: {fileID: 0}
 --- !u!114 &11459700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1124,11 +1510,11 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
-    m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
-    m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
-    m_FadeDuration: .5
+    m_FadeDuration: 0.5
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -1190,6 +1576,10 @@ MonoBehaviour:
   controller: {fileID: 0}
   levelsPanel: {fileID: 0}
   LIS: {fileID: 11441870}
+  yesNoButtonSet: {fileID: 0}
+  multipleChoiceButtonSet: {fileID: 0}
+  hideObjects: []
+  activityComplete: {fileID: 0}
 --- !u!114 &11462026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1256,7 +1646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1269,8 +1659,9 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
+    m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -1296,11 +1687,11 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
-    m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
-    m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
-    m_FadeDuration: .100000001
+    m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -1340,7 +1731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .772058845, g: .745436132, b: .658520758, a: 0}
+  m_Color: {r: 0.77205884, g: 0.74543613, b: 0.65852076, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1370,9 +1761,9 @@ MonoBehaviour:
   m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 2
-  m_Elasticity: .00999999978
+  m_Elasticity: 0.01
   m_Inertia: 1
-  m_DecelerationRate: .699999988
+  m_DecelerationRate: 0.7
   m_ScrollSensitivity: 1
   m_Viewport: {fileID: 0}
   m_HorizontalScrollbar: {fileID: 0}
@@ -1440,6 +1831,7 @@ MonoBehaviour:
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
+    m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -1550,11 +1942,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22469006}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 39, y: -2}
   m_SizeDelta: {x: 203, y: 87}
-  m_Pivot: {x: .5, y: .5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22403686
 RectTransform:
   m_ObjectHideFlags: 1
@@ -1570,7 +1962,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -36.0001831, y: -18}
+  m_AnchoredPosition: {x: -36.000183, y: -18}
   m_SizeDelta: {x: 258, y: 70}
   m_Pivot: {x: 1, y: 1}
 --- !u!224 &22406134
@@ -1589,7 +1981,7 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -3, y: -280}
   m_SizeDelta: {x: -105, y: 295}
-  m_Pivot: {x: .5, y: .5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22407198
 RectTransform:
   m_ObjectHideFlags: 1
@@ -1624,7 +2016,7 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -12, y: -3.5}
   m_SizeDelta: {x: -609, y: 84.5}
-  m_Pivot: {x: .5, y: 1}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!224 &22423300
 RectTransform:
   m_ObjectHideFlags: 1
@@ -1641,7 +2033,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 128.75, y: -32}
   m_SizeDelta: {x: 257.5, y: 64}
-  m_Pivot: {x: .5, y: .5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22432962
 RectTransform:
   m_ObjectHideFlags: 1
@@ -1659,7 +2051,7 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 30, y: -98}
   m_SizeDelta: {x: -278, y: 208}
-  m_Pivot: {x: .5, y: 0}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!224 &22457964
 RectTransform:
   m_ObjectHideFlags: 1
@@ -1676,7 +2068,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 129, y: -32}
   m_SizeDelta: {x: 258, y: 64}
-  m_Pivot: {x: .5, y: .5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22469006
 RectTransform:
   m_ObjectHideFlags: 1
@@ -1714,7 +2106,7 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -54}
   m_SizeDelta: {x: 0, y: 100}
-  m_Pivot: {x: .5, y: .5}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22484954
 RectTransform:
   m_ObjectHideFlags: 1
@@ -1722,7 +2114,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3.81469727e-06}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0000038146973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22472564}
@@ -1734,7 +2126,7 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 1.4999752, y: 248}
   m_SizeDelta: {x: 3, y: 456}
-  m_Pivot: {x: .5, y: 1}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
