@@ -1526,7 +1526,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1548,7 +1548,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!1 &191252751
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,43 +2311,43 @@ Prefab:
       objectReference: {fileID: 1809991221}
     - target: {fileID: 22473982, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22473982, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.33333334
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22449710, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.33333334
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22449710, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22449710, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.33333334
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22457138, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22457138, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.06
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22440270, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.06
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22440270, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22440270, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.06
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 11418610, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -8851,6 +8851,22 @@ Prefab:
     - target: {fileID: 189144, guid: afcbd0dfa87174458a42bad0ca10fb8a, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413978, guid: afcbd0dfa87174458a42bad0ca10fb8a, type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 96c82c837962149c5ac957e3634336c6, type: 3}
+    - target: {fileID: 11413978, guid: afcbd0dfa87174458a42bad0ca10fb8a, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413978, guid: afcbd0dfa87174458a42bad0ca10fb8a, type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413978, guid: afcbd0dfa87174458a42bad0ca10fb8a, type: 2}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afcbd0dfa87174458a42bad0ca10fb8a, type: 2}
