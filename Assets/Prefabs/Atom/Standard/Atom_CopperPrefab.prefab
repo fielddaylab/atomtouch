@@ -28,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 421.504517, y: 264.323792, z: 8.01026535}
+  m_LocalPosition: {x: 421.50452, y: 264.3238, z: 8.010265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,8 +51,10 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -97,15 +99,17 @@ TrailRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Time: 2
-  m_StartWidth: .400000006
-  m_EndWidth: -4.99999987e-05
+  m_StartWidth: 0.4
+  m_EndWidth: -0.00005
   m_Colors:
     m_Color[0]:
       serializedVersion: 2
@@ -122,7 +126,7 @@ TrailRenderer:
     m_Color[4]:
       serializedVersion: 2
       rgba: 16777215
-  m_MinVertexDistance: .100000001
+  m_MinVertexDistance: 0.1
   m_Autodestruct: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -139,6 +143,7 @@ MonoBehaviour:
   isTransparent: 0
   selected: 0
   doubleTapped: 0
+  selectionZone: 0
   textMeshPrefab: {fileID: 10200000, guid: e0c19431a83a34054b4e5ee48e8429c2, type: 2}
   untexturedDefaultMaterial: {fileID: 2100000, guid: 6dbb3d64b456f438f80ace9a582db70f,
     type: 2}
@@ -166,7 +171,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .5
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:

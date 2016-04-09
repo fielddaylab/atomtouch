@@ -196,6 +196,7 @@ public class SettingsControl : MonoBehaviour {
 	}
 
 	public void OnChange_SimType(){
+		Debug.Log ("SimTypeChange");
 		if(lenJonesOn.GetComponent<Toggle>().isOn){
 			Potential.currentPotential = Potential.potentialType.LennardJones;
 			if(currentPotentialType != Potential.potentialType.LennardJones){
