@@ -5843,7 +5843,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -5865,7 +5865,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!1 &1179847589 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 133642, guid: 55d7a7885dbc2407d8d0da3c83e7de5d, type: 2}
@@ -6780,12 +6780,20 @@ Prefab:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.size
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[5].instructions.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[7].instructions.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[0].showObjects.Array.size
@@ -8708,6 +8716,23 @@ Prefab:
       propertyPath: activityComplete
       value: 
       objectReference: {fileID: 1527059468}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[0].heading
+      value: Let's Play with Atoms
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: levelInstructions.Array.data[7].instructions.Array.data[0].instruction
+      value: Build and observe different structures! What formation of atoms stays
+        solid at the highest temperature?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276372, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276372, guid: 16074564d895b4a17a60338653483852, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16074564d895b4a17a60338653483852, type: 2}
   m_IsPrefabParent: 0
@@ -12242,7 +12267,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -12264,7 +12289,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!1 &2023343416
 GameObject:
   m_ObjectHideFlags: 0
