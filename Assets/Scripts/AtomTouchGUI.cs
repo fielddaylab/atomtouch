@@ -70,7 +70,6 @@ public class AtomTouchGUI : MonoBehaviour
 	public GameObject bondLineBtn;
 	public GameObject selectAtomPanel;
 	public GameObject selectAtomGroup;
-	public GameObject settingsCanvas;
 	public GameObject deselectButton;
 	public GameObject graphPanel;
 	public GameObject copperCount;
@@ -136,7 +135,6 @@ public class AtomTouchGUI : MonoBehaviour
 		volSliderComponent.maxValue = StaticVariables.maxVol * 0.1f; //to nm
 		
 		Atom.EnableSelectAtomGroup (false);
-		settingsCanvas.SetActive (false);
 		eventSystem = GameObject.Find ("EventSystem").gameObject.GetComponent<EventSystem> ();
 
 	}
