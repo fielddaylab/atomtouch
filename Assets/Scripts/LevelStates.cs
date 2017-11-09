@@ -113,7 +113,7 @@ public class LevelStates : MonoBehaviour
 		controller.LevelsClose ();
 		controller.CameraScriptOn (true);
 		levelGuide.SetLevelGuide (7, 0);
-		controller.LevelGuideOpen ();
+		//controller.LevelGuideOpen (); //no level guide!
 		Debug.Log ("Level seven started");
 	}
 

@@ -2,15 +2,10 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class LevelInstructionSet : MonoBehaviour {
-	
-	public LevelInstructions[] levelInstructions;
-
-	[System.Serializable]
-	public class LevelInstructions {	
-
-		public Instructions[] instructions;
-	}
+[System.Serializable]
+public class LevelInstructions {
+	public Instructions[] instructions;
+}
 
 	[System.Serializable]
 	public class Instructions {
@@ -34,5 +29,8 @@ public class LevelInstructionSet : MonoBehaviour {
 
 	}
 
+public class LevelInstructionSet : MonoBehaviour {
+	
+	public LevelInstructions[] levelInstructions;
 	
 }
