@@ -71,7 +71,6 @@ public class Platinum : Atom {
 			gameObject.GetComponent<Renderer>().material = platinumMaterial;
 		}
 		//Atom.EnableSelectAtomGroup(NumberofAtom.selectedAtoms>0);
-		//Debug.Log("selected atoms: " + NumberofAtom.selectedAtoms);
 	}
 	
 	public override void SetTransparent(bool transparent){

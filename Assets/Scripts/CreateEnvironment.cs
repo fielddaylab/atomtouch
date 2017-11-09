@@ -314,9 +314,7 @@ public class CreateEnvironment : MonoBehaviour {
 	// Create atoms by reading the information from an text input file in Resources folder. The file format is XYZ.
 	public void CreatePresetConfiguration(string filename)
 	{
-		//Debug.Log ("Uploading text file!");
 		TextAsset textFile = Resources.Load (filename) as TextAsset;
-		//Debug.Log("text file uploaded!");
 		string allLines = textFile.text;
 		allLines = allLines.ToLower ();
 		string[] lineArray = allLines.Split ("\r\n".ToCharArray (), 
@@ -441,7 +439,6 @@ public class CreateEnvironment : MonoBehaviour {
 			currAtom.GetComponent<Rigidbody>().freezeRotation = true;
 			if (textArray1.Length == 8) {
 				currAtom.selectionZone = Int16.Parse (textArray1 [7]);
-				Debug.Log ("Loaded zones");
 			}
 
 			currAtom.position =  pos;
@@ -460,7 +457,6 @@ public class CreateEnvironment : MonoBehaviour {
 		//initialize the new atoms
 		if (Potential.currentPotential == Potential.potentialType.LennardJones)
 		{
-			Debug.Log(molecules[0].gameObject.name);
 			for (int i = 0; i < numMolecules; i++)
 			{
 				createAtom (molecules [0]);
@@ -499,14 +495,12 @@ public class CreateEnvironment : MonoBehaviour {
 		CreateEnvironment myEnvironment = CreateEnvironment.myEnvironment;
 		Quaternion curRotation = Quaternion.Euler(0, 0, 0);
 		preFab.gameObject.GetComponent<MeshRenderer>().enabled = SettingsControl.renderAtoms;
-		Debug.Log ("Rendering Atoms");
 
 		Instantiate(preFab, myEnvironment.centerPos, curRotation);
 
 		int i = Atom.AllAtoms.Count-1;
 		Atom currAtom = Atom.AllAtoms[i];
 		currAtom.gameObject.name = currAtom.GetInstanceID().ToString();
-		//Debug.Log(currAtom.GetInstanceID());
 		currAtom.GetComponent<Rigidbody>().freezeRotation = true;
 		currAtom.GetComponent<TrailRenderer>().enabled = SettingsControl.mySettings.trailsToggle.isOn;
 
@@ -534,7 +528,6 @@ public class CreateEnvironment : MonoBehaviour {
 		{
 			Atom.UnregisterAtom(currAtom);
 			Destroy (currAtom.gameObject);
-			Debug.Log ("No space for atoms!");
 		}
 	}
 
@@ -545,9 +538,9 @@ public class CreateEnvironment : MonoBehaviour {
 		MeshRenderer mr = currAtom.GetComponent<MeshRenderer>();
 		while (numberofBlinks > 0) {
 			numberofBlinks--;
-			mr.material = currAtom.selectedMaterial;
+			if(mr) mr.material = currAtom.selectedMaterial;
 			yield return new WaitForSeconds(blinkspeed);
-			mr.material = currAtom.defaultMaterial;
+			if(mr) mr.material = currAtom.defaultMaterial;
 			yield return new WaitForSeconds(blinkspeed);
 		}
 	}

@@ -61,19 +61,13 @@ public class CameraScript : MonoBehaviour {
 			RotateCam(ref center);
 			
 		}else{
-			Debug.Log("holding atom: " + holdingAtom);
-			Debug.Log("changing temp: " + atomTouchGUI.changingTemp);
-			Debug.Log("changing vol: " + atomTouchGUI.changingVol);
-			Debug.Log("holding atom or changing temp or vol");
 		}
 	}
 	//this function handles the rotation of the camera
 	void Update () {
 		if(SettingsControl.GamePaused){
-//			Debug.Log ("game paused");
 			return;
 		}
-		//Debug.Log("resumed");
 		//if(true){
 		if (Application.isMobilePlatform) {
 			if(Input.touchCount == 1 ){
@@ -98,7 +92,6 @@ public class CameraScript : MonoBehaviour {
 		}
 		else{
 			if(Input.GetMouseButton(0)){
-				//Debug.Log("updating cam");
 				UpdateCamera();
 			}
 				

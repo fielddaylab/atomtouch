@@ -96,15 +96,12 @@ public class DevDebug : MonoBehaviour {
 	public void OnSubmitTimeChange(){
 		string timestepStr = timestepInputVal.GetComponent<Text>().text;
 		float timestep = float.Parse(timestepStr);
-		Debug.Log(timestep);
 		
 		string maxTimeStr = maxTimeInputVal.GetComponent<Text>().text;
 		float maxTime = float.Parse(maxTimeStr);
-		Debug.Log(maxTime);
 
 		string timescaleStr = timescaleInputVal.GetComponent<Text>().text;
 		float timescale = float.Parse(timescaleStr);
-		Debug.Log(timescale);
 		
 		if(maxTime < timestep){
 			return;

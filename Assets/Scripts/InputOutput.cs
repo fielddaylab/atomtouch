@@ -56,7 +56,6 @@ public class InputOutput : MonoBehaviour {
 		lineArray = File.ReadAllLines ("potential.txt");
 		if (lineArray.Length != (nR*numAtomTypes*numAtomTypes))
 		{
-			Debug.Log("Input file does not match!");
 			Debug.Break();
 		}
 		
@@ -84,12 +83,9 @@ public class InputOutput : MonoBehaviour {
 		int nR = myForce.GetLength(2);
 
 		lineArray = File.ReadAllLines ("force.txt");
-		Debug.Log ("Input file lines = " + lineArray.Length);
 		int dummy = nR * numAtomTypes * numAtomTypes;
-		Debug.Log ("Number of needed lines = " + dummy);
 		if (lineArray.Length != (nR*numAtomTypes*numAtomTypes))
 		{
-			Debug.Log("Input file does not match!");
 			Debug.Break();
 		}
 

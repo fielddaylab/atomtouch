@@ -18,7 +18,6 @@ public class LevelStates : MonoBehaviour
 		controller.LevelGuideOpen ();
 		controller.ResetAll ();
 		controller.hudController.LevelCompleted ("the Introduction Activity");
-		Debug.Log ("Level one started");
 	}
 
 	public void Level02 ()
@@ -30,7 +29,6 @@ public class LevelStates : MonoBehaviour
 		levelGuide.SetLevelGuide (1, 0);
 		controller.LevelGuideOpen ();
 		controller.ResetAll ();
-		Debug.Log ("Level eight started");
 		controller.hudController.LevelCompleted ("Practice Your Skills");
 	}
 
@@ -43,7 +41,6 @@ public class LevelStates : MonoBehaviour
 		controller.CameraScriptOn (true);
 		levelGuide.SetLevelGuide (2, 0);
 		controller.LevelGuideOpen ();
-		Debug.Log ("Level two started");
 		controller.hudController.LevelCompleted ("the States of Matter Activity");
 		controller.changeTimer ();
 		controller.changeTimer ();
@@ -60,7 +57,6 @@ public class LevelStates : MonoBehaviour
 		AtomTouchGUI.currentTimeSpeed = StaticVariables.TimeSpeed.SlowMotion;
 		controller.changeTimer ();
 		controller.LevelGuideOpen ();
-		Debug.Log ("Level three started");
 		controller.hudController.LevelCompleted ("the Temperature Activity");
 	}
 
@@ -73,7 +69,6 @@ public class LevelStates : MonoBehaviour
 		controller.CameraScriptOn (true);
 		levelGuide.SetLevelGuide (4, 0);
 		controller.LevelGuideOpen ();
-		Debug.Log ("Level four started");
 		controller.hudController.LevelCompleted ("Volume");
 		controller.changeTimer ();
 		controller.changeTimer ();
@@ -88,7 +83,6 @@ public class LevelStates : MonoBehaviour
 		controller.CameraScriptOn (true);
 		levelGuide.SetLevelGuide (5, 0);
 		controller.LevelGuideOpen ();
-		Debug.Log ("Level five started");
 		controller.hudController.LevelCompleted ("the Everything is Atoms Activity");
 	}
 
@@ -101,7 +95,6 @@ public class LevelStates : MonoBehaviour
 		controller.CameraScriptOn (true);
 		levelGuide.SetLevelGuide (6, 0);
 		controller.LevelGuideOpen ();
-		Debug.Log ("Level six started");
 		controller.hudController.LevelCompleted ("the Forces Activity");
 	}
 
@@ -114,7 +107,6 @@ public class LevelStates : MonoBehaviour
 		controller.CameraScriptOn (true);
 		levelGuide.SetLevelGuide (7, 0);
 		//controller.LevelGuideOpen (); //no level guide!
-		Debug.Log ("Level seven started");
 	}
 
 

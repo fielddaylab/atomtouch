@@ -186,12 +186,10 @@ public class AtomTouchGUI : MonoBehaviour
 	{
 
 		this.levelGuideGameObject.GetComponent<TriggerOperator> ().DeletingAtoms ();
-		Debug.Log ("DeleteSelectedAtoms called");
 		for (int i=Atom.AllAtoms.Count-1; i >= 0; i--) {
 			Atom currAtom = Atom.AllAtoms [i];
 			if (currAtom.selected) {
 				//delete this atom from the list
-				Debug.Log ("deleting atom: " + i);
 				currAtom.selected = false;
 				currAtom.SetSelected (false);
 				
@@ -737,7 +735,6 @@ public class AtomTouchGUI : MonoBehaviour
 		StaticVariables.desiredTemperature 
 			= Math.Abs (tempSliderComponent.value) * StaticVariables.tempScaler;
 		ChangeTimeScaleWithTemperature (oldTemperaure);
-		//Debug.Log("temp changing");
 		if (oldTemperaure < 0) {
 			return;
 		} else if (Mathf.Approximately (oldTemperaure, 0.0f)) {
@@ -858,7 +855,6 @@ public class AtomTouchGUI : MonoBehaviour
 	{
 		buttonSounds.PlayMainMenu ();
 		#if UNITY_IPHONE
-		Debug.Log("Iphone detected, starting intro video using handheld.");
 		Handheld.PlayFullScreenMovie ("intro.mp4", Color.black, FullScreenMovieControlMode.CancelOnInput);
 		#endif
 	}

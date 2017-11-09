@@ -56,7 +56,6 @@ public class Tooltip : MonoBehaviour {
 		fading = true;
 		while(fading){
 			yield return new WaitForSeconds(fadeStepTime);
-			//Debug.Log(playedTime);
 			if(playedTime <= fadeInLength){
 				//fade the text color too
 				text.color += (Time.deltaTime/Time.timeScale) * textFadeInStepColor;

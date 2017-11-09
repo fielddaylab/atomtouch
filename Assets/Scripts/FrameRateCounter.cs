@@ -30,7 +30,6 @@ void Start()
 {
     if( !fpsText )
     {
-        Debug.Log("UtilityFramesPerSecond needs a Text component!");
         enabled = false;
         return;
     }

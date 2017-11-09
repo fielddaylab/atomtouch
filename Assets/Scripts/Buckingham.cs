@@ -84,7 +84,6 @@ public class Buckingham : Potential {
 
 		//float time2 = Time.realtimeSinceStartup; //for debugging purposes
 		//float time3 = time2 - time1; //for debugging purposes
-		//Debug.Log ("Time spent calculating Buckingham = " + time3); //for debugging purposes
 
 	}
 	

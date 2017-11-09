@@ -23,7 +23,6 @@ public class NumberofAtom : MonoBehaviour {
 	void Update () {
 		selectedAtoms = CountSelectedAtoms ();
 		Atom.EnableSelectAtomGroup(selectedAtoms > 0);
-		//if(selectedAtoms>0)Debug.Log(selectedAtoms);
 		text.text = selectedAtoms + " Atom(s) selected";
 
 		

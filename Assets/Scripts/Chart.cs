@@ -89,7 +89,6 @@ public class Chart : MonoBehaviour {
 			p2 = Camera.main.ScreenToWorldPoint(screenPos2);
 			
 			
-			//Debug.Log(p1);
 			//StaticVariables.DrawLine(p1, p2, Color.white, Color.white, 0.015f, mat);
 			
 		}

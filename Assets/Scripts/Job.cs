@@ -43,7 +43,6 @@ public class Job : ThreadedJob
          // This is executed by the Unity main thread when the job is finished
          for (int i = 0; i < InData.Length; i++)
          {
-             Debug.Log("Results(" + i + "): " + InData[i]);
          }
      }
  }

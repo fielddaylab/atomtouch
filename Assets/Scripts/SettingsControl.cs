@@ -62,7 +62,6 @@ public class SettingsControl : MonoBehaviour {
 	}
 	
 	public void ResumeGame(){
-		//Debug.Log("mio");
 		//settingsCanvas.SetActive(false);
 		//hudCanvas.SetActive(true);
 		//resume
@@ -119,7 +118,6 @@ public class SettingsControl : MonoBehaviour {
 			}
 		}else{
 			textureOn = false;
-			Debug.Log("textures off");
 			for(int i=0; i < Atom.AllAtoms.Count; i++){
 				Atom atom = Atom.AllAtoms[i];
 				mr = atom.gameObject.GetComponent<MeshRenderer>();
@@ -185,10 +183,8 @@ public class SettingsControl : MonoBehaviour {
 			&& mp.x < rt.anchorMax.x * Screen.width //upper right
 			&& mp.y > rt.anchorMin.y * Screen.height
 			&& mp.y < rt.anchorMax.y * Screen.height){ 
-			Debug.Log("IN RECT");
 
 		}else{
-			Debug.Log("OUT RECT");
 			StaticVariables.mouseClickProcessed = true;
 			ResumeGame();
 		}
@@ -196,7 +192,6 @@ public class SettingsControl : MonoBehaviour {
 	}
 
 	public void OnChange_SimType(){
-		Debug.Log ("SimTypeChange");
 		if(lenJonesOn.GetComponent<Toggle>().isOn){
 			Potential.currentPotential = Potential.potentialType.LennardJones;
 			if(currentPotentialType != Potential.potentialType.LennardJones){

@@ -41,17 +41,14 @@ public class PhysicsEngine : MonoBehaviour
 				if (StaticVariables.iTime == 0)
 				{
 					StaticVariables.clockTimeStart = Time.realtimeSinceStartup;
-					Debug.Log ("Start Time = " +  StaticVariables.clockTimeStart +" , iTime = " + StaticVariables.iTime);
 				}
 
 				if (StaticVariables.iTime == 5000)
 				{
 					StaticVariables.clockTimeEnd = Time.realtimeSinceStartup;
-					Debug.Log ("End Time = " +  StaticVariables.clockTimeEnd +" , iTime = " + StaticVariables.iTime);
 					float deltaTime = StaticVariables.clockTimeEnd - StaticVariables.clockTimeStart;
 					float timePerStep = deltaTime / (float)StaticVariables.iTime;
 					float timePerStepPerAtom = timePerStep / CreateEnvironment.myEnvironment.numMolecules;
-					Debug.Log ("Delta Time = " + deltaTime +" , iTime = " + StaticVariables.iTime + " , time per step = " + timePerStep + " , time per step per atom = " + timePerStepPerAtom);
 				}
 
 

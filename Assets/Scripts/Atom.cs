@@ -214,7 +214,6 @@ public abstract class Atom : MonoBehaviour
 			}
 			else if(state == (int)State.Default){
 				//held = true;
-				//Debug.Log("raycast hit atom!");
 				if(Physics.Raycast(ray, out hitInfo)
 					&& hitInfo.transform.gameObject.tag == "Molecule" 
 					&& hitInfo.transform.gameObject == gameObject){
@@ -344,7 +343,6 @@ public abstract class Atom : MonoBehaviour
 		if (!Application.isMobilePlatform)return;
 		if(SettingsControl.GamePaused)return;
 		if (!StaticVariables.canSelectAtoms)return;
-		//Debug.Log("touch");
 		/*
 		RectTransform rt = AtomTouchGUI.myAtomTouchGUI.buttonPanel.GetComponent<RectTransform>();
 
@@ -380,9 +378,7 @@ public abstract class Atom : MonoBehaviour
 					currAtom.held = true;
 					gameObjectOffsets.Add(currAtom.name, atomOffset);
 
-					//Debug.Log("added atom offset: " + currAtom.name + ", " + atomOffset);
 					gameObjectScreenPoints.Add(currAtom.name, pointOnScreen);
-					//Debug.Log("added point on screen: " + currAtom.name + ", " + pointOnScreen);
 				}
 			}
 		}
@@ -415,7 +411,6 @@ public abstract class Atom : MonoBehaviour
 			//the -15.0 here is for moving the atom above your mouse
 			offset = transform.position - Camera.main.ScreenToWorldPoint(
 				new Vector3(Input.mousePosition.x, Input.mousePosition.y - 15.0f, screenPoint.z));
-			//Debug.Log("mouse down, atom not selected");
 		}else{
 			//this is for a group of atoms
 			gameObjectOffsets = new Dictionary<string, Vector3>();
@@ -456,9 +451,7 @@ public abstract class Atom : MonoBehaviour
 			return;
 		}
 		*/
-		Debug.Log("calling mobile drag");
 		if (Time.realtimeSinceStartup - dragStartTime > 0.1f) {
-			Debug.Log("time diff passed");
 			dragCalled = true;
 			if(!Tooltip.fadePlayed){
 				ShowHelpTip();
@@ -472,7 +465,6 @@ public abstract class Atom : MonoBehaviour
 					= new Vector3(lastTouchPosition.x, lastTouchPosition.y) 
 					- new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y);
 				if(diffVector.magnitude > 0 && Input.touchCount == 1){
-					Debug.Log("dragging");
 					Vector3 curScreenPoint = new Vector3(Input.GetTouch(0).position.x, Input.GetTouch(0).position.y, screenPoint.z);
 					Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
 					curPosition = CheckPosition(curPosition);
@@ -499,11 +491,9 @@ public abstract class Atom : MonoBehaviour
 					if(diffVector.magnitude > 0 && currAtom.selected && Input.touchCount == 1){
 						if(gameObjectOffsets != null && gameObjectScreenPoints != null){
 							if(!gameObjectScreenPoints.ContainsKey(currAtom.name)){
-								Debug.Log("screen points key not found: " + currAtom.name);
 								return;
 							}
 							if(!gameObjectOffsets.ContainsKey(currAtom.name)){
-								Debug.Log("offsets key not found: " + currAtom.name);
 								return;
 							}
 							Vector3 currScreenPoint = gameObjectScreenPoints[currAtom.name];
@@ -537,7 +527,6 @@ public abstract class Atom : MonoBehaviour
 	void OnMouseDrag(){
 		if(SettingsControl.GamePaused)return;
 		if(atomTouchGUI.changingTemp || atomTouchGUI.changingVol)return;
-		Debug.Log("calling pc drag");
 		if(!Tooltip.fadePlayed)
 			ShowHelpTip();
 		if (!StaticVariables.canSelectAtoms)
@@ -603,11 +592,9 @@ public abstract class Atom : MonoBehaviour
 					Vector3 newAtomPosition = currAtom.transform.position;
 					if((lastMousePosition - Input.mousePosition).magnitude > 0 && currAtom.selected){
 						if(!gameObjectScreenPoints.ContainsKey(currAtom.name)){
-							Debug.Log("screen points key not found");
 							return;
 						}
 						if(!gameObjectOffsets.ContainsKey(currAtom.name)){
-							Debug.Log("offsets key not found");
 							return;
 						}
 						Vector3 currScreenPoint = gameObjectScreenPoints[currAtom.name];

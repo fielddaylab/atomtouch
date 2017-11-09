@@ -72,7 +72,6 @@ public class Copper : Atom {
 			gameObject.GetComponent<Renderer>().material = copperMaterial;
 		}
 		//Atom.EnableSelectAtomGroup(NumberofAtom.selectedAtoms>0);
-		//Debug.Log("selected atoms: " + NumberofAtom.selectedAtoms);
 	}
 	*/
 	/*

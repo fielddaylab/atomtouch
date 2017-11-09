@@ -73,7 +73,6 @@ public class Chlorine : Atom
 			gameObject.GetComponent<Renderer>().material = chlorineMaterial;
 		}
 		//Atom.EnableSelectAtomGroup(NumberofAtom.selectedAtoms>0);
-//		Debug.Log("selected atoms: " + NumberofAtom.selectedAtoms);
 	}
 	
 	public override void SetTransparent(bool transparent){
