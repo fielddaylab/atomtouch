@@ -586,7 +586,7 @@ MonoBehaviour:
         You can tap anywhere on this dialogue box to minimize and maximize. Try it
         to continue.
 
-        Once you have completed the instruction, you will be able to touch <b>Next</b>
+        Once you have completed the instruction, you will be able to touch Next
         to continue.'
       instructions: []
       target: {fileID: 0}
@@ -622,7 +622,6 @@ MonoBehaviour:
       cleared: 0
     - heading: Nearer/Farther
       instruction: 'Now you need to learn how to move Atoms closer and farther.
-
 
         Start by dragging an Atom. Then, use a second finger and touch somewhere else
         on the screen and slide up and down. If you are using a mouse, just click
@@ -767,7 +766,7 @@ MonoBehaviour:
       blockerOn: 0
       cleared: 1
     - heading: 'Deleting atoms '
-      instruction: Once you have selected some Atoms, touch the <b>Delete</b> button
+      instruction: Once you have selected some Atoms, touch the Delete button
         to delete them.
       instructions: []
       target: {fileID: 0}
@@ -2154,7 +2153,7 @@ Prefab:
 
         To hide this box, tap anywhere within it.
 
-        Let''s start learning how to use the app! Touch <b>Next</b>'
+        Let''s start learning how to use the app! Touch Next'
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_FontData.m_FontSize
@@ -2182,7 +2181,6 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[2].instruction
       value: 'Now you need to learn how to move Atoms closer and farther.
-
 
         Start by dragging an Atom. Then, use a second finger and touch somewhere else
         on the screen and slide up and down. If you are using a mouse, just click
@@ -2222,7 +2220,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[10].instruction
-      value: Once you have selected some Atoms, touch the <b>Delete</b> button to
+      value: Once you have selected some Atoms, touch the Delete button to
         delete them.
       objectReference: {fileID: 0}
     - target: {fileID: 0}
