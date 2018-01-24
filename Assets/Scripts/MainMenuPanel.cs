@@ -10,12 +10,37 @@ public class MainMenuPanel : MonoBehaviour
 	public Button creditsButton;
 	public Button freePlayButton;
 	public Button ReplayVideoButton;
+	public Button AudioButton;
+	public Button MutedButton;
 	
-	public void Init (AtomTouchGUI controler)
+        private AtomTouchGUI my_controller;
+
+        //hack indirection because responsibility for UI and effects are separated,
+        //which is unnecessary/cumbersome when they need to be interlinked
+        private void my_ToggleAudio ()
+        {
+            my_controller.ToggleAudio();
+            if(AudioListener.volume > 0)
+            {
+              AudioButton.gameObject.SetActive(true);
+              MutedButton.gameObject.SetActive(false);
+            }
+            else
+            {
+              AudioButton.gameObject.SetActive(false);
+              MutedButton.gameObject.SetActive(true);
+            }
+        }
+
+	public void Init (AtomTouchGUI controller)
 	{
-		levelsButton.onClick.AddListener (controler.LevelsOpen);
-		creditsButton.onClick.AddListener (controler.CreditsOpen);
-		freePlayButton.onClick.AddListener (controler.FreePlayOpen);
-		ReplayVideoButton.onClick.AddListener (controler.IntroVideoOpen);
+                my_controller = controller;
+
+		levelsButton.onClick.AddListener (controller.LevelsOpen);
+		creditsButton.onClick.AddListener (controller.CreditsOpen);
+		freePlayButton.onClick.AddListener (controller.FreePlayOpen);
+		ReplayVideoButton.onClick.AddListener (controller.IntroVideoOpen);
+		AudioButton.onClick.AddListener (my_ToggleAudio);
+		MutedButton.onClick.AddListener (my_ToggleAudio);
 	}
 }

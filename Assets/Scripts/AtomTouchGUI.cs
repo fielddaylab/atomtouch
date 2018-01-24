@@ -118,8 +118,7 @@ public class AtomTouchGUI : MonoBehaviour
 	[HideInInspector]
 	public Slider volSliderComponent;
 	[HideInInspector]
-	public static AtomTouchGUI
-		myAtomTouchGUI;
+	public static AtomTouchGUI myAtomTouchGUI;
 
 	void Awake ()
 	{
@@ -136,7 +135,6 @@ public class AtomTouchGUI : MonoBehaviour
 		
 		Atom.EnableSelectAtomGroup (false);
 		eventSystem = GameObject.Find ("EventSystem").gameObject.GetComponent<EventSystem> ();
-
 	}
 
 	void Start ()
@@ -147,7 +145,6 @@ public class AtomTouchGUI : MonoBehaviour
 	}
 
 	void Update ()
-
 	{
 		if (CountSelectedAtoms () > 0) {
 			//change delete to delete selected
@@ -156,11 +153,8 @@ public class AtomTouchGUI : MonoBehaviour
 			//change delete selected to delete
 			// change selected to none selected
 		}
-
 	}
-	
 
-	
 	//this function selects all of the atoms in the scene
 	public void SelectAllAtoms ()
 	{
@@ -172,7 +166,7 @@ public class AtomTouchGUI : MonoBehaviour
 	}
 
 	//this function deselects all of the atoms in the scene
-    public void DeselectAllAtoms ()
+	public void DeselectAllAtoms ()
 	{
 		for (int i = 0; i < Atom.AllAtoms.Count; i++) {
 			Atom currAtom = Atom.AllAtoms [i];
@@ -184,7 +178,6 @@ public class AtomTouchGUI : MonoBehaviour
 
 	public void DeleteSelectedAtoms ()
 	{
-
 		this.levelGuideGameObject.GetComponent<TriggerOperator> ().DeletingAtoms ();
 		for (int i=Atom.AllAtoms.Count-1; i >= 0; i--) {
 			Atom currAtom = Atom.AllAtoms [i];
@@ -210,13 +203,14 @@ public class AtomTouchGUI : MonoBehaviour
 		}
 		AtomTouchGUI.myAtomTouchGUI.TryEnableAddAtomBtns ();
 		Atom.EnableSelectAtomGroup (false);
-
 	}
+
 	//this function returns the number of atoms that are selected
 	public int CountSelectedAtoms ()
 	{
 		return NumberofAtom.selectedAtoms;
 	}
+
 	//this function checks the position of all of the atoms to make sure they are inside of the box
 	void CheckAtomVolumePositions ()
 	{
@@ -248,7 +242,7 @@ public class AtomTouchGUI : MonoBehaviour
 		
 		
 	}
-	
+
 	public void AllAtomsKick ()
 	{
 		for (int i = 0; i < Atom.AllAtoms.Count; i++) {
@@ -360,7 +354,6 @@ public class AtomTouchGUI : MonoBehaviour
 				}
 			}
 		}
-
 	}
 
 	public void SetAtomBtnsVisibility ()
@@ -427,7 +420,6 @@ public class AtomTouchGUI : MonoBehaviour
 
 	public void AddGoldAtom ()
 	{
-		
 		if (Input.mousePosition.x < Screen.width && Input.mousePosition.x > 0 && Input.mousePosition.y > 0 && Input.mousePosition.y < Screen.height) {
 			//Vector3 curPosition = new Vector3 (createEnvironment.centerPos.x + (UnityEngine.Random.Range (-(createEnvironment.width / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.width / 2.0f) - createEnvironment.errorBuffer)), createEnvironment.centerPos.y + (UnityEngine.Random.Range (-(createEnvironment.height / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.height / 2.0f) - createEnvironment.errorBuffer)), createEnvironment.centerPos.z + (UnityEngine.Random.Range (-(createEnvironment.depth / 2.0f) + createEnvironment.errorBuffer, (createEnvironment.depth / 2.0f) - createEnvironment.errorBuffer)));
 			CreateEnvironment myEnvironment = CreateEnvironment.myEnvironment;
@@ -439,7 +431,6 @@ public class AtomTouchGUI : MonoBehaviour
 
 	public void AddCopperAtom ()
 	{
-		
 		if (Input.mousePosition.x < Screen.width 
 			&& Input.mousePosition.x > 0 && Input.mousePosition.y > 0 
 			&& Input.mousePosition.y < Screen.height) {
@@ -449,12 +440,10 @@ public class AtomTouchGUI : MonoBehaviour
 			
 		}
 		TryEnableAddAtomBtns ();
-
 	}
 
 	public void AddSodiumAtom ()
 	{
-		
 		if (Input.mousePosition.x < Screen.width 
 			&& Input.mousePosition.x > 0 && Input.mousePosition.y > 0 
 			&& Input.mousePosition.y < Screen.height) {
@@ -464,12 +453,10 @@ public class AtomTouchGUI : MonoBehaviour
 			
 		}
 		TryEnableAddAtomBtns ();
-
 	}
 
 	public void AddChlorineAtom ()
 	{
-		
 		if (Input.mousePosition.x < Screen.width 
 			&& Input.mousePosition.x > 0 && Input.mousePosition.y > 0 
 			&& Input.mousePosition.y < Screen.height) {
@@ -479,12 +466,10 @@ public class AtomTouchGUI : MonoBehaviour
 			
 		}
 		TryEnableAddAtomBtns ();
-
 	}
 
 	public void ResetAll ()
 	{
-		
 		CreateEnvironment myEnvironment = CreateEnvironment.myEnvironment;
 		myEnvironment.InitAtoms (currentAtomPreset);
 		Atom.EnableSelectAtomGroup (false);
@@ -513,8 +498,8 @@ public class AtomTouchGUI : MonoBehaviour
 		float floor = Mathf.Floor (rawVal / stepSize);
 		if (!Mathf.Approximately (rawVal / stepSize, floor))
 			tempSliderComponent.value = floor * stepSize + stepSize;
-
 	}
+
 	//for volume slider
 	//range: 1.5 - 4.5 nm 
 	//step size: 0.5
@@ -524,20 +509,18 @@ public class AtomTouchGUI : MonoBehaviour
 		float floor = Mathf.Floor (rawVal / stepSize);
 		if (!Mathf.Approximately (rawVal / stepSize, floor))
 			volSliderComponent.value = floor * stepSize + stepSize;
-
 	}
+
 	/*
 	public void ChangeTimerIcon(){
 		RawImage ri = timer.GetComponent<RawImage>();
 		if(currentTimeSpeed == StaticVariables.TimeSpeed.Normal){
-
 		}else if(currentTimeSpeed == StaticVariables.TimeSpeed.Stopped){
-
 		}else if(currentTimeSpeed == StaticVariables.TimeSpeed.SlowMotion){
-
 		}
 	}
 	*/
+
 	//when clicking on timer
 	public void changeTimer ()
 	{
@@ -576,6 +559,7 @@ public class AtomTouchGUI : MonoBehaviour
 		Camera.main.transform.position = new Vector3 (0.0f, 0.0f, -40.0f);
 		Camera.main.transform.rotation = Quaternion.Euler (0.0f, 0.0f, 0.0f);
 	}
+
 	/*
 	public void ToggleSelectAll ()
 	{
@@ -585,7 +569,6 @@ public class AtomTouchGUI : MonoBehaviour
 			SelectAllAtoms ();
 		}
 		
-
 	}
 
 	public void deselectAll ()
@@ -593,9 +576,9 @@ public class AtomTouchGUI : MonoBehaviour
 		DeselectAllAtoms ();
 	}
 	*/
+
 	public void ChangeAtomVolume ()
 	{
-		
 		CreateEnvironment createEnvironment = CreateEnvironment.myEnvironment;
 		//these are in angstroms
 		float offset = StaticVariables.maxVol + StaticVariables.minVol;
@@ -613,14 +596,11 @@ public class AtomTouchGUI : MonoBehaviour
 		changingVol = true;
 		if (volSliderComponent.value == 1) {
 			levelGuideGameObject.GetComponent<TriggerOperator> ().VolumeSlider ();
-
 		}
-
 	}
 
 	public void ChangePlaneMaterial (float realVol)
 	{
-
 		MeshRenderer topMesh = CreateEnvironment.topPlane.GetComponent<MeshRenderer> ();
 		MeshRenderer backMesh = CreateEnvironment.backPlane.GetComponent<MeshRenderer> ();
 		MeshRenderer frontMesh = CreateEnvironment.frontPlane.GetComponent<MeshRenderer> ();
@@ -693,18 +673,16 @@ public class AtomTouchGUI : MonoBehaviour
 		}
 		return true;
 	}
-	
+
 	public void ChangeTimeScaleWithTemperature (float oldTemp)
 	{
 		if (Potential.currentPotential == Potential.potentialType.LennardJones) {
-
 			float ratio = (StaticVariables.maxTimeScale - StaticVariables.baseTimeScale)
 				/ (StaticVariables.maxTemp - StaticVariables.defaultTemp);
 			float tempChange = StaticVariables.desiredTemperature - StaticVariables.defaultTemp;
 			if (tempChange < 0)
 				return;
 			Time.timeScale = StaticVariables.baseTimeScale + ratio * tempChange;
-
 		} else if (Potential.currentPotential == Potential.potentialType.Buckingham) {
 			float ratio = (StaticVariables.maxTimeScaleBuck - StaticVariables.baseTimeScaleBuck)
 				/ (StaticVariables.maxTemp - StaticVariables.defaultTemp);
@@ -750,7 +728,7 @@ public class AtomTouchGUI : MonoBehaviour
 	{
 		changingTemp = true;
 	}
-	
+
 	public void OnPointerDown_VolSlider ()
 	{
 		changingVol = true;
@@ -766,24 +744,22 @@ public class AtomTouchGUI : MonoBehaviour
 		changingVol = false;
 	}
 
-
 	//initialize UI Objects
 	private void MainMenuInit ()
 	{
 		mainMenu.Init (this);
 	}
-	
+
 	private void LevelsInit ()
 	{
 		levels.Init (this);
 	}
-	
+
 	public void MainMenuOpen ()
 	{
 		mainMenuGameObject.SetActive (true);
 		mainMenuAnimation.SetActive (true);
 	}
-
 
 	//UI GameObject Controllers
 	public void MainMenuClose ()
@@ -821,7 +797,7 @@ public class AtomTouchGUI : MonoBehaviour
 		levelsGameObject.SetActive (true);
 		mainMenuAnimation.SetActive (true);
 	}
-	
+
 	public void LevelsClose ()
 	{
 		buttonSounds.menu.Play ();
@@ -863,14 +839,27 @@ public class AtomTouchGUI : MonoBehaviour
 	{
 		MainMenuOpen ();
 	}
+	
+	public void ToggleAudio ()
+	{
+		//GameObject cam = GameObject.Find("Main Camera");
+		//AudioListener audio = cam.GetComponents<AudioListener>()[0];
+		if(AudioListener.volume > 0)
+		{
+			AudioListener.volume = 0;
+		}
+		else
+		{
+			AudioListener.volume = 1;
+		}
+	}
 
-	public void CloseAllExMain() 
+	public void CloseAllExMain ()
 	{
 		//LevelsClose ();
 		LevelGuideClose ();
 		CreditsClose ();
 	}
-
 
 	// bug fix for camera working past UI elements
 	public void CameraScriptOn (bool toggle)
