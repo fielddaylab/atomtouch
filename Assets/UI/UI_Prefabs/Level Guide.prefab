@@ -580,14 +580,13 @@ MonoBehaviour:
   levelInstructions:
   - instructions:
     - heading: Welcome to AtomTouch
-      instruction: 'This app allows us to look and play with with Atoms, the ultra-small
+      instruction: 'This app allows us to look and play with Atoms, the ultra-small
         building blocks of everything.
 
         You can tap anywhere on this dialogue box to minimize and maximize. Try it
         to continue.
 
-        Once you have completed the instruction, you will be able to touch Next
-        to continue.'
+        Complete the instruction on each screen to continue.'
       instructions: []
       target: {fileID: 0}
       showObjects: []
@@ -693,11 +692,9 @@ MonoBehaviour:
       blockerOn: 0
       cleared: 0
     - heading: Speeding it Up
-      instruction: "Touch the clock a second time to go full speed. \nTouch the clock
-        button again to change it from slow play to fast play. The atoms will move
-        around \nfaster. The pico seconds are counting up faster, however  notice
-        that time in AtomTouch is <i>really</i> slowed down from real life. Here,
-        seconds are more like pico seconds."
+      instruction: "Touch the clock a second time to go full speed. Touching the clock
+        button cycles between slow and fast play. Notice the pico seconds counting
+        up; time in AtomTouch moves <i>very</i> slowly compared to reality."
       instructions: []
       target: {fileID: 0}
       showObjects: []
@@ -713,7 +710,7 @@ MonoBehaviour:
       cleared: 0
     - heading: Reset
       instruction: Sometimes things can get a little messy. If you ever want to reset,
-        tap the reset button. The atoms and settings will return to how the activty
+        tap the reset button. The atoms and settings will return to how the activity.
         started.
       instructions: []
       target: {fileID: 0}
@@ -2147,7 +2144,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[0].instruction
-      value: 'This app allows us to look and play with with Atoms, the ultra-small
+      value: 'This app allows us to look and play with Atoms, the ultra-small
         building blocks of everything.
 
 
@@ -2198,7 +2195,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[7].instruction
       value: Sometimes things can get a little messy. If you ever want to reset, tap
-        the reset button. The atoms and settings will return to how the activty started.
+        the reset button. The atoms and settings will return to how the activity started.
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[9].instruction

@@ -7572,7 +7572,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[10].heading
-      value: Solid? or Not a solid?
+      value: Solid? or not a solid?
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[10].instruction
@@ -7580,7 +7580,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[11].heading
-      value: Solid? or Not a solid?
+      value: Solid? or not a solid?
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[2].instructions.Array.data[11].instruction
@@ -7949,17 +7949,17 @@ Prefab:
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].instructions.Array.data[2]
       value: Correct! Absolute zero is the temperature at which all atomic motion
-        stops. It is the lowest possible tempature.
+        stops. It is the lowest possible temperature.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].instructions.Array.data[1]
       value: Not quite. Absolute zero is the temperature at which all atomic motion
-        stops. It is the <b>lowest possible tempature</b>.
+        stops. It is the <b>lowest possible temperature</b>.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].instructions.Array.data[0]
       value: Not quite. Absolute zero is the temperature at which all atomic motion
-        stops. It is the <b>lowest possible tempature</b>.
+        stops. It is the <b>lowest possible temperature</b>.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[3].instructions.Array.data[6].cleared
@@ -8583,21 +8583,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[6].instructions.Array.data[4].instructions.Array.data[0]
-      value: 'It is true that <b>same charges repel</b>, but it is important to see
-        that <b>opposite charges attract</b>, as well. Since Sodium and Chlorine atoms
-        have opposite charges they attract each other to form an ionic bond. In an
-        ionic bond, two atoms with opposite charges bond to one another to form a
-        structure with a net charge of 0.
-
-'
+      value: "<b>Same charges repel</b>, but it's important to also see
+        that <b>opposite charges attract</b>. Since Sodium and Chlorine atoms
+        have opposite charges, they attract each other to form an ionic bond.
+        In an ionic bond, two atoms with opposite charges come together to form a
+        structure with a net charge of 0."
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[6].instructions.Array.data[4].instructions.Array.data[1]
-      value: It is true that <b>opposite charges attract</b>, but it is important
-        to see that <b>same charges repel</b>, as well. Since Sodium and Chlorine
-        atoms have opposite charges they attract each other to form an ionic bond.
-        In an ionic bond, two atoms with opposite charges bond to one another to form
-        a structure with a net charge of 0.
+      value: "<b>Opposite charges attract</b>, but it's important to also see
+        that <b>same charges repel</b>. Since Sodium and Chlorine atoms
+        have opposite charges, they attract each other to form an ionic bond.
+        In an ionic bond, two atoms with opposite charges come together to form a
+        structure with a net charge of 0."
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[6].instructions.Array.data[4].instructions.Array.data[2]
@@ -8746,10 +8744,9 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[0].instructions.Array.data[0].instruction
-      value: This app allows us to look and play with with Atoms, the ultra-small
+      value: This app allows us to look and play with Atoms, the ultra-small
         building blocks of everything. You can tap anywhere on this dialogue box to
-        minimize and maximize. Try it to continue. Once you have completed the instruction,
-        you will be able to touch <b>Next</b> to continue.
+        minimize and maximize. Try it to continue.
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[6].instructions.Array.data[2].hasMultipleChoice
