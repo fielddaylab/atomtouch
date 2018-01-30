@@ -8536,7 +8536,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[6].instructions.Array.data[1].buttonAnswers.Array.data[2]
-      value: Moving twoards the other atoms
+      value: Moving towards the other atoms
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[6].instructions.Array.data[1].blockerOn
@@ -8575,7 +8575,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[6].instructions.Array.data[3].buttonAnswers.Array.data[2]
-      value: 'Same charges repel and opposite charges attract. '
+      value: 'Same charges repel, opposites attract. '
       objectReference: {fileID: 0}
     - target: {fileID: 11441870, guid: 16074564d895b4a17a60338653483852, type: 2}
       propertyPath: levelInstructions.Array.data[6].instructions.Array.data[3].blockerOn
