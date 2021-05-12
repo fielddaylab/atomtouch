@@ -14,14 +14,14 @@ public class LoLEventHandler : MonoBehaviour
 
     //each index represents a level, and tracks the highest index the player has completed
     int[] completedStages = new int[] {0, 0, 0, 0, 0, 0};
-    int[,] progressPoints = new int[,]
+    int[][] progressPoints = new int[][]
     {
-        {4, 7, 10}, //Intro
-        {5, 7, 13}, //StatesOfMatter
-        {6, 9, 12}, //Temp
-        {2, 5, 7},  //Volume
-        {1, 2, 4},  //EverythingIsAtoms
-        {1, 2, 4}   //Forces
+        new int[] {4, 7, 10}, //Intro
+        new int[] {5, 7, 13}, //StatesOfMatter
+        new int[] {6, 9, 12}, //Temp
+        new int[] {2, 5, 7},  //Volume
+        new int[] {1, 2, 4},  //EverythingIsAtoms
+        new int[] {1, 2, 4}   //Forces
     };
 
     // Start is called before the first frame update
@@ -31,12 +31,12 @@ public class LoLEventHandler : MonoBehaviour
 
 
         //if (UNITY_EDITOR)
-            ILOLSDK sdk = new LoLSDK.MockWebGL();
+            //ILOLSDK sdk = new LoLSDK.MockWebGL();
         //elif UNITY_WEBGL
-        //ILOLSDK sdk = new LoLSDK.WebGL();
+            ILOLSDK sdk = new LoLSDK.WebGL();
 
         //Initialize
-        LOLSDK.Init(sdk, "I think a website link goes here?");
+        LOLSDK.Init(sdk, "http://localhost:25566");
 
         //Game is ready
         LOLSDK.Instance.GameIsReady();
@@ -55,12 +55,12 @@ public class LoLEventHandler : MonoBehaviour
             stageIndex--; //There's an extra screen of text at element 1 for some reason
 
         Debug.Log("Stage: " + stageIndex.ToString() + " index: " + textIndex.ToString());
-        //Checks if this screen should update progress, ugly because I couldn't get a row from a 2d array, sorry about that :/
-        if ((progressPoints[stageIndex, 0] == textIndex) || (progressPoints[stageIndex, 1] == textIndex) || (progressPoints[stageIndex, 2] == textIndex))
-        {
-            //Progress should be updated on this screen
 
-            if (completedStages[stageIndex] < textIndex) //First time player has reached this screen, uniquely update progress
+        //Checks if this screen should update progress
+        if (Array.IndexOf(progressPoints[stageIndex], textIndex) >= 0)
+        {
+            //If this is the first time player has reached this screen, uniquely update progress
+            if (completedStages[stageIndex] < textIndex) 
             {
                 completedStages[stageIndex] = textIndex;
                 progress += 1;
