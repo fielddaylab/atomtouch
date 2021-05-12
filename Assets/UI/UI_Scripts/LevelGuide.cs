@@ -5,6 +5,7 @@ using System.Collections;
 [RequireComponent(typeof(AudioSource))]
 public class LevelGuide : MonoBehaviour
 {
+  public LoLEventHandler lolHandler;
   public TriggerOperator triggerOperator;
   public GameObject rigPanel;
   public GameObject contentPanel;
@@ -52,6 +53,10 @@ public class LevelGuide : MonoBehaviour
       this.target        = this.instrs.target;
       this.buttonTrggers = this.instrs.buttonTriggers;
       heading.text       = this.instrs.heading;
+
+     //TTS header text
+     lolHandler.TTSText(heading.text);
+
       if(target != null) target.SetActive(true);
       if(buttonTrggers != null)
       {
@@ -69,9 +74,17 @@ public class LevelGuide : MonoBehaviour
       }
       else                                     instruction.text = this.instrs.instruction;
 
-      this.buttonAnswers = this.instrs.buttonAnswers;
+     //TTS instruction text
+     lolHandler.TTSText(instruction.text);
 
-      if(this.instrs.hasYesNo) yesNoButtonSet.SetActive(true);
+     this.buttonAnswers = this.instrs.buttonAnswers;
+
+      if (this.instrs.hasYesNo)
+      {
+        yesNoButtonSet.SetActive(true);
+        lolHandler.TTSText("No");
+        lolHandler.TTSText("Yes");
+      }
 
       if(this.instrs.hasMultipleChoice)
       {
@@ -81,6 +94,7 @@ public class LevelGuide : MonoBehaviour
         for(int i = 0; i < buttonAnswers.Length; i++)
         {
           buttons[i].GetComponentInChildren<Text>().text = buttonAnswers[i];
+          lolHandler.TTSText(buttonAnswers[i]); //TTS Button Answers
         }
       }
 
@@ -193,6 +207,9 @@ public class LevelGuide : MonoBehaviour
     if(this.instrs.hasMultipleChoice) multipleChoiceButtonSet.SetActive(false);
 
     if(target != null) target.SetActive(false);
+
+    //Check if progress should be updated (LoL API)
+    lolHandler.ClickNext(levelNumber, this.instructionNumber);
 
     // Activity Complete
     if(instructionNumber == this.linstrs.instructions.Length-1)
