@@ -37,6 +37,9 @@ public class AtomTouchGUI : MonoBehaviour
 	public CameraScript cameraScript;
 	public SplashScreen splashScreen;
 
+	//LoLEventHandler
+	public LoLEventHandler lolHandler;
+
 	//UI Panels Scripts
 	public HUD hudController;
 	public IntroVideoController introVideoController;
@@ -757,6 +760,7 @@ public class AtomTouchGUI : MonoBehaviour
 
 	public void MainMenuOpen ()
 	{
+		lolHandler.MainMenuPress();
 		mainMenuGameObject.SetActive (true);
 		mainMenuAnimation.SetActive (true);
 	}

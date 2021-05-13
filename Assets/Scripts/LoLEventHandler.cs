@@ -40,7 +40,6 @@ public class LoLEventHandler : MonoBehaviour
 
         //Game is ready
         LOLSDK.Instance.GameIsReady();
-
     }
 
     // Update is called once per frame
@@ -54,7 +53,7 @@ public class LoLEventHandler : MonoBehaviour
         if (stageIndex > 1) 
             stageIndex--; //There's an extra screen of text at element 1 for some reason
 
-        Debug.Log("Stage: " + stageIndex.ToString() + " index: " + textIndex.ToString());
+        //Debug.Log("Stage: " + stageIndex.ToString() + " index: " + textIndex.ToString());
 
         //Checks if this screen should update progress
         if (Array.IndexOf(progressPoints[stageIndex], textIndex) >= 0)
@@ -71,19 +70,26 @@ public class LoLEventHandler : MonoBehaviour
 
     public void updateProgress()
     {
-        Debug.Log("updated progress: " + progress.ToString());
-        LOLSDK.Instance.SubmitProgress(progress, maxProgress);
+        //Debug.Log("updated progress: " + progress.ToString());
+        LOLSDK.Instance.SubmitProgress(0, progress, maxProgress);
     }
 
     public void TTSText(string textToSpeak)
     {
-        LOLSDK.Instance.SpeakText(textToSpeak);
+        //LOLSDK.Instance.SpeakText(textToSpeak);
     }
 
-
+    //Called whenever the player presses a button that takes them to the menu
+    public void MainMenuPress()
+    {
+        //If the player has gone through all the content and presses menu, end the game
+        if (progress >= maxProgress)
+            CompleteGame();
+    }
 
     public void CompleteGame()
     {
         LOLSDK.Instance.CompleteGame();
     }
+
 }
