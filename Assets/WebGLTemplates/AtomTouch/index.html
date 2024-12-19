@@ -3,13 +3,63 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | %UNITY_WEB_NAME%</title>
+    <title>%UNITY_WEB_NAME%</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics Atom Touch-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72694027-7"></script>
+
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+
+    <style>
+      body,div
+      {
+        margin:0px;
+        padding:0px;
+      }
+    </style>
+    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-72694027-7');
+    </script>
     <script src="%UNITY_WEBGL_LOADER_URL%"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "%UNITY_WEBGL_BUILD_URL%");
+      function UnityProgress(gameInstance, progress) {
+        if (!gameInstance.Module)
+          return;
+        if (!gameInstance.logo) {
+          gameInstance.logo = document.createElement("div");
+          gameInstance.logo.className = "logo " + gameInstance.Module.splashScreenStyle;
+          gameInstance.container.appendChild(gameInstance.logo);
+        }
+        if (!gameInstance.progress) {    
+          gameInstance.progress = document.createElement("div");
+          gameInstance.progress.className = "progress " + gameInstance.Module.splashScreenStyle;
+          gameInstance.progress.empty = document.createElement("div");
+          gameInstance.progress.empty.className = "empty";
+          gameInstance.progress.appendChild(gameInstance.progress.empty);
+          gameInstance.progress.full = document.createElement("div");
+          gameInstance.progress.full.className = "full";
+          gameInstance.progress.appendChild(gameInstance.progress.full);
+          gameInstance.container.appendChild(gameInstance.progress);
+        }
+        gameInstance.progress.full.style.width = (100 * progress) + "%";
+        gameInstance.progress.empty.style.width = (100 * (1 - progress)) + "%";
+        if (progress == 1)
+          gameInstance.logo.style.display = gameInstance.progress.style.display = "none";
+      }
+
+      var gameInstance = UnityLoader.instantiate("gameContainer", "%UNITY_WEBGL_BUILD_URL%", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
-    <div id="gameContainer" style="width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px; margin: auto"></div>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px"></div>
+      <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"><img src="TemplateData/fullscreen.png"></div>
+      <div class="title">%UNITY_WEB_NAME%</div>
+    </div>
   </body>
 </html>
