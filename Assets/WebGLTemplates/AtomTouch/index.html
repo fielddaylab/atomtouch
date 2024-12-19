@@ -8,6 +8,10 @@
     <!-- Global site tag (gtag.js) - Google Analytics Atom Touch-->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72694027-7"></script>
 
+    <!-- tags for the Vault Dropdown -->
+    <script src="FloatingDropdown/index.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/vis0yeq.css">
+
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
 
@@ -56,10 +60,24 @@
     </script>
   </head>
   <body>
-    <div class="webgl-content">
+    <div class="webgl-content" style="overflow: hidden;">
+      <floating-dropdown>
+          <style>
+              span {
+                  font-family: "brandon-grotesque", sans-serif !important;
+              }
+          </style>
+          <img slot="header" src="FloatingDropdown/vault-library-logo.png" alt="Vault Games Library" width="250px">
+          <span slot="desc" class="content">
+              Field Day presents the largest collection of
+              <span style="color:#00ECD0">FREE</span>
+              learning games on the web.
+          </span>
+          <span slot="button-label" class="content">
+              OPEN VAULT
+          </span>
+      </floating-dropdown>
       <div id="gameContainer" style="width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px"></div>
-      <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"><img src="TemplateData/fullscreen.png"></div>
-      <div class="title">%UNITY_WEB_NAME%</div>
     </div>
   </body>
 </html>
