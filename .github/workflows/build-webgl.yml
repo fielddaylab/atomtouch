@@ -18,10 +18,9 @@ jobs:
     if: github.event_name != 'delete'
     uses: VaultLearningGames/vault-publisher/.github/workflows/unity-build.yml@v1
     # Passed explicitly: `secrets: inherit` doesn't cross GitHub orgs.
+    # This repo has no Unity seat secrets of its own; it uses the fielddaylab org's licence file.
     secrets:
-      UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-      UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
-      UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+      UNITY_LICENSE: ${{ secrets.FIELDDAY_UNITY_LICENSE_2019 }}
 
   preview:
     needs: build
