@@ -16,6 +16,8 @@ public static class VaultWebGLBuild
         {
             if (args[i] == "-customBuildPath") path = args[i + 1];
         }
+        // Debug IL2CPP makes Unity 2018.2 pass -disable-O0-optnone, which the CI image's compiler rejects.
+        PlayerSettings.SetIl2CppCompilerConfiguration(BuildTargetGroup.WebGL, Il2CppCompilerConfiguration.Release);
         string[] scenes = EditorBuildSettings.scenes.Where(s => s.enabled).Select(s => s.path).ToArray();
         UnityEngine.Debug.Log("VaultWebGLBuild: " + scenes.Length + " scenes -> " + path);
         BuildReport report = BuildPipeline.BuildPlayer(scenes, path, BuildTarget.WebGL, BuildOptions.None);
