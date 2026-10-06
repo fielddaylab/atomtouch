@@ -1,0 +1,48 @@
+name: Field Day Unity Build
+
+# One Unity WebGL build, published to Vault test builds (R2):
+#   https://builds.vaultlearninggames.org/fieldday/atom-touch/<branch>/
+# Deleting a branch removes its Vault build.
+on:
+   push:
+   delete:
+   workflow_dispatch:
+
+concurrency:
+    # Branch-delete runs get their own group so they never cancel a build of the same branch.
+    group: ${{ github.workflow }}-${{ github.event_name == 'delete' && github.run_id || github.ref }}
+    cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.event_name != 'delete'
+    uses: VaultLearningGames/vault-publisher/.github/workflows/unity-build.yml@v1
+    with:
+      # game-ci's build script needs C# 7; this project (legacy .NET 3.5 scripting runtime) uses its own.
+      build-method: VaultWebGLBuild.Build
+      # Unity 2018.4 upgrades this 2018.2 project on import; let its script updater rewrite old APIs unattended.
+      custom-parameters: -accept-apiupdate
+    # Passed explicitly: `secrets: inherit` doesn't cross GitHub orgs.
+    secrets:
+      UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+      UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+      UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+
+  preview:
+    needs: build
+    permissions:
+      contents: read
+      id-token: write
+    uses: VaultLearningGames/vault-publisher/.github/workflows/publish-preview.yml@v1
+    with:
+      game: atom-touch
+      artifact: ${{ needs.build.outputs.artifact }}
+
+  remove-preview:
+    if: github.event_name == 'delete'
+    permissions:
+      contents: read
+      id-token: write
+    uses: VaultLearningGames/vault-publisher/.github/workflows/publish-preview.yml@v1
+    with:
+      game: atom-touch
