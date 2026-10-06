@@ -16,7 +16,10 @@ concurrency:
 jobs:
   build:
     if: github.event_name != 'delete'
-    uses: VaultLearningGames/vault-publisher/.github/workflows/unity-build.yml@v1
+    uses: VaultLearningGames/vault-publisher/.github/workflows/unity-build.yml@unity-build-method
+    with:
+      # Unity 2018.2 can't compile game-ci's build script (C# 7): use this project's own.
+      build-method: VaultWebGLBuild.Build
     # Passed explicitly: `secrets: inherit` doesn't cross GitHub orgs.
     secrets:
       UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
